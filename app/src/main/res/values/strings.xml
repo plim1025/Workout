@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Workout</string>
+    <string name="tab_text_1">Workouts</string>
+    <string name="tab_text_2">Exercises</string>
+    <string name="tab_text_3">Progress</string>
+    <string name="action_bar_1">Calendar</string>
+</resources>
