@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+
 import java.text.DateFormat;
 import java.util.Calendar;
 
@@ -54,6 +57,14 @@ public class WorkoutsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 incrementDate();
+            }
+        });
+
+        FloatingActionButton fab1 = view.findViewById(R.id.fab1);
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(R.id.frame, new CalendarFragment()).commit();
             }
         });
 

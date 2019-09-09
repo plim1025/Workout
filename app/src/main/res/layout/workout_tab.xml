@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/workout_tab"
+<RelativeLayout android:id="@+id/workout_tab"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
         <LinearLayout
             android:background="@color/white"
             android:orientation="horizontal"
@@ -37,4 +37,40 @@
                     android:layout_gravity="end"
                     android:background="@drawable/workout_top_navigation_color" />
         </LinearLayout>
-</LinearLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/workout_fab"
+            android:layout_width="322dp"
+            android:layout_height="208dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="32dp"
+            app:fab_addButtonColorNormal="@color/mediumGray"
+            app:fab_addButtonColorPressed="@color/mediumGray2"
+            app:fab_addButtonPlusIconColor="@color/black"
+            app:fab_addButtonStrokeVisible="false"
+            app:fab_labelsPosition="left">
+
+                <com.getbase.floatingactionbutton.AddFloatingActionButton
+                    android:id="@+id/fab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_colorNormal="@color/mediumGray"
+                    app:fab_colorPressed="@color/mediumGray2"
+                    app:fab_plusIconColor="@color/black"
+                    app:fab_size="mini"
+                    app:fab_stroke_visible="false"
+                    android:labelFor="@id/fab1"
+                    android:text="@string/fab_1"/>
+
+                <com.getbase.floatingactionbutton.AddFloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_colorNormal="@color/mediumGray"
+                    app:fab_colorPressed="@color/mediumGray2"
+                    app:fab_plusIconColor="@color/black"
+                    app:fab_size="mini"
+                    app:fab_stroke_visible="false" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

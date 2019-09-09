@@ -1,8 +1,22 @@
-<resources>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/darkGray</item>
         <item name="overlapAnchor">false</item>
+        <item name="android:actionOverflowButtonStyle">@style/AppTheme.OverFlow</item>
     </style>
+
+    <!-- Overflow button style. -->
+    <style name="AppTheme.OverFlow">
+        <item name="android:src">@drawable/ic_overflow_white_24dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="fab1">
+        <item name="android:label">@string/fab_1</item>
+    </style>
+
 
 </resources>
