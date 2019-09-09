@@ -4,4 +4,6 @@
     <string name="tab_text_2">Exercises</string>
     <string name="tab_text_3">Progress</string>
     <string name="action_bar_1">Calendar</string>
+    <string name="dropdown_1">Themes</string>
+    <string name="dropdown_2">Settings</string>
 </resources>
