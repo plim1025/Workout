@@ -1,11 +1,13 @@
 package com.example.android.workout;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -57,20 +59,31 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // When calendar icon selected, calendar fragment displayed, and if selected again while in calendar fragment, toast message displayed
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Fragment currentFragment = getSupportFragmentManager().findFragmentByTag("CALENDAR");
+        // When calendar icon selected, calendar fragment displayed, and if selected again while in calendar fragment, toast message displayed
         if(item.getItemId()==R.id.nav_calendar) {
+            Fragment currentFragment = getSupportFragmentManager().findFragmentByTag("CALENDAR");
             if(currentFragment != null && currentFragment.isVisible()){
                 Toast.makeText(getApplicationContext(), "Today selected", Toast.LENGTH_SHORT).show();
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.frame, new CalendarFragment(), "CALENDAR").commit();
         }
+        // When settings icon selected, settings fragment displayed
+        else if(item.getItemId()==R.id.dropdown_settings) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame, new SettingsFragment()).commit();
+        }
+        else if(item.getItemId()==R.id.dropdown_themes) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame, new ThemesFragment()).commit();
+        }
+
+
+
         return super.onOptionsItemSelected(item);
     }
 
     // Creates top navigation menu
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_nav_menu, menu);

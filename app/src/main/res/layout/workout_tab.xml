@@ -17,7 +17,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_arrow_back_black_24dp"
                     android:padding="16dp"
-                    android:background="@drawable/workout_top_navigation_color" />
+                    android:background = "@drawable/workout_top_navigation_color" />
 
                 <TextView
                     android:id="@+id/date"
@@ -35,16 +35,16 @@
                     android:src="@drawable/ic_arrow_forward_black_24dp"
                     android:padding="16dp"
                     android:layout_gravity="end"
-                    android:background="@drawable/workout_top_navigation_color" />
+                    android:background = "@drawable/workout_top_navigation_color" />
         </LinearLayout>
 
         <com.getbase.floatingactionbutton.FloatingActionsMenu
             android:id="@+id/workout_fab"
-            android:layout_width="322dp"
-            android:layout_height="208dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_margin="32dp"
+            android:layout_margin="16dp"
             app:fab_addButtonColorNormal="@color/mediumGray"
             app:fab_addButtonColorPressed="@color/mediumGray2"
             app:fab_addButtonPlusIconColor="@color/black"
@@ -52,19 +52,7 @@
             app:fab_labelsPosition="left">
 
                 <com.getbase.floatingactionbutton.AddFloatingActionButton
-                    android:id="@+id/fab1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:fab_colorNormal="@color/mediumGray"
-                    app:fab_colorPressed="@color/mediumGray2"
-                    app:fab_plusIconColor="@color/black"
-                    app:fab_size="mini"
-                    app:fab_stroke_visible="false"
-                    android:labelFor="@id/fab1"
-                    android:text="@string/fab_1"/>
-
-                <com.getbase.floatingactionbutton.AddFloatingActionButton
-                    android:id="@+id/fab2"
+                    android:id="@+id/workout_fab_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:fab_colorNormal="@color/mediumGray"
@@ -72,5 +60,43 @@
                     app:fab_plusIconColor="@color/black"
                     app:fab_size="mini"
                     app:fab_stroke_visible="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:text="@string/workout_fab_1"
+                    android:labelFor="@id/workout_fab_1"/>
+
+                <com.getbase.floatingactionbutton.AddFloatingActionButton
+                    android:id="@+id/workout_fab_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_colorNormal="@color/mediumGray"
+                    app:fab_colorPressed="@color/mediumGray2"
+                    app:fab_plusIconColor="@color/black"
+                    app:fab_size="mini"
+                    app:fab_stroke_visible="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:text="@string/workout_fab_2"
+                        android:labelFor="@id/workout_fab_2" />
+
+                <com.getbase.floatingactionbutton.AddFloatingActionButton
+                    android:id="@+id/workout_fab_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_colorNormal="@color/mediumGray"
+                    app:fab_colorPressed="@color/mediumGray2"
+                    app:fab_plusIconColor="@color/black"
+                    app:fab_size="mini"
+                    app:fab_stroke_visible="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workout_fab_3"
+                    android:labelFor="@id/workout_fab_3" />
         </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>

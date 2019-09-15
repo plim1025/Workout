@@ -6,7 +6,8 @@
         android:id="@+id/nav_calendar"
         android:icon="@drawable/ic_calendar_white_24dp"
         android:title="@string/action_bar_1"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        />
 
     <item
         android:id="@+id/dropdown_themes"
