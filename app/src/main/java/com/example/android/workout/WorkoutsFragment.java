@@ -118,4 +118,9 @@ public class WorkoutsFragment extends Fragment {
         DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
     }
+
+    @Override
+    public String toString() {
+        return WorkoutsFragment.class.getSimpleName();
+    }
 }

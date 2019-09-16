@@ -14,4 +14,9 @@ public class ProgressFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.progress_tab, container, false);
     }
+
+    @Override
+    public String toString() {
+        return ProgressFragment.class.getSimpleName();
+    }
 }

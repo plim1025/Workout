@@ -1,7 +1,9 @@
 package com.example.android.workout;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -11,23 +13,33 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    FragmentManager fragmentManager;
+    private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
+    private static final String TAG = ACTIVITY_NAME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+        fragmentManager = getSupportFragmentManager();
+
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Set home fragment to workout tab
-        getSupportFragmentManager().beginTransaction().add(R.id.frame, new WorkoutsFragment()).commit();
+        Fragment initialFragment = new WorkoutsFragment();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.frame, initialFragment, "0");
+        fragmentTransaction.addToBackStack("Add " + initialFragment.toString());
+        fragmentTransaction.commit();
 
         // Creates bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -37,48 +49,66 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch(menuItem.getItemId()) {
+                Fragment fragment;
+                switch (menuItem.getItemId()) {
                     case R.id.nav_workout:
-                        Fragment workouts_tab = new WorkoutsFragment();
-                        FragmentTransaction fm1 = getSupportFragmentManager().beginTransaction();
-                        fm1.replace(R.id.frame, workouts_tab).commit();
-                        return true;
+                        fragment = new WorkoutsFragment();
+                        break;
                     case R.id.nav_exercises:
-                        Fragment exercises_tab = new ExercisesFragment();
-                        FragmentTransaction fm2 = getSupportFragmentManager().beginTransaction();
-                        fm2.replace(R.id.frame, exercises_tab).commit();
-                        return true;
+                        fragment = new ExercisesFragment();
+                        break;
                     case R.id.nav_progress:
-                        Fragment progress_tab = new ProgressFragment();
-                        FragmentTransaction fm3 = getSupportFragmentManager().beginTransaction();
-                        fm3.replace(R.id.frame, progress_tab).commit();
-                        return true;
+                        fragment = new ProgressFragment();
+                        break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
                 }
-                return false;
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frame, fragment, "0");
+                // Need to title it so that fragment tier 2 can return to tier 1 after pressing android back button
+                fragmentTransaction.addToBackStack("Add main");
+                fragmentTransaction.commit();
+                return true;
+            }
+        });
+
+        fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                StringBuilder backstackEntryMessage = new StringBuilder("Current status of fragment transaction back stack: " + fragmentManager.getBackStackEntryCount() + "\n");
+
+                for (int index = (fragmentManager.getBackStackEntryCount() - 1); index >= 0; index--) {
+                    FragmentManager.BackStackEntry entry = fragmentManager.getBackStackEntryAt(index);
+                    backstackEntryMessage.append(entry.getName() + "\n");
+                }
+                Log.i(TAG, backstackEntryMessage.toString());
             }
         });
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        // When calendar icon selected, calendar fragment displayed, and if selected again while in calendar fragment, toast message displayed
-        if(item.getItemId()==R.id.nav_calendar) {
-            Fragment currentFragment = getSupportFragmentManager().findFragmentByTag("CALENDAR");
-            if(currentFragment != null && currentFragment.isVisible()){
-                Toast.makeText(getApplicationContext(), "Today selected", Toast.LENGTH_SHORT).show();
-            }
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame, new CalendarFragment(), "CALENDAR").commit();
+        Fragment fragment;
+        switch (item.getItemId()) {
+            case R.id.nav_calendar:
+                fragment = new CalendarFragment();
+                break;
+            case R.id.dropdown_settings:
+                fragment = new SettingsFragment();
+                break;
+            case R.id.dropdown_themes:
+                fragment = new ThemesFragment();
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
-        // When settings icon selected, settings fragment displayed
-        else if(item.getItemId()==R.id.dropdown_settings) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame, new SettingsFragment()).commit();
+        if (fragment.isVisible()) {
+            Toast.makeText(getApplicationContext(), "Today selected", Toast.LENGTH_SHORT).show();
         }
-        else if(item.getItemId()==R.id.dropdown_themes) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame, new ThemesFragment()).commit();
-        }
-
-
-
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment, "1");
+        fragmentTransaction.addToBackStack("Add " + fragment.toString());
+        fragmentTransaction.commit();
         return super.onOptionsItemSelected(item);
     }
 
@@ -88,5 +118,27 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_nav_menu, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Fragment fragment = fragmentManager.findFragmentById(R.id.frame);
+
+        // If press back button on fragment tier 1, return to home and pause app
+        if (fragment == fragmentManager.findFragmentByTag("0")) {
+            fragmentManager.popBackStack(0,0);
+            Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+            homeIntent.addCategory( Intent.CATEGORY_HOME );
+            homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
+
+            //  If press back button on fragment tier 2, replace frame with fragment tier 2 by searching with tag 0 and pop backstack up until last fragment tier 1
+        } else if (fragment == fragmentManager.findFragmentByTag("1")) {
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame, fragmentManager.findFragmentByTag("0"), "0");
+            fragmentTransaction.addToBackStack("Add " + fragment.toString());
+            fragmentTransaction.commit();
+            fragmentManager.popBackStack("Add main", 0);
+        }
     }
 }
