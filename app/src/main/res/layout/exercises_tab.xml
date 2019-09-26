@@ -3,28 +3,65 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.SearchView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:queryHint="@string/query_hint"
-        android:background="@color/lightGray"
-        android:layout_margin="8dp"
-        app:iconifiedByDefault="false" />
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            app:queryHint="@string/query_hint"
+            android:background="@color/lightGray"
+            android:layout_margin="8dp"
+            app:iconifiedByDefault="false" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/exercise_sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_sort_black_24dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="8dp"
+            android:padding="12dp"
+            android:background="@drawable/create_new_exercise_color"/>
+
+
+    </LinearLayout>
     <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/workout_fab"
+        android:id="@+id/exercise_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="10dp"
         app:fab_addButtonColorNormal="@color/mediumGray"
         app:fab_addButtonColorPressed="@color/mediumGray2"
         app:fab_addButtonPlusIconColor="@color/black"
         app:fab_addButtonStrokeVisible="false"
-        app:fab_labelsPosition="left">
+        app:fab_labelsPosition="left" >
 
         <com.getbase.floatingactionbutton.AddFloatingActionButton
-            android:id="@+id/exercises_fab_1"
+        android:id="@+id/exercises_fab_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="@color/mediumGray"
+        app:fab_colorPressed="@color/mediumGray2"
+        app:fab_plusIconColor="@color/black"
+        app:fab_size="mini"
+        app:fab_stroke_visible="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercises_fab_1"
+            android:labelFor="@id/exercises_fab_1"/>
+
+        <com.getbase.floatingactionbutton.AddFloatingActionButton
+            android:id="@+id/exercises_fab_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorNormal="@color/mediumGray"
@@ -36,8 +73,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exercises_fab_1"
-            android:labelFor="@id/exercises_fab_1"/>
+            android:text="@string/exercises_fab_2"
+            android:labelFor="@id/exercises_fab_2"/>
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>

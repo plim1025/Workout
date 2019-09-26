@@ -7,4 +7,5 @@
     <color name="mediumGray">#E0E0E0</color>
     <color name="mediumGray2">#D3D3D3</color>
     <color name="darkGray">#202020</color>
+    <color name="defaultBackground">#FAFAFA</color>
 </resources>

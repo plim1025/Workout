@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -88,27 +87,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Fragment fragment;
         switch (item.getItemId()) {
             case R.id.nav_calendar:
-                fragment = new CalendarFragment();
+                startActivity(new Intent(this, com.example.android.workout.CalendarActivity.class));
                 break;
             case R.id.dropdown_settings:
-                fragment = new SettingsFragment();
+                startActivity(new Intent(this, SettingsActivity.class));
                 break;
             case R.id.dropdown_themes:
-                fragment = new ThemesFragment();
+                startActivity(new Intent(this, ThemesActivity.class));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
-        if (fragment.isVisible()) {
-            Toast.makeText(getApplicationContext(), "Today selected", Toast.LENGTH_SHORT).show();
-        }
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame, fragment, "1");
-        fragmentTransaction.addToBackStack("Add " + fragment.toString());
-        fragmentTransaction.commit();
         return super.onOptionsItemSelected(item);
     }
 
