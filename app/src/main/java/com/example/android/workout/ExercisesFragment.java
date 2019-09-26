@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+
+
 public class ExercisesFragment extends Fragment {
 
 
@@ -16,6 +19,14 @@ public class ExercisesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.exercises_tab, container, false);
+
+        FloatingActionButton fab1 = view.findViewById(R.id.exercises_fab_1);
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         // Inflate the layout for this fragment
         return view;
@@ -26,4 +37,3 @@ public class ExercisesFragment extends Fragment {
         return ExercisesFragment.class.getSimpleName();
     }
 }
-
