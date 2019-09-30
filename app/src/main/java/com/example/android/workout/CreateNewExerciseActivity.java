@@ -30,7 +30,7 @@ public class CreateNewExerciseActivity extends AppCompatActivity{
             }
         });
 
-        String[] spinnerArray = new String[] {"", "1", "2", "3"};
+        String[] spinnerArray = new String[] {"", "Abs", "Back", "Biceps", "Cardio", "Chest", "Forearms", "Glutes", "Lower Legs", "Triceps", "Upper Legs"};
         Spinner spinner = findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, spinnerArray);
 
