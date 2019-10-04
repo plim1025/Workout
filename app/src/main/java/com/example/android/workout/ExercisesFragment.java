@@ -3,6 +3,7 @@ package com.example.android.workout;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,6 +40,13 @@ public class ExercisesFragment extends Fragment {
         menu.add("By Most Recent");
         menu.add("Favorites");
 
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dropDownMenu.show();
+            }
+        });
+
         dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -54,13 +62,6 @@ public class ExercisesFragment extends Fragment {
                         return true;
                 }
                 return false;
-            }
-        });
-
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dropDownMenu.show();
             }
         });
 

@@ -8,4 +8,14 @@
     <color name="mediumGray2">#D3D3D3</color>
     <color name="darkGray">#202020</color>
     <color name="defaultBackground">#FAFAFA</color>
+    <color name="pieRed">#e6194B</color>
+    <color name="pieOrange">#f58231</color>
+    <color name="pieYellow">#ffe119</color>
+    <color name="pieLime">#bfef45</color>
+    <color name="pieGreen">#3cb44b</color>
+    <color name="pieCyan">#42d4f4</color>
+    <color name="pieBlue">#4363d8</color>
+    <color name="piePurple">#911eb4</color>
+    <color name="pieMagenta">#f032e6</color>
+    <color name="pieGrey">#a9a9a9</color>
 </resources>
