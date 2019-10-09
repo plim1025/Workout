@@ -46,6 +46,7 @@ public class ProgressFragment extends Fragment {
         // Set pie chart
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true);
+        pieChartData.setHasCenterCircle(true).setCenterText1("Whatever is selected in sort here").setCenterText1FontSize(20);
         pieChartView.setPieChartData(pieChartData);
         pieChartView.setChartRotationEnabled(false);
 
