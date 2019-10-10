@@ -20,7 +20,7 @@ public class TimerDialog extends AppCompatDialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.alert_dialog, null);
+        View view = inflater.inflate(R.layout.workout_dialog, null);
 
         NumberPicker numberPickerMin = view.findViewById(R.id.number_picker_min);
         NumberPicker numberPickerSec = view.findViewById(R.id.number_picker_sec);

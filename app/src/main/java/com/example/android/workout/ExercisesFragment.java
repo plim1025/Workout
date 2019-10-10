@@ -1,5 +1,6 @@
 package com.example.android.workout;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,11 +13,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -80,17 +83,30 @@ public class ExercisesFragment extends Fragment {
             }
         });
 
+        // ListView adapter for exercises
         try {
             JSONObject JSON = new JSONObject(readJSONFromAsset());
             JSONObject exercises = JSON.getJSONObject("exercise_info");
             ArrayList<Exercise> exercise = new ArrayList<Exercise>();
-            exercises.getJSONObject
-            for(int i = 0; i < exercises.names().length(); i++){
-                exercise.add(new Exercise(exercises.names().getString(i), exercises.getString("Main Muscle Group"), exercises.getString("Type"), exercises.getString("Equipment")));
+            JSONArray exercise_names = exercises.names();
+            for(int i = 0; i < exercise_names.length(); i++){
+                JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
+                exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment")));
             }
-            ArrayAdapter adapter = new ArrayAdapter<>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, exercise);
+
+            ExerciseAdapter adapter = new ExerciseAdapter(getActivity(), exercise);
             ListView exerciseListView = view.findViewById(R.id.exercise_list_view);
             exerciseListView.setAdapter(adapter);
+            exerciseListView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    Log.i(TAG, "HI");
+                    ExerciseDialog exerciseDialog = new ExerciseDialog();
+                    exerciseDialog.show(getActivity().getSupportFragmentManager(), null);
+                    return false;
+                }
+            });
+
         } catch (JSONException e){
             e.printStackTrace();
         }

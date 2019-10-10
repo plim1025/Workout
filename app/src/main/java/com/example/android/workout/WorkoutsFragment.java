@@ -107,7 +107,7 @@ public class WorkoutsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TimerDialog timerDialog = new TimerDialog();
-                timerDialog.show(getActivity().getSupportFragmentManager(), "example dialog");
+                timerDialog.show(getActivity().getSupportFragmentManager(), null);
             }
         });
 
