@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -97,20 +98,17 @@ public class ExercisesFragment extends Fragment {
             ExerciseAdapter adapter = new ExerciseAdapter(getActivity(), exercise);
             ListView exerciseListView = view.findViewById(R.id.exercise_list_view);
             exerciseListView.setAdapter(adapter);
-            exerciseListView.setOnLongClickListener(new View.OnLongClickListener() {
+
+            exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public boolean onLongClick(View view) {
-                    Log.i(TAG, "HI");
-                    ExerciseDialog exerciseDialog = new ExerciseDialog();
-                    exerciseDialog.show(getActivity().getSupportFragmentManager(), null);
-                    return false;
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                 }
             });
 
         } catch (JSONException e){
             e.printStackTrace();
         }
-
 
         // Inflate the layout for this fragment
         return view;

@@ -27,7 +27,11 @@ public class ExerciseAdapter extends ArrayAdapter {
 
 
         TextView exercise_name = convertView.findViewById(R.id.exercise_item);
-        exercise_name.setText(currentExercise.getName());
+        String current_name = currentExercise.getName();
+        if (current_name.length() > 48) {
+            current_name = current_name.substring(0, Math.min(current_name.length(), 45)) + "...";
+        }
+        exercise_name.setText(current_name);
 
         return convertView;
     }
