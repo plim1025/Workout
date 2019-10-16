@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".CreateNewExerciseActivity">
         </activity>
+        <activity android:name=".AddExerciseActivity">
+        </activity>
     </application>
 
 </manifest>

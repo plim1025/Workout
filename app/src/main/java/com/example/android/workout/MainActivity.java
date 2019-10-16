@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_calendar:
-                startActivity(new Intent(this, com.example.android.workout.CalendarActivity.class));
+                startActivity(new Intent(this, CalendarActivity.class));
                 break;
             case R.id.dropdown_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
@@ -114,6 +114,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Fragment fragment = fragmentManager.findFragmentById(R.id.frame);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
 
         // If press back button on fragment tier 1, return to home and pause app
         if (fragment == fragmentManager.findFragmentByTag("0")) {
