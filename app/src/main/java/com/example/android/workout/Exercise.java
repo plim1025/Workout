@@ -1,11 +1,20 @@
 package com.example.android.workout;
 
-public class Exercise {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exercise implements Parcelable{
 
     private String mName;
     private String mMuscleGroup;
     private String mType;
     private String mEquipment;
+    private List<Integer> mSets = new ArrayList<>();
+    private List<Integer> mWeight = new ArrayList<>();
 
     public Exercise(String name, String MuscleGroup, String type, String equipment) {
         mName = name;
@@ -13,6 +22,25 @@ public class Exercise {
         mType = type;
         mEquipment = equipment;
     }
+
+    protected Exercise(Parcel in) {
+        mName = in.readString();
+        mMuscleGroup = in.readString();
+        mType = in.readString();
+        mEquipment = in.readString();
+    }
+
+    public static final Creator<Exercise> CREATOR = new Creator<Exercise>() {
+        @Override
+        public Exercise createFromParcel(Parcel in) {
+            return new Exercise(in);
+        }
+
+        @Override
+        public Exercise[] newArray(int size) {
+            return new Exercise[size];
+        }
+    };
 
     public String getName() {
         return mName;
@@ -28,5 +56,26 @@ public class Exercise {
 
     public String getEquipment() {
         return mEquipment;
+    }
+
+    public void setSets(List<Integer> sets) {
+        mSets = sets;
+    }
+
+    public void setWeight(List<Integer> weight) {
+        mWeight = weight;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mName);
+        parcel.writeString(mMuscleGroup);
+        parcel.writeString(mType);
+        parcel.writeString(mEquipment);
     }
 }

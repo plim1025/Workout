@@ -15,8 +15,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Weight (lbs): "
-        android:textAllCaps="true"
+        android:text="WEIGHT (lbs): "
         android:paddingTop="16dp"
         android:paddingRight="16dp"
         android:paddingLeft="16dp"
@@ -31,23 +30,31 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="10">
+
         <ImageButton
+            android:id="@+id/minus_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
+            android:layout_marginLeft="80dp"
             android:background="@drawable/exercise_add_color"
             android:padding="16dp"
-            android:layout_marginLeft="80dp"/>
+            android:src="@drawable/ic_minus_black_24dp" />
+
         <EditText
+            android:id="@+id/weight_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="10"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:selectAllOnFocus="true"/>
         <ImageButton
+            android:id="@+id/add_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
+            android:src="@drawable/ic_plus_black_24dp"
             android:background="@drawable/exercise_add_color"
             android:padding="16dp"
             android:layout_marginRight="80dp"/>
@@ -72,25 +79,56 @@
         android:orientation="horizontal"
         android:weightSum="10">
         <ImageButton
+            android:id="@+id/minus_reps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
+            android:src="@drawable/ic_minus_black_24dp"
             android:background="@drawable/exercise_add_color"
             android:padding="16dp"
             android:layout_marginLeft="80dp"/>
         <EditText
+            android:id="@+id/reps_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="10"
-            android:padding="16dp"/>
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:selectAllOnFocus="true"/>
         <ImageButton
+            android:id="@+id/add_reps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_add_black_24dp"
+            android:src="@drawable/ic_plus_black_24dp"
             android:background="@drawable/exercise_add_color"
             android:padding="16dp"
             android:layout_marginRight="80dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+        <Button
+            android:id="@+id/add_set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add Set"
+            android:textAllCaps="true"
+            android:background="@drawable/exercise_add_color"
+            android:layout_margin="24dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="clear"
+            android:textAllCaps="true"
+            android:background="@drawable/exercise_add_color"
+            android:layout_margin="24dp"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ExerciseAdapter extends ArrayAdapter {
+
+    public Exercise currentExercise;
 
     public ExerciseAdapter(Context context, ArrayList<Exercise> exercises) {
         super(context, 0, exercises);
@@ -23,8 +26,7 @@ public class ExerciseAdapter extends ArrayAdapter {
                     R.layout.exercise_list_item, parent, false);
         }
 
-        Exercise currentExercise = (Exercise) getItem(position);
-
+        currentExercise = (Exercise) getItem(position);
 
         TextView exercise_name = convertView.findViewById(R.id.exercise_item);
         String current_name = currentExercise.getName();

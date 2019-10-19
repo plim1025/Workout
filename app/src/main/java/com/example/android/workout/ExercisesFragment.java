@@ -1,5 +1,6 @@
 package com.example.android.workout;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +35,6 @@ import static android.content.ContentValues.TAG;
 
 
 public class ExercisesFragment extends Fragment {
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,7 +89,7 @@ public class ExercisesFragment extends Fragment {
         try {
             JSONObject JSON = new JSONObject(readJSONFromAsset());
             JSONObject exercises = JSON.getJSONObject("exercise_info");
-            ArrayList<Exercise> exercise = new ArrayList<Exercise>();
+            final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
             JSONArray exercise_names = exercises.names();
             for(int i = 0; i < exercise_names.length(); i++){
                 JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
@@ -103,7 +103,9 @@ public class ExercisesFragment extends Fragment {
             exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    startActivity(new Intent(getActivity(), AddExerciseActivity.class));
+                    Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
+                    intent.putExtra("Exercises", exercise.get(i));
+                    startActivity(intent);
                 }
             });
 
