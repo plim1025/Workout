@@ -6,6 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
         <LinearLayout
+            android:id="@+id/workout_dates"
             android:background="@color/white"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -37,6 +38,12 @@
                     android:layout_gravity="end"
                     android:background = "@drawable/workout_top_navigation_color" />
         </LinearLayout>
+
+        <ListView
+            android:id="@+id/workout_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/workout_dates" />
 
         <com.getbase.floatingactionbutton.FloatingActionsMenu
             android:id="@+id/workout_fab"

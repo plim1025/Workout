@@ -13,14 +13,16 @@ public class Exercise implements Parcelable{
     private String mMuscleGroup;
     private String mType;
     private String mEquipment;
-    private List<Integer> mSets = new ArrayList<>();
-    private List<Integer> mWeight = new ArrayList<>();
+    private float mWeight;
+    private int mReps;
 
-    public Exercise(String name, String MuscleGroup, String type, String equipment) {
+    public Exercise(String name, String MuscleGroup, String type, String equipment, float weight, int reps) {
         mName = name;
         mMuscleGroup = MuscleGroup;
         mType = type;
         mEquipment = equipment;
+        mWeight = weight;
+        mReps = reps;
     }
 
     protected Exercise(Parcel in) {
@@ -28,6 +30,8 @@ public class Exercise implements Parcelable{
         mMuscleGroup = in.readString();
         mType = in.readString();
         mEquipment = in.readString();
+        mWeight = in.readInt();
+        mReps = in.readInt();
     }
 
     public static final Creator<Exercise> CREATOR = new Creator<Exercise>() {
@@ -58,13 +62,9 @@ public class Exercise implements Parcelable{
         return mEquipment;
     }
 
-    public void setSets(List<Integer> sets) {
-        mSets = sets;
-    }
+    public float getWeight() { return mWeight; }
 
-    public void setWeight(List<Integer> weight) {
-        mWeight = weight;
-    }
+    public int getReps() { return mReps; }
 
     @Override
     public int describeContents() {
@@ -77,5 +77,7 @@ public class Exercise implements Parcelable{
         parcel.writeString(mMuscleGroup);
         parcel.writeString(mType);
         parcel.writeString(mEquipment);
+        parcel.writeFloat(mWeight);
+        parcel.writeInt(mReps);
     }
 }

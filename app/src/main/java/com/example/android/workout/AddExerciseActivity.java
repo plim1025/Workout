@@ -26,6 +26,8 @@ public class AddExerciseActivity extends AppCompatActivity {
 
     float WEIGHTTEXT = 0;
     int REPSTEXT = 0;
+    Exercise added_exercise;
+    Bundle exercise_info = new Bundle();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,7 +53,14 @@ public class AddExerciseActivity extends AppCompatActivity {
         ImageButton addReps = findViewById(R.id.add_reps);
         final EditText repsEditText = findViewById(R.id.reps_edit_text);
         Button addSet = findViewById(R.id.add_set);
-        Button clear = findViewById(R.id.clear);
+        Button clear_all = findViewById(R.id.clear);
+
+        ListView add_exercise_list_view = findViewById(R.id.add_exercise_list_view);
+        final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
+
+        // Receive exercise object when clicked on
+        Intent intent = getIntent();
+        final Exercise current_exercise = intent.getParcelableExtra("Exercises");
 
         // Initialize weight/reps to 0
         weightEditText.setText(String.valueOf(WEIGHTTEXT));
@@ -93,8 +102,28 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        Exercise current_exercise = intent.getParcelableExtra("Exercises");
-        current_exercise.getName();
+        addSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT);
+                exercise.add(added_exercise);
+            }
+        });
+
+        clear_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                exercise.remove(added_exercise);
+            }
+        });
+
+        ExerciseAdapter adapter = new ExerciseAdapter(this, exercise);
+        add_exercise_list_view.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // send ArrayList of exercises to WorkoutsFragment
     }
 }
