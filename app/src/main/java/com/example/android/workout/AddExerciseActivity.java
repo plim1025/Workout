@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,7 +57,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         Button addSet = findViewById(R.id.add_set);
         Button clear_all = findViewById(R.id.clear);
 
-        ListView add_exercise_list_view = findViewById(R.id.add_exercise_list_view);
+        RecyclerView add_exercise_list_view = findViewById(R.id.add_exercise_recycler_view);
         final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
 
         // Receive exercise object when clicked on
@@ -102,6 +104,14 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
+        RecyclerView recyclerView = findViewById(R.id.add_exercise_recycler_view);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        WorkoutRecyclerViewAdapter adapter = new WorkoutRecyclerViewAdapter(exercise);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+
         addSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,8 +127,6 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        ExerciseAdapter adapter = new ExerciseAdapter(this, exercise);
-        add_exercise_list_view.setAdapter(adapter);
     }
 
     @Override

@@ -1,24 +1,18 @@
 package com.example.android.workout;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.PopupMenu;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
@@ -29,10 +23,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import static android.content.ContentValues.TAG;
-
 
 public class ExercisesFragment extends Fragment {
 
@@ -96,15 +86,18 @@ public class ExercisesFragment extends Fragment {
                 exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment"), 0, 0));
             }
 
-            ExerciseAdapter adapter = new ExerciseAdapter(getActivity(), exercise);
-            ListView exerciseListView = view.findViewById(R.id.exercise_list_view);
-            exerciseListView.setAdapter(adapter);
+            RecyclerView recyclerView = view.findViewById(R.id.exercise_recycler_view);
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+            ExerciseRecyclerViewAdapter adapter = new ExerciseRecyclerViewAdapter(exercise);
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setLayoutManager(layoutManager);
+            recyclerView.setAdapter(adapter);
 
-            exerciseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
                 @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                public void onItemClick(int position) {
                     Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
-                    intent.putExtra("Exercises", exercise.get(i));
+                    intent.putExtra("Exercises", exercise.get(position));
                     startActivity(intent);
                 }
             });
