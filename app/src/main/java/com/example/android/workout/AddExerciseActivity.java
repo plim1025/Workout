@@ -57,7 +57,6 @@ public class AddExerciseActivity extends AppCompatActivity {
         Button addSet = findViewById(R.id.add_set);
         Button clear_all = findViewById(R.id.clear);
 
-        RecyclerView add_exercise_list_view = findViewById(R.id.add_exercise_recycler_view);
         final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
 
         // Receive exercise object when clicked on
