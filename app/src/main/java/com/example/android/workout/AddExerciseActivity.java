@@ -1,35 +1,31 @@
 package com.example.android.workout;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class AddExerciseActivity extends AppCompatActivity {
 
+    private ArrayList<Exercise> exercise = new ArrayList<Exercise>();
+    private RecyclerView mRecyclerView;
+    private WorkoutRecyclerViewAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
     float WEIGHTTEXT = 0;
     int REPSTEXT = 0;
     Exercise added_exercise;
     Bundle exercise_info = new Bundle();
+    int exercise_items = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,8 +52,6 @@ public class AddExerciseActivity extends AppCompatActivity {
         final EditText repsEditText = findViewById(R.id.reps_edit_text);
         Button addSet = findViewById(R.id.add_set);
         Button clear_all = findViewById(R.id.clear);
-
-        final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
 
         // Receive exercise object when clicked on
         Intent intent = getIntent();
@@ -103,19 +97,22 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        RecyclerView recyclerView = findViewById(R.id.add_exercise_recycler_view);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        WorkoutRecyclerViewAdapter adapter = new WorkoutRecyclerViewAdapter(exercise);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+
+        // Build Recycler View
+        mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
+        mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
 
 
         addSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT);
-                exercise.add(added_exercise);
+                insertItem(exercise_items, added_exercise);
+                exercise_items++;
             }
         });
 
@@ -126,6 +123,16 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void insertItem(int position, Exercise added_exercise) {
+        exercise.add(position, added_exercise);
+        mAdapter.notifyItemInserted(position);
+    }
+
+    public void removeItem(int position) {
+        exercise.remove(position);
+        mAdapter.notifyItemRemoved(position);
     }
 
     @Override
