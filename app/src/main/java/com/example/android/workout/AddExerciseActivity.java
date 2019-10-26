@@ -24,7 +24,6 @@ public class AddExerciseActivity extends AppCompatActivity {
     float WEIGHTTEXT = 0;
     int REPSTEXT = 0;
     Exercise added_exercise;
-    Bundle exercise_info = new Bundle();
     int exercise_items = 0;
 
     @Override
@@ -44,7 +43,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         });
 
         // Set up buttons and edit texts
-        ImageButton minusWeight = findViewById(R.id.minus_weight);
+        final ImageButton minusWeight = findViewById(R.id.minus_weight);
         ImageButton addWeight = findViewById(R.id.add_weight);
         final EditText weightEditText = findViewById(R.id.weight_edit_text);
         ImageButton minusReps = findViewById(R.id.minus_reps);
@@ -65,6 +64,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(WEIGHTTEXT >= 5) {
+                    WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
                     WEIGHTTEXT -= 5;
                     weightEditText.setText(String.valueOf(WEIGHTTEXT));
                 }
@@ -74,6 +74,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         addWeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
                 WEIGHTTEXT += 5;
                 weightEditText.setText(String.valueOf(WEIGHTTEXT));
             }
@@ -83,6 +84,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(REPSTEXT >= 1) {
+                    REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
                     REPSTEXT -= 1;
                     repsEditText.setText(String.valueOf(REPSTEXT));
                 }
@@ -92,6 +94,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         addReps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
                 REPSTEXT += 1;
                 repsEditText.setText(String.valueOf(REPSTEXT));
             }
@@ -102,7 +105,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mAdapter = new WorkoutRecyclerViewAdapter(exercise);
-        mRecyclerView.setHasFixedSize(true);
+
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
@@ -119,10 +122,11 @@ public class AddExerciseActivity extends AppCompatActivity {
         clear_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                exercise.remove(added_exercise);
+                exercise.clear();
+                mAdapter.notifyItemRangeRemoved(0, exercise_items);
+                exercise_items = 0;
             }
         });
-
     }
 
     public void insertItem(int position, Exercise added_exercise) {
