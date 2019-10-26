@@ -30,7 +30,7 @@ public class Exercise implements Parcelable{
         mMuscleGroup = in.readString();
         mType = in.readString();
         mEquipment = in.readString();
-        mWeight = in.readInt();
+        mWeight = in.readFloat();
         mReps = in.readInt();
     }
 

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/workout_set"
-    android:background="@color/lightGray"
-    android:elevation="16dp"
-    android:padding="16dp">
-    <TextView
-        android:id="@+id/exercise_name"
-        android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="exercise_name"
-        android:layout_weight="1"/>
-    <TextView
-        android:id="@+id/exercise_weight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="80.0 lbs"
-        android:layout_weight="1"/>
-    <TextView
-        android:id="@+id/exercise_reps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="9 reps"
-        android:layout_weight="1" />
-</LinearLayout>
+        android:id="@+id/workout_set"
+        android:background="@color/lightGray"
+        android:padding="16dp"
+        >
+        <TextView
+            android:id="@+id/exercise_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/exercise_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="80.0 lbs"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/exercise_reps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9 reps"
+            android:layout_weight="1" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

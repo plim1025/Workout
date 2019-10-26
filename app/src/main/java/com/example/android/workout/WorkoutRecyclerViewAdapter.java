@@ -23,15 +23,13 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
     }
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView1;
-        public TextView mTextView2;
-        public TextView mTextView3;
+        public TextView weightTextView;
+        public TextView repTextView;
 
         public RecyclerViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
-            mTextView1 = itemView.findViewById(R.id.exercise_name);
-            mTextView2 = itemView.findViewById(R.id.exercise_weight);
-            mTextView3 = itemView.findViewById(R.id.exercise_reps);
+            weightTextView = itemView.findViewById(R.id.exercise_weight);
+            repTextView = itemView.findViewById(R.id.exercise_reps);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,9 +60,8 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
         Exercise currentItem = mExercises.get(position);
-        holder.mTextView1.setText(currentItem.getName());
-        holder.mTextView2.setText(String.valueOf(currentItem.getWeight()));
-        holder.mTextView3.setText(currentItem.getReps());
+        holder.weightTextView.setText(String.valueOf(currentItem.getWeight()) + " lbs");
+        holder.repTextView.setText(String.valueOf(currentItem.getReps()) + " reps");
     }
 
     @Override
