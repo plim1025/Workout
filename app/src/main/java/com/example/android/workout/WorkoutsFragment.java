@@ -1,37 +1,53 @@
 package com.example.android.workout;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.DatePicker;
 import android.widget.ImageButton;
-import android.widget.NumberPicker;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
+import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Timer;
 
 public class WorkoutsFragment extends Fragment {
     private Calendar CALENDAR;
     private String DATE;
     private TextView DATEVIEW;
+    private RecyclerView mRecyclerView;
+    private WorkoutRecyclerViewAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private ArrayList<Exercise> exercise;
+    private View view;
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        // Receive workout arraylist from addExerciseActivity
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            Toast toast = Toast.makeText(getContext(),"Hello Javatpoint",Toast.LENGTH_SHORT);
+            toast.show();
+            exercise = bundle.getParcelableArrayList("exercise");
+            buildRecyclerView();
+        }
+        super.onActivityCreated(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.workout_tab, container, false);
+        view = inflater.inflate(R.layout.workout, container, false);
 
         // Set Date
         DATEVIEW = view.findViewById(R.id.date);
@@ -118,6 +134,15 @@ public class WorkoutsFragment extends Fragment {
         CALENDAR.add(Calendar.DATE, i);
         DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
+    }
+
+    private void buildRecyclerView() {
+        mRecyclerView = view.findViewById(R.id.workout_recycler_view);
+        mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override

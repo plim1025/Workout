@@ -17,6 +17,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
@@ -43,15 +46,31 @@ public class MainActivity extends AppCompatActivity {
         // Creates bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
-        menuItem.setChecked(true);
+        if(getIntent().getParcelableArrayListExtra("exercise") != null){
+            MenuItem menuItem = menu.getItem(1);
+            menuItem.setChecked(true);
+            Fragment fragment = new ExercisesFragment();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frame, fragment, "0");
+            fragmentTransaction.addToBackStack("Add main");
+            fragmentTransaction.commit();
+        }
+        else{
+            MenuItem menuItem = menu.getItem(0);
+            menuItem.setChecked(true);
+        }
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.nav_workout:
+                        // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
+                        ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelableArrayList("exercise", exercise);
                         fragment = new WorkoutsFragment();
+                        fragment.setArguments(bundle);
                         break;
                     case R.id.nav_exercises:
                         fragment = new ExercisesFragment();

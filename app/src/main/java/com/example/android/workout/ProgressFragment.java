@@ -1,17 +1,13 @@
 package com.example.android.workout;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
 
@@ -27,7 +23,7 @@ public class ProgressFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.progress_tab, container, false);
+        View view = inflater.inflate(R.layout.progress, container, false);
 
         // Add pie chart slices
         PieChartView pieChartView = view.findViewById(R.id.pie_chart);

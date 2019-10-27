@@ -3,13 +3,18 @@ package com.example.android.workout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +35,10 @@ public class AddExerciseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_exercise);
+
+        // Hide keyboard when open activity
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
@@ -59,6 +68,12 @@ public class AddExerciseActivity extends AppCompatActivity {
         // Initialize weight/reps to 0
         weightEditText.setText(String.valueOf(WEIGHTTEXT));
         repsEditText.setText(String.valueOf(REPSTEXT));
+
+        buildRecyclerView();
+
+        // Set checkmark bottom right of keyboards when click on editTexts
+        weightEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        repsEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
         minusWeight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,20 +115,12 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-
-        // Build Recycler View
-        mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
-        mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
-
-
         addSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT);
+                WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
+                REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
+                added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
                 insertItem(exercise_items, added_exercise);
                 exercise_items++;
             }
@@ -127,6 +134,8 @@ public class AddExerciseActivity extends AppCompatActivity {
                 exercise_items = 0;
             }
         });
+
+
     }
 
     public void insertItem(int position, Exercise added_exercise) {
@@ -139,9 +148,23 @@ public class AddExerciseActivity extends AppCompatActivity {
         mAdapter.notifyItemRemoved(position);
     }
 
+    public void buildRecyclerView() {
+        mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
+        mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
         // send ArrayList of exercises to WorkoutsFragment
+        Intent i = new Intent(this, MainActivity.class);
+        i.putParcelableArrayListExtra("exercise", exercise);
+        startActivity(i);
+        // clear exercise ArrayList
+
+        super.onPause();
     }
 }

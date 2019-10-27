@@ -25,11 +25,13 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
         public TextView weightTextView;
         public TextView repTextView;
+        public TextView setTextView;
 
         public RecyclerViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             weightTextView = itemView.findViewById(R.id.exercise_weight);
             repTextView = itemView.findViewById(R.id.exercise_reps);
+            setTextView = itemView.findViewById(R.id.exercise_set);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,6 +64,7 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
         Exercise currentItem = mExercises.get(position);
         holder.weightTextView.setText(String.valueOf(currentItem.getWeight()) + " lbs");
         holder.repTextView.setText(String.valueOf(currentItem.getReps()) + " reps");
+        holder.setTextView.setText("Set " + String.valueOf(currentItem.getSet()));
     }
 
     @Override
