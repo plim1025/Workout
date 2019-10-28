@@ -8,13 +8,10 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +21,7 @@ public class AddExerciseActivity extends AppCompatActivity {
 
     private ArrayList<Exercise> exercise = new ArrayList<Exercise>();
     private RecyclerView mRecyclerView;
-    private WorkoutRecyclerViewAdapter mAdapter;
+    private AddExerciseRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     float WEIGHTTEXT = 0;
     int REPSTEXT = 0;
@@ -32,13 +29,18 @@ public class AddExerciseActivity extends AppCompatActivity {
     int exercise_items = 0;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_exercise);
 
         // Hide keyboard when open activity
-        getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
@@ -48,8 +50,11 @@ public class AddExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
+
+
 
         // Set up buttons and edit texts
         final ImageButton minusWeight = findViewById(R.id.minus_weight);
@@ -151,7 +156,7 @@ public class AddExerciseActivity extends AppCompatActivity {
     public void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
+        mAdapter = new AddExerciseRecyclerViewAdapter(exercise);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

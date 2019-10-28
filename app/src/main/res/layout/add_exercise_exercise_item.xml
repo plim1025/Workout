@@ -10,22 +10,22 @@
         android:padding="16dp"
         >
         <TextView
-            android:id="@+id/workout_exercise_name"
+            android:id="@+id/add_exercise_exercise_set"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1"
             android:layout_weight="1"/>
         <TextView
-            android:id="@+id/workout_exercise_weight"
+            android:id="@+id/add_exercise_exercise_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="80.0 lbs"
-            android:layout_weight="2"/>
+            android:layout_weight="1"/>
         <TextView
-            android:id="@+id/workout_exercise_reps"
+            android:id="@+id/add_exercise_exercise_reps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="9 reps"
-            android:layout_weight="2" />
+            android:layout_weight="1" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

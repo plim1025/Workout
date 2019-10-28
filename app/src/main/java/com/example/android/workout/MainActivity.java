@@ -17,7 +17,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -68,9 +67,11 @@ public class MainActivity extends AppCompatActivity {
                         // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
                         ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
                         Bundle bundle = new Bundle();
-                        bundle.putParcelableArrayList("exercise", exercise);
                         fragment = new WorkoutsFragment();
-                        fragment.setArguments(bundle);
+                        if(exercise != null) {
+                            bundle.putParcelableArrayList("exercise", exercise);
+                            fragment.setArguments(bundle);
+                        }
                         break;
                     case R.id.nav_exercises:
                         fragment = new ExercisesFragment();

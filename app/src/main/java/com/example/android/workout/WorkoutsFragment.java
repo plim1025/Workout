@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -25,7 +24,7 @@ public class WorkoutsFragment extends Fragment {
     private String DATE;
     private TextView DATEVIEW;
     private RecyclerView mRecyclerView;
-    private WorkoutRecyclerViewAdapter mAdapter;
+    private WorkoutsRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Exercise> exercise;
     private View view;
@@ -35,8 +34,6 @@ public class WorkoutsFragment extends Fragment {
         // Receive workout arraylist from addExerciseActivity
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            Toast toast = Toast.makeText(getContext(),"Hello Javatpoint",Toast.LENGTH_SHORT);
-            toast.show();
             exercise = bundle.getParcelableArrayList("exercise");
             buildRecyclerView();
         }
@@ -139,7 +136,7 @@ public class WorkoutsFragment extends Fragment {
     private void buildRecyclerView() {
         mRecyclerView = view.findViewById(R.id.workout_recycler_view);
         mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        mAdapter = new WorkoutRecyclerViewAdapter(exercise);
+        mAdapter = new WorkoutsRecyclerViewAdapter(exercise);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecyclerViewAdapter.RecyclerViewHolder> {
+public class AddExerciseRecyclerViewAdapter extends RecyclerView.Adapter<AddExerciseRecyclerViewAdapter.RecyclerViewHolder> {
     private ArrayList<Exercise> mExercises;
     private OnItemClickListener mListener;
 
@@ -29,9 +29,9 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
 
         public RecyclerViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
-            weightTextView = itemView.findViewById(R.id.exercise_weight);
-            repTextView = itemView.findViewById(R.id.exercise_reps);
-            setTextView = itemView.findViewById(R.id.exercise_set);
+            weightTextView = itemView.findViewById(R.id.add_exercise_exercise_weight);
+            repTextView = itemView.findViewById(R.id.add_exercise_exercise_reps);
+            setTextView = itemView.findViewById(R.id.add_exercise_exercise_set);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -47,14 +47,14 @@ public class WorkoutRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutRecy
         }
     }
 
-    public WorkoutRecyclerViewAdapter(ArrayList<Exercise> exercises) {
+    public AddExerciseRecyclerViewAdapter(ArrayList<Exercise> exercises) {
         mExercises = exercises;
     }
 
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_exercise_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_exercise_exercise_item, parent, false);
         RecyclerViewHolder holder = new RecyclerViewHolder(v, mListener);
         return holder;
     }

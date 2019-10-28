@@ -27,14 +27,17 @@ import java.util.ArrayList;
 
 public class ExercisesFragment extends Fragment {
 
+    View view;
+    private int sortIndicator;
+    private JSONObject JSON;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.exercises, container, false);
+        view = inflater.inflate(R.layout.exercises, container, false);
 
-        getActivity().getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         // Create FAB
         FloatingActionButton fab1 = view.findViewById(R.id.exercises_fab_1);
@@ -50,10 +53,13 @@ public class ExercisesFragment extends Fragment {
         final PopupMenu dropDownMenu = new PopupMenu(getContext(), imageButton);
         final Menu menu = dropDownMenu.getMenu();
 
+        menu.add("Basic List");
+        menu.add("Complex List");
         menu.add("By Category");
         menu.add("By Most Recent");
         menu.add("Favorites");
 
+        // Show menu items if click on imageButton
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,28 +67,50 @@ public class ExercisesFragment extends Fragment {
             }
         });
 
+        //
         dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case 0:
-                        // item ID 0 was clicked
-                        return true;
+                        sortIndicator = 0; break;
                     case 1:
-                        // item ID 1 was clicked
-                        return true;
+                        sortIndicator = 1; break;
                     case 2:
-                        // item ID 2 was clicked
-                        return true;
+                        sortIndicator = 2; break;
+                    case 3:
+                        sortIndicator = 3; break;
+                    case 4:
+                        sortIndicator = 4; break;
                 }
+                buildRecyclerView();
                 return false;
             }
         });
 
-        // ListView adapter for exercises
+
+        // Inflate the layout for this fragment
+        return view;
+    }
+
+    @Override
+    public String toString() {
+        return ExercisesFragment.class.getSimpleName();
+    }
+
+    private void buildRecyclerView() {
         try {
-            JSONObject JSON = new JSONObject(readJSONFromAsset());
-            JSONObject exercises = JSON.getJSONObject("exercise_info");
+            switch (sortIndicator) {
+                case 0:
+                    JSON = new JSONObject(readBasicJSONFromAsset()); break;
+                case 1:
+                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+                case 2:
+                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+                case 3:
+                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+            }
+            JSONObject exercises = JSON.getJSONObject("exercise_info_complex");
             final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
             JSONArray exercise_names = exercises.names();
             for(int i = 0; i < exercise_names.length(); i++){
@@ -109,20 +137,28 @@ public class ExercisesFragment extends Fragment {
         } catch (JSONException e){
             e.printStackTrace();
         }
-
-        // Inflate the layout for this fragment
-        return view;
     }
 
-    @Override
-    public String toString() {
-        return ExercisesFragment.class.getSimpleName();
-    }
-
-    public String readJSONFromAsset() {
+    private String readComplexJSONFromAsset() {
         String json = null;
         try {
-            InputStream is = getActivity().getAssets().open("exercise_info");
+            InputStream is = getActivity().getAssets().open("exercise_info_complex");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    private String readBasicJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getActivity().getAssets().open("exercise_info_basic");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

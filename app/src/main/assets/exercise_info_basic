@@ -1,0 +1,139 @@
+{
+  "exercise_info": {
+    "Barbell Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Dumbbell Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Weighted Dips": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Weight Plate "
+    },
+    "Barbell Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Pull Ups": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "T Bar Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Lat Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Cable Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Ab Wheel Rollout": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Ab Wheel "
+    },
+    "Barbell Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Dumbbell Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Barbell Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Front Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Leg Press": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Dumbbell Lunges": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Barbell Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Dumbbell Hammer Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Barbell Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Skullcrusher": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Cable Rope Face Pull": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    }
+  }
+}
