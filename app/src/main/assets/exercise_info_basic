@@ -1,36 +1,221 @@
 {
   "exercise_info": {
+    "1 Leg Pushup": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "90 90 Hamstring": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Ab Crunch Machine": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Ab Draw Leg Slide": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Abdominal Pendulum": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Aerobics": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Air Bike": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "All Fours Squad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Alternate Heel Touchers": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Alternate Leg Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Alternate Leg Diagonal Bound": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Alternate Leg Reverse Hyper on Flat Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Alternate Reach and Catch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Alternating Arm Cobra": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Ankle Circles": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Ankle On The Knee": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Arm Circles": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Back Extension Machine": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Back Extension on Exercise Ball": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Back Relaxation": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Band Back Fly": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Back Flyes": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bands, Machine - Strength "
+    },
+    "Band Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bands, Bench "
+    },
+    "Band Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Calf Raises": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Cross Over": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Good Morning": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Hip Lift": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Powerlifting ",
+      "Equipment": "Bands, Weight Plate "
+    },
+    "Band Lateral Raises": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Speed Alternating Biceps Curl ": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Upright Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bands "
+    },
+    "Band Weighted Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Bands "
+    },
+    "Bands Seated Shoulder Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bands, Exercise Ball "
+    },
+    "Barbell 1/2 Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell 1/4 Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Ab Rollout": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Ab Rollout on Knees": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Behind The Back Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Behind The Head Military Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
     "Barbell Bench Press": {
       "Main Muscle Group": "Chest ",
       "Type": "Strength ",
       "Equipment": "Barbell, Machine - Strength "
     },
-    "Barbell Incline Bench Press": {
-      "Main Muscle Group": "Chest ",
+    "Barbell Bent Arm Pullover": {
+      "Main Muscle Group": "Back ",
       "Type": "Strength ",
-      "Equipment": "Barbell, Machine - Strength "
+      "Equipment": "Barbell, Bench "
     },
-    "Dumbbell Bench Press": {
-      "Main Muscle Group": "Chest ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell, Bench "
-    },
-    "Dumbbell Incline Bench Press": {
-      "Main Muscle Group": "Chest ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell, Bench "
-    },
-    "Weighted Dips": {
-      "Main Muscle Group": "Triceps ",
-      "Type": "Strength ",
-      "Equipment": "Machine - Strength, Weight Plate "
-    },
-    "Barbell Decline Bench Press": {
-      "Main Muscle Group": "Chest ",
-      "Type": "Strength ",
-      "Equipment": "Barbell, Machine - Strength "
-    },
-    "Barbell Deadlift": {
+    "Barbell Bent One Arm Row": {
       "Main Muscle Group": "Back ",
       "Type": "Strength ",
       "Equipment": "Barbell "
@@ -40,100 +225,6215 @@
       "Type": "Strength ",
       "Equipment": "Barbell "
     },
-    "Pull Ups": {
+    "Barbell Bent Over Two Arm Row": {
       "Main Muscle Group": "Back ",
       "Type": "Strength ",
-      "Equipment": "Pullup Bar "
+      "Equipment": "Barbell "
     },
-    "T Bar Row": {
-      "Main Muscle Group": "Back ",
+    "Barbell Bicep Curl with Deadlift": {
+      "Main Muscle Group": "Biceps ",
       "Type": "Strength ",
-      "Equipment": "Barbell, Machine - Strength "
+      "Equipment": "Barbell "
     },
-    "Lat Pulldown": {
-      "Main Muscle Group": "Back ",
+    "Barbell Bicep Drag Curl": {
+      "Main Muscle Group": "Biceps ",
       "Type": "Strength ",
-      "Equipment": "Machine - Strength "
+      "Equipment": "Barbell, EZ Curl Bar "
     },
-    "Seated Cable Row": {
-      "Main Muscle Group": "Shoulders ",
+    "Barbell Body Row": {
+      "Main Muscle Group": "Biceps ",
       "Type": "Strength ",
-      "Equipment": "Machine - Strength, Bench "
+      "Equipment": "Machine - Strength, Barbell "
     },
-    "Cable Crunch": {
-      "Main Muscle Group": "Abs ",
-      "Type": "Strength ",
-      "Equipment": "Machine - Strength "
-    },
-    "Ab Wheel Rollout": {
-      "Main Muscle Group": "Abs ",
-      "Type": "Strength ",
-      "Equipment": "Ab Wheel "
-    },
-    "Barbell Shoulder Press": {
+    "Barbell Bradford Rocky Press": {
       "Main Muscle Group": "Shoulders ",
       "Type": "Strength ",
       "Equipment": "Barbell, Bench "
     },
-    "Dumbbell Shoulder Press": {
-      "Main Muscle Group": "Shoulders ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell, Bench "
-    },
-    "Dumbbell Lateral Raise": {
-      "Main Muscle Group": "Shoulders ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell "
-    },
-    "Dumbbell Front Raise": {
-      "Main Muscle Group": "Shoulders ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell "
-    },
-    "Barbell Squat": {
+    "Barbell Clean": {
       "Main Muscle Group": "Upper Legs ",
-      "Type": "Strength ",
+      "Type": "Olympic Weight Lifting ",
       "Equipment": "Barbell "
     },
-    "Barbell Front Squat": {
-      "Main Muscle Group": "Upper Legs ",
-      "Type": "Strength ",
+    "Barbell Clean and Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
       "Equipment": "Barbell "
     },
-    "Leg Press": {
+    "Barbell Clean Deadlift": {
       "Main Muscle Group": "Upper Legs ",
-      "Type": "Strength ",
-      "Equipment": "Machine - Strength "
-    },
-    "Dumbbell Lunges": {
-      "Main Muscle Group": "Upper Legs ",
-      "Type": "Strength ",
-      "Equipment": "Dumbbell "
-    },
-    "Barbell Lunge": {
-      "Main Muscle Group": "Upper Legs ",
-      "Type": "Strength ",
+      "Type": "Olympic Weight Lifting ",
       "Equipment": "Barbell "
     },
-    "Dumbbell Hammer Curls": {
+    "Barbell Clean From Blocks": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell, Others "
+    },
+    "Barbell Clean Pull": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Close Grip Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Close Grip Preacher Curl": {
       "Main Muscle Group": "Biceps ",
       "Type": "Strength ",
-      "Equipment": "Dumbbell "
+      "Equipment": "EZ Curl Bar, Machine - Strength "
+    },
+    "Barbell Close Grip Press Behind the Neck": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Close Grip Seated Concentration Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Close Grip Standing Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Concentration Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
     },
     "Barbell Curl": {
       "Main Muscle Group": "Biceps ",
       "Type": "Strength ",
       "Equipment": "Barbell "
     },
-    "Barbell Skullcrusher": {
+    "Barbell Curls Lying Against An Incline": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Decline Bench Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Decline Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Deep Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Drag Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell EZ Bar Reverse Grip Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar "
+    },
+    "Barbell Floor Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Frankenstein Squat": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Front Raise and Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Front Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Full Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Glute Bridge": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Good Morning": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Good Morning Off Pins": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Hack Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Hang Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Hang Clean Below the Knees": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Hang Snatch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Hang Snatch Below the Knees": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Heaving Snatch Balance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell High Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell High Inverted Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Hip Thrust": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Incline Bench Pull": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Barbell "
+    },
+    "Barbell Incline Bench Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Incline Close Grip Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Incline Shoulder Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Jefferson Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Jerk Balance": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Jerk Dip Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell JM Press": {
       "Main Muscle Group": "Triceps ",
       "Type": "Strength ",
       "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lateral Lunge": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Lying Back of the Head Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Cambered Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Close Grip Triceps Press To Chin": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying High Bench Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Rear Delt Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Reverse Extension ": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Triceps Extension ": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Lying Triceps Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Military Press Behind Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Muscle Snatch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Neck Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Olympic Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Arm Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Arm Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Arm Floor Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Arm Side Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Arm Snatch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell One Leg Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Overhead Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Palms Down Wrist Curl Over A Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Palms Up Wrist Curl Over A Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Power Clean from Blocks": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell, Others "
+    },
+    "Barbell Power Jerk": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Power Snatch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Power Snatch From Blocks": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell, Others "
+    },
+    "Barbell Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Exercise Ball "
+    },
+    "Barbell Press Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Pullover and Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Push Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Push Press Behind The Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Rack Delivery": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Rack Pulls": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Rear Delt Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Rear Delt Row To Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Reverse Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Reverse Grip Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Reverse Grip Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Reverse Grip Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Reverse Grip Incline Bench Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Reverse Grip Skullcrusher": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Reverse Grip Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Reverse Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Machine - Strength "
+    },
+    "Barbell Reverse Preacher Curls": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Reverse Triceps Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Reverse Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Rocking Standing Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Romanian Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Romanian Deadlift From Deficit": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell, Weight Plate "
+    },
+    "Barbell Round The World Shoulder Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Seated Alternating Front and Back Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Good Mornings": {
+      "Main Muscle Group": "Back ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated High Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Overhead Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Palms Down Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Palms Up Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Reverse Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Seated Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Shrugs Behind The Back": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Side Split Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Single Leg Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Snatch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Snatch Balance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Snatch Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Snatch from Blocks": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell, Others "
+    },
+    "Barbell Snatch Pull": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Snatch Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Speed Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Spider Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, EZ Curl Bar "
+    },
+    "Barbell Split Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Split Jerk": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Split Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Squat Jerk": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Squat To A Bench": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Squat to Shoulder Press": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Squat to Upright Row": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Squat with Narrow Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Alternating Front and Back Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Weight Plate "
+    },
+    "Barbell Standing Front Raise Over Head": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Military Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Overhead Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Press Behind The Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Standing Wide Grip Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Step Ups": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Stiff Leg Deadlift on Bench": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Stiff-Legged Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Sumo Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Up Right Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Wide Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Wide Grip Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Wide Grip Decline Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "Barbell Wide Reverse Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Barbell Wide Stance Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Wide Stance Stiff Leg Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Barbell Zercher Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "Behind Head Chest Stretch": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Bench  Twisting Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Bench Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Bench Press Machine": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Bench Pushups": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Bent Knee Hip Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bent Knee Hundreds": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bent Knee Side Angle Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Bicep Curl Machine": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Boat Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Bodyweight Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bodyweight Side Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bodyweight Standing Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bodyweight Step Up": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Bodyweight Walking Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bodyweight Wall Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Bow Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Box Jump Down with 1 Leg Stabilization": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Box Jump Multiple Response": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Boxing": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Bridge": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Butt-Ups": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Butterfly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "C-Curve": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Cable Back Incline Pushdown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Bent Over Low Pulley Lateral": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Bent Over Low Pulley Side Lateral": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Close Grip Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Concentration Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Cross Over": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Decline Chest Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Decline One Arm Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Decline Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Decline Pullover": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Drag Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Elevated Rows": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Weight Plate "
+    },
+    "Cable External Rotation": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Flat Bench Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Exercise Ball "
+    },
+    "Cable Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Full Range of Motion Straight Crossover": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable High Cross Over": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable High Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable High Pulley Overhead Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Incline Bench Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Incline Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Incline Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable Incline Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Incline Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable Incline Pullover": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Incline Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Incline Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Inner Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Internal Rotation": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Judo Flip": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Kneeling Concentration Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Kneeling Crunch with Alternating Oblique Twists": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Kneeling Pulldown": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Kneeling Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Low Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Lower Chest Raise": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Lying Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Lying Close Grip Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Lying Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Lying Pullover": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Lying Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Lying Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Lying Upright Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Mid Chest Crossovers": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Decline Chest Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable One Arm Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable One Arm High Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm High-Pulley Side Bends": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Incline Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable One Arm Incline Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable One Arm Incline Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Exercise Ball "
+    },
+    "Cable One Arm Lat Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable One Arm Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable One Arm Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable One Arm Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Reverse Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable One Arm Seated Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable One Arm Standing Overhead Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Arm Tricep Pushdown": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Leg Kickback": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable One Leg Lying Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Overhead Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Overhead Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable Pallof Press with Rotation": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Palm Rotational Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Machine - Strength "
+    },
+    "Cable Pull Through": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Pulldown Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Rear Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Reverse Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Reverse Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Grip Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Grip Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Grip Incline Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Reverse Grip Low Tricep Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Grip Triceps Pushdown": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse One Arm Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse One Arm Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Reverse Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Reverse Wood Chops": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Crossover Seated Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Elevated Seated Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Weight Plate "
+    },
+    "Cable Rope Extension Incline Bench Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Rope Extension Lying Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
     },
     "Cable Rope Face Pull": {
       "Main Muscle Group": "Shoulders ",
       "Type": "Strength ",
       "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Hammer Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Hammer Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Rope High Pulley Overhead Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Incline Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Rope Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Lying on Floor Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope One Arm Hammer Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Rope Overhead Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Pull Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Pullup Bar "
+    },
+    "Cable Rope Rear Delt Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rope Row To Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Rope Seated Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Rope Triceps Pushdown": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Rotation on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Exercise Ball "
+    },
+    "Cable Row to Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Russian Twists": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Exercise Ball "
+    },
+    "Cable Seated Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Seated Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Seated One Arm Concentration Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Seated Overhead Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Seated Reverse Grip Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Seated Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Seated Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Seated Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Side Bends": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Squatting Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Behind the Back Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Deltoid Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Leg Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Lift": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Oblique Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing One Arm Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing One Arm Low Pulley Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing One Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Reverse Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Reverse Grip One Arm Overhead Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Standing Up Straight Crossovers": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Straight Arm Push Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Tricep Incline Pushdown": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Tricep Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Triceps Pushdown": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Twist on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Exercise Ball "
+    },
+    "Cable Twisting Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Two Arm Curl on Incline Bench": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Cable Two Arm Tricep Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Underhand Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Cable Up Right Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Upper Chest Crossovers": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Upper Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable V Bar Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable V Bar Standing Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Wood Chops": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Cable Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Calf Machine Shoulder Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Calf Press On Leg Press": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Calf Press on Leg Press Machine": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Calf Raise On A Dumbbell": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Calf Stretch With Hands Against Wall": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Calf Stretch with Rope": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Camel Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Cat Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Chair Leg Extended Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Chair Lower Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Chair Upper Body Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Chest and Front of Shoulder Stretch": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Barbell "
+    },
+    "Child's Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Child's Pose on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Clap Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Climbers Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Close Grip Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Close Grip Front Lat Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Close Grip Reverse Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Close Grip Vertical Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Close Hand Pushup": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Close Triceps Pushup": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Cobra": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Crane Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Crescent Moon Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Cross Body Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Cross Legged Erector Spinae": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Cross Legged Lying Side Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Cross Legged Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Cross-Legged Forward Fold": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Crossover Reverse Lunge": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Crunch with Hands Overhead": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Crunches": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Crunches with Legs on a Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Crunches with Legs on an Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Dancer's Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Decline Ab Reach": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Alternate Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Alternate Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Cable Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Decline Bench Cable Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Decline Bench Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Leg Raise with Hip Thrust": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Twisting Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Bench Weighted Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Decline Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Decline Oblique Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Decline Reverse Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Deep Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Depth Jump Leap": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Dip Machine": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Donkey Calf Raises": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Dorsiflexion": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Double Leg Butt Kick": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Double Leg Hundreds": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Double Leg Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Downward Facing Balance": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Downward Facing Dog": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Downward Facing Dog-Single Leg": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Downward Facing Puppy Dog": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Dragon Flag": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Drop Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Dumbbell  Seated Front Hammer Raises": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Alternate Bent Over Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Hammer Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Dumbbell "
+    },
+    "Dumbbell Alternate Incline Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Alternate Incline Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Lying Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Lying Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate One Arm Standing Palms In Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Dumbbell "
+    },
+    "Dumbbell Alternate Rear Delt Fly on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Alternate Reverse Fly on Incline Bench": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Bent Over Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Palms In Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Seated Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Alternate Standing Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternate Standing Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternating Arnold Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Dumbbell "
+    },
+    "Dumbbell Alternating Bicep Curl with Leg Raised on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Alternating Cobra Prone Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Alternating Deltoid Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Alternating Lateral Raise on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Alternating Seated Bicep Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Around the Worlds": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Bench One Leg Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Bent Arm Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Bent Over Delt Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Bicep Curl Lunge with Bowling Motion": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Bicep Curl on Exercise Ball with Leg Raised": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Dumbbell "
+    },
+    "Dumbbell Bicep Curl With Stork Stance": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Biceps Curl Reverse": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Biceps Curl Squat": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Biceps Curl V Sit on Dome": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Others "
+    },
+    "Dumbbell Close Grip Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Cobra Prone on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Concentration Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Cross Body Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Cuban Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Decline Bench Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Decline Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Decline One Arm Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Decline One Arm Hammer Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Decline Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Decline Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Decline Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Double Incline Shoulder Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell External Rotation": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Flexor Incline Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Forward Lunge Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Forward Lunge with Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Front Incline Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Front Two Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Hammer Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Hammer Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Hammer Grip Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Hamstring Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell High Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Incline Bench Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Incline Bench Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline Bench Two Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Incline Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Incline Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline Fly With A Twist": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline Hammer Curls": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Incline Hammer Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline One Arm Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline One Arm Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline One Arm Hammer Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline One Arm Hammer Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline One Arm Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline One Arm Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Incline Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Incline Two Arm Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Iron Cross": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Jumping Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Kickbacks on Exercise Ball": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Kneeling Bicep Curl Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Kneeling Lateral Raise on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Lateral Lunge with Bicep Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Lateral Raises on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Lunges": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Lying Across Face Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying One Arm Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Pronation": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Pullover on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Lying Rear Delt Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Rear Delt Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Rear Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Lying Single Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Lying Supination": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Supine Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Supine Two Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Triceps Extension ": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Lying Wide Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Middle Back Shrug": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Neutral Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Arnold Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Bench Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Chest Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Decline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm French Press on Exercise Ball": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Front Raise on Incline Bench": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Hammer Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Dumbbell "
+    },
+    "Dumbbell One Arm Hammer Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Hammer Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Incline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Incline Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Lateral Raise on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Lying Rear Delt Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Lying Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Neutral Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Machine - Strength "
+    },
+    "Dumbbell One Arm Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Prone Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Prone Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Pullover": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Pullover on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Rear Delt Fly on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Reverse Fly on Incline Bench": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Reverse Grip Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Reverse Preacher Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Dumbbell "
+    },
+    "Dumbbell One Arm Reverse Spider Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Reverse Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Seated Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Seated Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Seated Bicep Curl on Exercise Ball ": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Seated Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Seated Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Seated Neutral Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Seated Reverse Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Seated Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Seated Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Shoulder Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Arm Side Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Standing Palms In Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Supinated Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Arm Up Right Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell One Arm Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell One Arm Zottman Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell One Leg Fly on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell One Leg Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Palm Rotational Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Palms Down Wrist Curl Over A Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Palms In Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Palms In Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Palms In Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Palms Up Wrist Curl Over A Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Pile Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Power Partials": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Preacher Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Machine - Strength "
+    },
+    "Dumbbell Preacher Curl over Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Preacher Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Machine - Strength "
+    },
+    "Dumbbell Press on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Prone Alternating Rear Delt Row on Exercise Ball": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Prone Incline Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Prone Incline Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Prone One Arm Rear Delt Row on Exercise Ball": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Prone Rear Delt Row on Exercise Ball": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Prone Shoulder Raise on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Pullover Hip Extension on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Pullover on Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Rear Delt Fly on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Rear Delt Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Rear Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Reverse Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Reverse Concentration Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Reverse Flyes": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Reverse Flyes With External Rotation": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Reverse Grip Incline Bench One Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Reverse Grip Incline Bench Two Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Reverse Preacher Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Dumbbell "
+    },
+    "Dumbbell Reverse Spider Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Reverse Wrist Curl Over Bench": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Alternate Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Alternate Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Alternate Hammer Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated Alternate Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Alternating Shoulder Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated Arnold Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Bent Over Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Bent Over Two Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Concentration Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Dublin Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Hammer Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Inner Biceps Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Neutral Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated One Arm Bent Over Reverse Fly": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated One Arm Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated One Arm Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated One Arm One Leg Bicep Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Palms Down One Arm Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Palms In Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Palms Up One Arm Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Palms Up Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Palms-Down Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Reverse Grip One Arm Overhead Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Reverse Grip Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Reverse Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Shoulder Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Seated Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Seated Side Lateral Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Seated Triceps Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell See Saw Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Shoulder Press on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Shoulder Raise on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Shoulder Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Shrugs on Exercise Ball": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Single Arm Pronated Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Single Arm Supinated Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Sit Up On Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Dumbbell "
+    },
+    "Dumbbell Spider Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Split Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Squat To A Bench": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Standing Alternate Front Raises": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Alternate Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Alternate Reverse Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Alternating Tricep Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Bent Over One Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Bent Over Two Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Weight Plate "
+    },
+    "Dumbbell Standing Dublin Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing One Arm Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing One Arm Reverse Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing One Arm Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing One Leg Cobra": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing One-Arm  Curl Over Incline Bench": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Standing Palms In One Arm Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Palms In Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Reverse Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Straight Arm Front Delt Raise Above Head": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Standing Triceps Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Step Up Single Leg Balance with Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Step Ups": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Stiff Leg Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Stiff Leg Deadlift on Bench": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Stiff-Legged Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Straight Arm Pullover": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Tate Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Tricep Kickback": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Bench "
+    },
+    "Dumbbell Tricep Kickback With Stork Stance": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Twisting Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Twisting Decline Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Dumbbell "
+    },
+    "Dumbbell Twisting Standing Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Two Arm Seated Hammer Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Dumbbell Two Arm Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Upright Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Walking Lunges": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Wall Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Wood Chops": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dumbbell Zottman Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Dynamic Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Dynamic Chest Stretch": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Eagle Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Elbow Circles": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Elbows Back Stretch": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Elliptical Training": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Exercise Ball Ab Curl": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Alternating Arm Ups": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Alternating One Arm Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Extension With Arms Extended": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Extension With Hands Behind Head": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Extension With Knees Off Ground": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Extension With Rotation": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Back Wall Circles": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Chest Stretch": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Cross Legged Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Cross Legged Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Extended Arms Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hand and Foot Exchange": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hip Flexor Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hip Roll": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hip Thrust Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hug": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Hundreds": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Incline Ab Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Jack Knife Push Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Knee Roll": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Lat Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Leg Lifts": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Lower Back Prone Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Lower Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Lying Side Lat Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Lying Side Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Narrow Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Oblique Curl": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball on the Wall Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Dumbbell "
+    },
+    "Exercise Ball One Leg Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball One Leg Prone Lower Body Rotation": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball One Legged Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball One Legged Diagonal Kick Hamstring Curl": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Pike Pushup ": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Plank With Side Kick": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Prone Leg Raise": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Pull In": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Pyramid": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Reverse Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Reverse Supine Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Reverse Trunk Curl": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Roll Down": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Roman Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Head Tilt": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball, Bench "
+    },
+    "Exercise Ball Seated Neck Extensor Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Neck Flexor Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Pelvic Circles": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Seated Triceps Stretch": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Side Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Side Crunch Against Wall": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Side Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Standing Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Straight Legged Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Supine Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell, Exercise Ball "
+    },
+    "Exercise Ball Traveling Lunge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Tricep Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball V Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Wall Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Exercise Ball Weighted Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Weight Plate "
+    },
+    "Exercise Ball Wood Chops": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Extended Arm Child Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "EZ Bar Close Grip Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar "
+    },
+    "EZ Bar Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar "
+    },
+    "EZ Bar Decline Close Grip Skull Crusher": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "EZ Bar Decline Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "EZ Bar French Press on Exercise Ball": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Barbell "
+    },
+    "EZ Bar Incline Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "EZ Bar Lying Close Grip Behind the Head Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "EZ Bar Reverse Grip Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar "
+    },
+    "EZ Bar Reverse Grip French Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell "
+    },
+    "EZ Bar Reverse Grip Preacher Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Machine - Strength "
+    },
+    "EZ Bar Seated Close Grip Concentration Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "EZ Bar Seated Reverse Grip French Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Bench "
+    },
+    "EZ Bar Standing French Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar "
+    },
+    "EZ Bar Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "EZ Curl Bar, Bench "
+    },
+    "Field Sports": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Fish Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Flat Bench Leg Pull In": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Flat Bench Lying Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Flutter Kick": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Freehand Jump Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Frog Sit Ups": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Front Leg Raises": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Front Step Up": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Full Range Of Motion Lat Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Gironda Sternum Chin Ups": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Glute Kickback ": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Gorilla Chin Up with Crunch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hack Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Hack One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Hack Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Hack Squat with Narrow Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Half Moon Stretch on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Hammer Grip Pull Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Handstand Pushups": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Hanging Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hanging Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hanging Pike": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hanging Rotated Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Hare Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Hero Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Hip Adduction": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Machine - Strength "
+    },
+    "Hip Flexor and Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Hip Thrusts": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Hug Knees to Chest": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Hundreds": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Hyperextensions - Back Extensions": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Machine - Strength "
+    },
+    "Hyperextensions With No Bench": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Incline Push Up Depth Jump": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Others "
+    },
+    "Indoor Cycling": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Inline Skating": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Inverted Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Iron Cross Stretch": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Iso Lateral Wide Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Isometric Chest Squeeze": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Jackknife Sit up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Jackknife Sit-Up On Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Janda Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Jump Rope": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Kettlebell Advanced Windmill": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Alternating Floor Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Alternating Hang Clean": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Alternating Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Alternating Renegade Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Alternating Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Arnold Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Bent Press": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Bottoms Up Clean From The Hang Position": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Dead Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Double Alternating Hang Clean": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Double Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Double Push Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Double Snatch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Double Windmill": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Extended Range One Arm Floor Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Figure Eight": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Front Squats": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Goblet Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Hang Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Clean And Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Floor Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Military Press To The Side": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Overhead Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Palm Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Para Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Push Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Snatch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Split Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Split Snatch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Arm Swing": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell One Legged Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Open Palm Clean": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Pass Between The Legs": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Pistol Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Plyo Pushups": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Seated Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Seesaw Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Sumo High Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Thruster": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Turkish Get Up Lunge": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Turkish Get Up Squat": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Two Arm Clean": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Two Arm Jerk": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Two Arm Military Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Two Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Kettlebell Windmill": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Knee Across The Body": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Knee Circles": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Knee Draw In": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Knee Hip Raise On Parallel Bars": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Knee Tuck Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Kneeling Forearm Stretch": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Kneeling Hip Flexor": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Kneeling Jump Squat": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Olympic Weight Lifting ",
+      "Equipment": "Barbell "
+    },
+    "Kneeling Lat Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Kneeling Leg Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Kneeling Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Kneeling Squat": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell "
+    },
+    "Leg Extension with One Leg": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Extensions": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Lift": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Leg Over Floor Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Kettlebell "
+    },
+    "Leg Press": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press Machine": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press Machine One Leg Press with Wide Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press Machine With Narrow Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press Machine With One Leg": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press Machine With Wide Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press with Narrow Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Press with Wide Stance": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leg Pull In": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Leg Slide": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Leg Slide with One Leg": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Leg-Up Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Leverage Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Decline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Incline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Machine High Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Machine Iso Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Leverage Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Locust Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Looking At Ceiling": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Lower Abdominal Hip Roll": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Lower Back Curl": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Lying Alternate Floor Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Lying Alternate Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Lying Cable Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Lying Cable Knee Raise on Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Lying Floor Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Lying Heel Touches": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Lying Hip Flexor": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Lying Leg Curls": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Lying Leg Raise with Hip Thrust on Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Lying Machine Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Lying to Side Plank": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Machine Assisted Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Assisted Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Assisted Hammer Grip Pull Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Assisted Pull Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Curl With Hammer Grip": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Curl With Reverse Grip": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Decline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Deltoid Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Fly": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Incline Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Inner Chest Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Reverse Flyes": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine T-Bar Reverse Grip Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Machine Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Medicine Ball Backward Throw": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Biceps Curl on Exercise Ball": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Others "
+    },
+    "Medicine Ball Catch and Overhead Throw": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Chest Pass": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Chest Push from 3 Point Stance": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Chest Push Multiple Response": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Chest Push Single Response": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Chest Push with Run Release": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Decline One Arm Overhead Throw": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Others "
+    },
+    "Medicine Ball Decline Two Arm Overhead Throw": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Others "
+    },
+    "Medicine Ball Full Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Overhead Slam": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Sit Up on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Others "
+    },
+    "Medicine Ball Supine Chest Throw": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Supine One Arm Overhead Throw": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Supine Two Arm Overhead Throw": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Medicine Ball Throw On Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Others "
+    },
+    "Middle Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Mighty Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Mixed Grip Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Modified Push Up to Forearms": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Mountain Biking": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Mountain Climbers": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Narrow Grip Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Neck Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Oblique Crunches": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Oblique Crunches with Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Oblique Raises on Parallel Bars": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "On Your Back Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "On Your Side Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "One Arm Against Wall": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "One Arm Chin Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "One Arm Iso Lateral High Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "One Arm Iso Lateral Wide Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "One Armed Biased Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others, Exercise Ball "
+    },
+    "One Half Locust": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "One Handed Hang": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Pullup Bar "
+    },
+    "One Knee to Chest": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "One Leg 45 Degree Leg Press": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "One Leg Bodyweight Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "One Leg Calf Press on Leg Press": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "One Leg Donkey Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "One Leg Floor Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "One Leg Hack Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "One Leg Kickback": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "One Leg Reverse Hyper on Flat Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Opening Out Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Overhead Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Parallel Bar Leg Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Passive Opening Out Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Pelvic Tilt Into Bridge": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Peroneals Stretch": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Pilates": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Body Only "
+    },
+    "Pin Presses": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Powerlifting ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Plank": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Plank on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Plank with Feet on Bench": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Plank with Side Kick": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Plyo Push-Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Posterior Capsule": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Posterior Tibialis Stretch": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Preacher Curl Machine": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Prisoner Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Pull Ups": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Push Up On Exercise Dome": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Push Up to Side Plank": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Push Up with Feet Elevated": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Push Up with Feet On An Exercise Ball": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Reach and Catch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Rear Bodyweight Lunge": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Rear Leg Raises": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Reclining Big Toe Pose": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Recumbent Bike": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Reverse Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Reverse Grip Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Reverse Grip Machine Lat Pull Down": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Reverse Grip Vertical Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Reverse Hack Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Reverse Hyper on Flat Bench": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Reverse Lying T Bar Machine Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Revolved Abdomen Pose Sequence": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Road Cycling": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Others "
+    },
+    "Rocket Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Rocky Pull Ups and Pulldowns": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Roll Downs": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Roll Over on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Rolling": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Roman Chair Twisting Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Rowing": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Runner's Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Running": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Body Only "
+    },
+    "Sage Twist 1": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Scalene": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Scissor Kick": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Scissors Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Scorpion": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Calf Stretch": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Flat Bench Leg Pull In": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Seated Floor Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Glute": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Hamstring and Calf Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Seated Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Hamstring Stretch on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Seated Leg Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Leg Curl with One Leg": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Leg Tucks": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Seated Machine Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Overhead Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Seated Tricep Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Seated Two Arm Palms Up Low Pulley Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Seated Wide Angle Pose Sequence": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Shell Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Shoulder Circles": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Shoulder Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Dumbbell "
+    },
+    "Shoulder Raise Machine": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Shoulder Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Side Angle Pose With Rotation": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Side Bridge": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Side Hop-Sprint": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Side Jackknife": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Side Step Up": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Side to Side Box Shuffle": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Side Wrist Pull": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Side-Lying Floor Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Single Bench Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Single Leg Butt Kick": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Single Leg Curl": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Single Leg Glute Bridge": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Single Leg Push-Off": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Single Leg Stride Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Sissy Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Sit Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Sit Up": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Smith Machine Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Bicep Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Close Grip Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Close Grip Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Deadlift": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Decline Close Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Frankenstein Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Front Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Good Morning": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Hack Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Incline Shoulder Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Incline Tricep Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Lunge": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine One Arm Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Overhead Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Rear Delt Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Reverse Calf Raises": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Reverse Close Grip Bench Press": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Reverse Decline Close Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Reverse Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Reverse Grip Bent Over Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Reverse Grip Incline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Seated One Leg Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Seated Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Shoulder Press Behind the Neck": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Single Leg Split Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Squat to Bench": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Machine - Strength "
+    },
+    "Smith Machine Standing Behind the Back Wrist Curl": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Stiff Legged Deadlift": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Toe Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Upright Row": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Smith Machine Wide Grip Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Wide Grip Decline Bench Press": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Wide Grip Shoulder Press": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Bench "
+    },
+    "Smith Machine Zercher Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Sphinx": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Spinal Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Spine Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Spine Twist": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Split Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Staff Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Adductor": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Standing Biceps Stretch": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Calf Raises": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Standing Elevated Quad Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Standing Gastrocnemius": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Gastrocnemius Calf Stretch": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Standing Glute Kickback": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Standing Half Moon": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Hamstring and Calf Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bands "
+    },
+    "Standing Hip Flexors": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Lateral Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Long Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Standing One Arm One Leg Opposite Reach": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing One Leg Bodyweight Calf Raise": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Standing Pelvic Tilt": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Quadriceps Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Soleus And Achilles Stretch": {
+      "Main Muscle Group": "Lower Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Standing Straight Leg Hamstring Contract Relax on Exercise Ball": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Standing Toe Touches": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Star Jump": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Stationary Bike": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Step Machine": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Stork Stance": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Stork Stance with Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball "
+    },
+    "Straddle Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Straight Leg Heel on Toe": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Straight Leg Outer Hip Abductor": {
+      "Main Muscle Group": "Glutes ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Sun Salutation": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Superman": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Superman Leg Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Supine Ab Crunch Machine": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Supine Hamstring Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Supine Knee to Chest": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Supine Straight Leg Hamstring Stretch on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Swimming": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Body Only "
+    },
+    "T Bar Lying Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "T Bar Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Barbell, Machine - Strength "
+    },
+    "Table Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Thigh Abductor": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Thigh Adductor": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Three Bench Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench "
+    },
+    "Toe Touchers": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Torso Rotation": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Exercise Ball "
+    },
+    "Towel Standing Triceps Extension": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Others "
+    },
+    "Transverse Step Up": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Bench "
+    },
+    "Treadmill Running": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Triangle Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Tricep Side Stretch": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Tricep Stretch": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Triceps Pushdown V Bar": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Tuck Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Turtle Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Twisting Floor Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Twisting Hanging Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Twisting Lying Cable Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Two Leg Slide": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Two Legged Supine Knee to Chest": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Unilateral Row": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Upper Back Stretch": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Upward Facing Bow Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Upward Facing Dog": {
+      "Main Muscle Group": "Back ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Upward Stretch": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "V Bar Pull Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar, Machine - Strength "
+    },
+    "V Ups": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Walking": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Machine - Cardio "
+    },
+    "Warrior 2 Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Warrior 3 Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Warrior Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Weight Plate  Decline Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weight Plate Around the World Decline Crunch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate, Bench "
+    },
+    "Weight Plate Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate High Front Raise": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Hyperextensions on Exercise Ball": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Weight Plate "
+    },
+    "Weight Plate Lying Face Down Neck Resistance": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weight Plate Lying Face Up Neck Resistance": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weight Plate Oblique Twists": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate One Arm Shrug": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Pinch": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Pullover on Exercise Ball": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Weight Plate "
+    },
+    "Weight Plate Reverse Curl": {
+      "Main Muscle Group": "Biceps ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Russian Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weight Plate Shrugs": {
+      "Main Muscle Group": "Shoulders ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Side Bend": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Side Bend on Exercise Ball": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Weight Plate "
+    },
+    "Weight Plate Sissy Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Weight Plate "
+    },
+    "Weight Plate Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate, Bench "
+    },
+    "Weight Plate Standing Hand Squeeze": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weight Plate Twist": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weighted Bench Dip": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weighted Crunches": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Weight Plate "
+    },
+    "Weighted Drop Push Up": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weighted Exercise Ball Wall Squat": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Strength ",
+      "Equipment": "Exercise Ball, Weight Plate "
+    },
+    "Weighted Hanging Knee Raise": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar, Dumbbell "
+    },
+    "Weighted Pull Ups": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar, Weight Plate "
+    },
+    "Weighted Side Touches": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weighted Three Bench Dips": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Bench, Weight Plate "
+    },
+    "Weighted Tricep Dips": {
+      "Main Muscle Group": "Triceps ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength, Weight Plate "
+    },
+    "Wide Grip Lat Pulldown": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Wide Grip Pulldown Behind The Neck": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Machine - Strength "
+    },
+    "Wide Grip Rear Pull-Up": {
+      "Main Muscle Group": "Back ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "Wide Hand Pushup": {
+      "Main Muscle Group": "Chest ",
+      "Type": "Strength ",
+      "Equipment": "Body Only "
+    },
+    "Wide Leg Stretch": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Windshield Wipers": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Strength ",
+      "Equipment": "Pullup Bar "
+    },
+    "World's Greatest Stretch": {
+      "Main Muscle Group": "Upper Legs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Wrist Circles": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
+    },
+    "Wrist Roller": {
+      "Main Muscle Group": "Forearm ",
+      "Type": "Strength ",
+      "Equipment": "Others, Weight Plate "
+    },
+    "Yoga": {
+      "Main Muscle Group": "Cardio ",
+      "Type": "Cardio ",
+      "Equipment": "Body Only "
+    },
+    "Z Pose": {
+      "Main Muscle Group": "Abs ",
+      "Type": "Stretching ",
+      "Equipment": "Body Only "
     }
   }
 }

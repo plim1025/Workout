@@ -29,7 +29,7 @@ public class ExercisesFragment extends Fragment {
 
     View view;
     private int sortIndicator;
-    private JSONObject JSON;
+    JSONObject exercises;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,7 +102,9 @@ public class ExercisesFragment extends Fragment {
         try {
             switch (sortIndicator) {
                 case 0:
-                    JSON = new JSONObject(readBasicJSONFromAsset()); break;
+                    JSONObject JSON = new JSONObject(readBasicJSONFromAsset());
+                    JSONObject exercises = JSON.getJSONObject("exercise_info_basic");
+                    break;
                 case 1:
                     JSON = new JSONObject(readComplexJSONFromAsset()); break;
                 case 2:
@@ -110,7 +112,7 @@ public class ExercisesFragment extends Fragment {
                 case 3:
                     JSON = new JSONObject(readComplexJSONFromAsset()); break;
             }
-            JSONObject exercises = JSON.getJSONObject("exercise_info_complex");
+
             final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
             JSONArray exercise_names = exercises.names();
             for(int i = 0; i < exercise_names.length(); i++){
