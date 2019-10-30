@@ -27,9 +27,11 @@ import java.util.ArrayList;
 
 public class ExercisesFragment extends Fragment {
 
-    View view;
+    private View view;
     private int sortIndicator;
-    JSONObject exercises;
+    private JSONObject json;
+    private JSONObject exercises;
+    private JSONArray exercise_names;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,19 +104,23 @@ public class ExercisesFragment extends Fragment {
         try {
             switch (sortIndicator) {
                 case 0:
-                    JSONObject JSON = new JSONObject(readBasicJSONFromAsset());
-                    JSONObject exercises = JSON.getJSONObject("exercise_info_basic");
+                    json = new JSONObject(readBasicJSONFromAsset());
+                    exercises = json.getJSONObject("exercise_info");
                     break;
                 case 1:
-                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    exercises = json.getJSONObject("exercise_info");
+                    break;
                 case 2:
-                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    break;
                 case 3:
-                    JSON = new JSONObject(readComplexJSONFromAsset()); break;
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    break;
             }
 
             final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
-            JSONArray exercise_names = exercises.names();
+            exercise_names = exercises.names();
             for(int i = 0; i < exercise_names.length(); i++){
                 JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
                 exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment"), 0, 0, 0));
