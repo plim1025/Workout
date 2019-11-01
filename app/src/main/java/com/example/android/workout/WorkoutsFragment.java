@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -26,15 +27,26 @@ public class WorkoutsFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private WorkoutsRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<Exercise> exercise;
+    private ArrayList<Exercise> exercise = new ArrayList<>();
     private View view;
+    private boolean buildRecycler = false;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         // Receive workout arraylist from addExerciseActivity
+
         Bundle bundle = this.getArguments();
         if (bundle != null) {
-            exercise = bundle.getParcelableArrayList("exercise");
+            buildRecycler = true;
+            ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercise");
+            exercise.addAll(added_exercises);
+        }
+        if (savedInstanceState != null) {
+            buildRecycler = true;
+            ArrayList<Exercise> added_exercises = savedInstanceState.getParcelableArrayList("exercise");
+            exercise.addAll(added_exercises);
+        }
+        if (buildRecycler == true) {
             buildRecyclerView();
         }
         super.onActivityCreated(savedInstanceState);
@@ -125,6 +137,12 @@ public class WorkoutsFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putParcelableArrayList("exercise", exercise);
     }
 
     private void changeDate(int i) {

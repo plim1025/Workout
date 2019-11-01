@@ -11,6 +11,8 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,11 +26,14 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class ExercisesFragment extends Fragment {
 
     private View view;
-    private int sortIndicator;
+    private int sortIndicator = 0;
     private JSONObject json;
     private JSONObject exercises;
     private JSONArray exercise_names;
@@ -55,11 +60,13 @@ public class ExercisesFragment extends Fragment {
         final PopupMenu dropDownMenu = new PopupMenu(getContext(), imageButton);
         final Menu menu = dropDownMenu.getMenu();
 
-        menu.add("Basic List");
-        menu.add("Complex List");
-        menu.add("By Category");
-        menu.add("By Most Recent");
-        menu.add("Favorites");
+        menu.add(Menu.NONE, 0, 0, "Basic List");
+        menu.add(Menu.NONE, 1, 1,"Complex List");
+        menu.add(Menu.NONE, 2, 2,"By Category");
+        menu.add(Menu.NONE, 3, 3,"By Most Recent");
+        menu.add(Menu.NONE, 4, 4,"Favorites");
+
+        buildRecyclerView();
 
         // Show menu items if click on imageButton
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +76,6 @@ public class ExercisesFragment extends Fragment {
             }
         });
 
-        //
         dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -89,7 +95,6 @@ public class ExercisesFragment extends Fragment {
                 return false;
             }
         });
-
 
         // Inflate the layout for this fragment
         return view;
@@ -121,6 +126,7 @@ public class ExercisesFragment extends Fragment {
 
             final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
             exercise_names = exercises.names();
+
             for(int i = 0; i < exercise_names.length(); i++){
                 JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
                 exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment"), 0, 0, 0));

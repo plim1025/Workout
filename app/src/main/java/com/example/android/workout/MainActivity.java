@@ -23,10 +23,15 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fragmentManager;
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
+    private Fragment fragment;
+    Bundle savedInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        savedInstance = savedInstanceState;
+
         setContentView(R.layout.main_activity);
 
         fragmentManager = getSupportFragmentManager();
@@ -61,13 +66,15 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fragment;
                 switch (menuItem.getItemId()) {
                     case R.id.nav_workout:
                         // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
                         ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
                         Bundle bundle = new Bundle();
                         fragment = new WorkoutsFragment();
+                        if(savedInstance!=null){
+                            fragment = getSupportFragmentManager().getFragment(savedInstance, "workoutFragment");
+                        }
                         if(exercise != null) {
                             bundle.putParcelableArrayList("exercise", exercise);
                             fragment.setArguments(bundle);
@@ -103,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, backstackEntryMessage.toString());
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        getSupportFragmentManager().putFragment(outState, "workoutFragment", fragment);
     }
 
     @Override
