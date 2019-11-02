@@ -24,13 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
     private Fragment fragment;
-    Bundle savedInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        savedInstance = savedInstanceState;
 
         setContentView(R.layout.main_activity);
 
@@ -72,11 +69,8 @@ public class MainActivity extends AppCompatActivity {
                         ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
                         Bundle bundle = new Bundle();
                         fragment = new WorkoutsFragment();
-                        if(savedInstance!=null){
-                            fragment = getSupportFragmentManager().getFragment(savedInstance, "workoutFragment");
-                        }
                         if(exercise != null) {
-                            bundle.putParcelableArrayList("exercise", exercise);
+                            bundle.putParcelableArrayList("added_exercises", exercise);
                             fragment.setArguments(bundle);
                         }
                         break;
@@ -110,12 +104,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, backstackEntryMessage.toString());
             }
         });
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        getSupportFragmentManager().putFragment(outState, "workoutFragment", fragment);
     }
 
     @Override

@@ -32,24 +32,28 @@ public class WorkoutsFragment extends Fragment {
     private boolean buildRecycler = false;
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        // Receive workout arraylist from addExerciseActivity
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putParcelableArrayList("exercise", exercise);
+    }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            buildRecycler = true;
+            exercise = savedInstanceState.getParcelableArrayList("exercise");
+        }
+        // Receive workout arraylist from addExerciseActivity
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             buildRecycler = true;
-            ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercise");
+            ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("added_exercises");
             exercise.addAll(added_exercises);
         }
-        if (savedInstanceState != null) {
-            buildRecycler = true;
-            ArrayList<Exercise> added_exercises = savedInstanceState.getParcelableArrayList("exercise");
-            exercise.addAll(added_exercises);
-        }
-        if (buildRecycler == true) {
+        if (buildRecycler) {
             buildRecyclerView();
         }
-        super.onActivityCreated(savedInstanceState);
     }
 
     @Override
@@ -137,12 +141,6 @@ public class WorkoutsFragment extends Fragment {
         });
 
         return view;
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putParcelableArrayList("exercise", exercise);
     }
 
     private void changeDate(int i) {
