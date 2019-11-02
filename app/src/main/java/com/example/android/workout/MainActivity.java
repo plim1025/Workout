@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
     private Fragment fragment;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +37,6 @@ public class MainActivity extends AppCompatActivity {
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        // Set home fragment to workout tab
-        Fragment initialFragment = new WorkoutsFragment();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.frame, initialFragment, "0");
-        fragmentTransaction.addToBackStack("Add " + initialFragment.toString());
-        fragmentTransaction.commit();
 
         // Creates bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -57,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.commit();
         }
         else{
+            // Set home fragment to workout tab
+            Fragment initialFragment = new WorkoutsFragment();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.frame, initialFragment, "0");
+            fragmentTransaction.addToBackStack("Add " + initialFragment.toString());
+            fragmentTransaction.commit();
             MenuItem menuItem = menu.getItem(0);
             menuItem.setChecked(true);
         }
