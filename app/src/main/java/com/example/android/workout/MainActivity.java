@@ -1,13 +1,16 @@
 package com.example.android.workout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,22 +20,23 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    FragmentManager fragmentManager;
+    FragmentManager fragmentManager = getSupportFragmentManager();
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
-    private Fragment fragment;
     private FragmentTransaction fragmentTransaction;
+    private ArrayList<Exercise> exercises_to_send = new ArrayList<>();
+    private Fragment fragment;
+    Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.main_activity);
-
-        fragmentManager = getSupportFragmentManager();
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -41,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
         // Creates bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         Menu menu = bottomNavigationView.getMenu();
+
+        // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
+        ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
+        if(exercise!=null) {
+            exercises_to_send.addAll(exercise);
+            bundle.putParcelableArrayList("exercises", exercises_to_send);
+        }
+
+        // If exercises sent from AddExerciseActivity, set screen to exercises
         if(getIntent().getParcelableArrayListExtra("exercise") != null){
             MenuItem menuItem = menu.getItem(1);
             menuItem.setChecked(true);
@@ -50,29 +63,25 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.addToBackStack("Add main");
             fragmentTransaction.commit();
         }
+
+        // Set home fragment to workout tab
         else{
-            // Set home fragment to workout tab
-            Fragment initialFragment = new WorkoutsFragment();
+            Fragment initial_fragment = new WorkoutsFragment();
             fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.frame, initialFragment, "0");
-            fragmentTransaction.addToBackStack("Add " + initialFragment.toString());
+            fragmentTransaction.add(R.id.frame, initial_fragment, "0");
+            fragmentTransaction.addToBackStack("Add " + initial_fragment.toString());
             fragmentTransaction.commit();
             MenuItem menuItem = menu.getItem(0);
             menuItem.setChecked(true);
         }
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_workout:
-                        // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
-                        ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercise");
-                        Bundle bundle = new Bundle();
                         fragment = new WorkoutsFragment();
-                        if(exercise != null) {
-                            bundle.putParcelableArrayList("added_exercises", exercise);
-                            fragment.setArguments(bundle);
-                        }
+                        fragment.setArguments(bundle);
                         break;
                     case R.id.nav_exercises:
                         fragment = new ExercisesFragment();
@@ -83,8 +92,9 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
                 }
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, fragment, "0");
+
                 // Need to title it so that fragment tier 2 can return to tier 1 after pressing android back button
                 fragmentTransaction.addToBackStack("Add main");
                 fragmentTransaction.commit();

@@ -1,6 +1,7 @@
 package com.example.android.workout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,29 +28,22 @@ public class WorkoutsFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private WorkoutsRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<Exercise> exercise = new ArrayList<>();
+    private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
     private View view;
     private boolean buildRecycler = false;
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putParcelableArrayList("exercise", exercise);
-    }
-
-    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (savedInstanceState != null) {
-            buildRecycler = true;
-            exercise = savedInstanceState.getParcelableArrayList("exercise");
-        }
+
         // Receive workout arraylist from addExerciseActivity
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             buildRecycler = true;
-            ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("added_exercises");
-            exercise.addAll(added_exercises);
+            ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
+            if(added_exercises!=null) {
+                exercise.addAll(added_exercises);
+            }
         }
         if (buildRecycler) {
             buildRecyclerView();
