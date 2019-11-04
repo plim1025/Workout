@@ -2,6 +2,7 @@ package com.example.android.workout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.PopupMenu;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,20 +21,31 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AddExerciseActivity extends AppCompatActivity {
 
     private int sortIndicator = 0;
     private JSONObject json;
-    private JSONObject exercises;
     private JSONArray exercise_names;
+    private JSONObject exercises;
+    private ArrayList<Exercise> exercise = new ArrayList<>();
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
+        i.putParcelableArrayListExtra("exercises", exercise);
+        startActivity(i);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.add_exercise_activity);
+
+        exercise = getIntent().getParcelableArrayListExtra("exercises");
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
@@ -43,7 +54,9 @@ public class AddExerciseActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
+                i.putParcelableArrayListExtra("exercises", exercise);
+                startActivity(i);
             }
         });
 
@@ -126,7 +139,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(int position) {
-                    Intent intent = new Intent(getApplicationContext(), AddExerciseSetsActivity.class);
+                    Intent intent = new Intent(AddExerciseActivity.this, AddExerciseSetsActivity.class);
                     intent.putExtra("current_exercise", exercise.get(position));
                     startActivity(intent);
                 }

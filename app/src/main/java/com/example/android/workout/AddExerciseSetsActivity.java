@@ -1,5 +1,6 @@
 package com.example.android.workout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,8 +31,18 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        finish();
+    }
+
+    @Override
+    protected void onPause() {
+        // send ArrayList of exercises to AddExerciseActivity
+        Intent i = new Intent(this, AddExerciseActivity.class);
+        i.putParcelableArrayListExtra("exercises", exercise);
+        startActivity(i);
+        // clear exercise ArrayList
+
+        super.onPause();
     }
 
     @Override
@@ -49,14 +60,14 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_sets_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(current_exercise.getName());
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                finish();
             }
         });
-        getSupportActionBar().setTitle(current_exercise.getName());
 
         // Set up buttons and edit texts
         final ImageButton minusWeight = findViewById(R.id.minus_weight);
@@ -141,6 +152,8 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
 
     }
 
+
+
     public void insertItem(int position, Exercise added_exercise) {
         exercise.add(position, added_exercise);
         mAdapter.notifyItemInserted(position);
@@ -158,16 +171,5 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
-    }
-
-    @Override
-    protected void onPause() {
-        // send ArrayList of exercises to WorkoutsFragment
-        Intent i = new Intent(this, WorkoutsActivity.class);
-        i.putParcelableArrayListExtra("exercise", exercise);
-        startActivity(i);
-        // clear exercise ArrayList
-
-        super.onPause();
     }
 }
