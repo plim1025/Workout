@@ -2,45 +2,39 @@ package com.example.android.workout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class AddExerciseActivity extends AppCompatActivity {
 
-    private ArrayList<Exercise> exercise = new ArrayList<Exercise>();
-    private RecyclerView mRecyclerView;
-    private AddExerciseRecyclerViewAdapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    float WEIGHTTEXT = 0;
-    int REPSTEXT = 0;
-    Exercise added_exercise;
-    int exercise_items = 0;
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-    }
+    private int sortIndicator = 0;
+    private JSONObject json;
+    private JSONObject exercises;
+    private JSONArray exercise_names;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_exercise);
 
-        // Hide keyboard when open activity
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        setContentView(R.layout.add_exercise_activity);
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
@@ -50,126 +44,128 @@ public class AddExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
 
+        // Create menu
+        final ImageButton imageButton = findViewById(R.id.exercise_sort_button);
+        final PopupMenu dropDownMenu = new PopupMenu(this, imageButton);
+        final Menu menu = dropDownMenu.getMenu();
 
-
-        // Set up buttons and edit texts
-        final ImageButton minusWeight = findViewById(R.id.minus_weight);
-        ImageButton addWeight = findViewById(R.id.add_weight);
-        final EditText weightEditText = findViewById(R.id.weight_edit_text);
-        ImageButton minusReps = findViewById(R.id.minus_reps);
-        ImageButton addReps = findViewById(R.id.add_reps);
-        final EditText repsEditText = findViewById(R.id.reps_edit_text);
-        Button addSet = findViewById(R.id.add_set);
-        Button clear_all = findViewById(R.id.clear);
-
-        // Receive exercise object when clicked on
-        Intent intent = getIntent();
-        final Exercise current_exercise = intent.getParcelableExtra("Exercises");
-
-        // Initialize weight/reps to 0
-        weightEditText.setText(String.valueOf(WEIGHTTEXT));
-        repsEditText.setText(String.valueOf(REPSTEXT));
+        menu.add(Menu.NONE, 0, 0, "Basic List");
+        menu.add(Menu.NONE, 1, 1,"Complex List");
+        menu.add(Menu.NONE, 2, 2,"By Category");
+        menu.add(Menu.NONE, 3, 3,"By Most Recent");
+        menu.add(Menu.NONE, 4, 4,"Favorites");
 
         buildRecyclerView();
 
-        // Set checkmark bottom right of keyboards when click on editTexts
-        weightEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        repsEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
-
-        minusWeight.setOnClickListener(new View.OnClickListener() {
+        // Show menu items if click on imageButton
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                if(WEIGHTTEXT >= 5) {
-                    WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
-                    WEIGHTTEXT -= 5;
-                    weightEditText.setText(String.valueOf(WEIGHTTEXT));
+            public void onClick(View v) {
+                dropDownMenu.show();
+            }
+        });
+
+        dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case 0:
+                        sortIndicator = 0; break;
+                    case 1:
+                        sortIndicator = 1; break;
+                    case 2:
+                        sortIndicator = 2; break;
+                    case 3:
+                        sortIndicator = 3; break;
+                    case 4:
+                        sortIndicator = 4; break;
                 }
+                buildRecyclerView();
+                return false;
             }
         });
+    }
 
-        addWeight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
-                WEIGHTTEXT += 5;
-                weightEditText.setText(String.valueOf(WEIGHTTEXT));
+    private void buildRecyclerView() {
+        try {
+            switch (sortIndicator) {
+                case 0:
+                    json = new JSONObject(readBasicJSONFromAsset());
+                    exercises = json.getJSONObject("exercise_info");
+                    break;
+                case 1:
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    exercises = json.getJSONObject("exercise_info");
+                    break;
+                case 2:
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    break;
+                case 3:
+                    json = new JSONObject(readComplexJSONFromAsset());
+                    break;
             }
-        });
 
-        minusReps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(REPSTEXT >= 1) {
-                    REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
-                    REPSTEXT -= 1;
-                    repsEditText.setText(String.valueOf(REPSTEXT));
+            final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
+            exercise_names = exercises.names();
+
+            for(int i = 0; i < exercise_names.length(); i++){
+                JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
+                exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment"), 0, 0, 0));
+            }
+
+            RecyclerView recyclerView = findViewById(R.id.exercise_recycler_view);
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+            ExerciseRecyclerViewAdapter adapter = new ExerciseRecyclerViewAdapter(exercise);
+            recyclerView.setLayoutManager(layoutManager);
+            recyclerView.setAdapter(adapter);
+
+            // When click on item, go to AddExerciseSetsActivity and send which exercise was clicked on
+            adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    Intent intent = new Intent(getApplicationContext(), AddExerciseSetsActivity.class);
+                    intent.putExtra("current_exercise", exercise.get(position));
+                    startActivity(intent);
                 }
-            }
-        });
+            });
 
-        addReps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
-                REPSTEXT += 1;
-                repsEditText.setText(String.valueOf(REPSTEXT));
-            }
-        });
-
-        addSet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
-                REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
-                added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
-                insertItem(exercise_items, added_exercise);
-                exercise_items++;
-            }
-        });
-
-        clear_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                exercise.clear();
-                mAdapter.notifyItemRangeRemoved(0, exercise_items);
-                exercise_items = 0;
-            }
-        });
-
-
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
     }
 
-    public void insertItem(int position, Exercise added_exercise) {
-        exercise.add(position, added_exercise);
-        mAdapter.notifyItemInserted(position);
+    private String readComplexJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("exercise_info_complex");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
-    public void removeItem(int position) {
-        exercise.remove(position);
-        mAdapter.notifyItemRemoved(position);
-    }
-
-    public void buildRecyclerView() {
-        mRecyclerView = findViewById(R.id.add_exercise_recycler_view);
-        mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mAdapter = new AddExerciseRecyclerViewAdapter(exercise);
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
-    }
-
-    @Override
-    protected void onPause() {
-        // send ArrayList of exercises to WorkoutsFragment
-        Intent i = new Intent(this, MainActivity.class);
-        i.putParcelableArrayListExtra("exercise", exercise);
-        startActivity(i);
-        // clear exercise ArrayList
-
-        super.onPause();
+    private String readBasicJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("exercise_info_basic");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 }

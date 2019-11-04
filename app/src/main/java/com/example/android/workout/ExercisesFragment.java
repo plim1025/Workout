@@ -11,8 +11,6 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,9 +24,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
 public class ExercisesFragment extends Fragment {
 
@@ -142,7 +137,7 @@ public class ExercisesFragment extends Fragment {
             adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(int position) {
-                    Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
+                    Intent intent = new Intent(getActivity(), AddExerciseSetsActivity.class);
                     intent.putExtra("Exercises", exercise.get(position));
                     startActivity(intent);
                 }
