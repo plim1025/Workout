@@ -1,6 +1,5 @@
 package com.example.android.workout;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,20 +22,29 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class WorkoutsFragment extends Fragment {
-
-    private View view;
     private Calendar CALENDAR;
-    private String DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
+    private String DATE;
     private TextView DATEVIEW;
+    private RecyclerView mRecyclerView;
+    private WorkoutsRecyclerViewAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
+    private View view;
+    private boolean buildRecycler = false;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
+        // Receive workout arraylist from addExerciseActivity
         Bundle bundle = this.getArguments();
         ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
+        if (added_exercises != null) {
+            buildRecycler = true;
+        }
+        if (buildRecycler) {
+            buildRecyclerView();
+        }
     }
 
     @Override
@@ -49,11 +56,12 @@ public class WorkoutsFragment extends Fragment {
         // Set Date
         DATEVIEW = view.findViewById(R.id.date);
         CALENDAR = Calendar.getInstance();
+        DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
 
         // When swipe right/left date changes accordingly
-        View workout_dates = view.findViewById(R.id.workouts);
-        workout_dates.setOnTouchListener(new OnSwipeTouchListener(getActivity()) {
+        View workout_tab = view.findViewById(R.id.date);
+        workout_tab.setOnTouchListener(new OnSwipeTouchListener(getActivity()) {
             public void onSwipeRight() {
                 changeDate(-1);
             }
@@ -92,13 +100,6 @@ public class WorkoutsFragment extends Fragment {
             }
         });
 
-        // If exercises received from AddExerciseActivity OR Date has already been stored in DateArray, set viewpager
-        if()
-        // Set viewpager
-        ViewPagerAdapter adapter =  new ViewPagerAdapter(getContext(), DATE, exercise);
-        ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
-        viewPager.setAdapter(adapter);
-
         // Go to AddExerciseActivity
         FloatingActionButton fab1 = view.findViewById(R.id.workout_fab_1);
         fab1.setOnClickListener(new View.OnClickListener() {
@@ -129,12 +130,21 @@ public class WorkoutsFragment extends Fragment {
         });
 
         return view;
-}
-
+    }
 
     private void changeDate(int i) {
-        CALENDAR.add(Integer.parseInt(DATE), i);
+        CALENDAR.add(Calendar.DATE, i);
+        DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
+    }
+
+    private void buildRecyclerView() {
+        mRecyclerView = view.findViewById(R.id.workout_recycler_view);
+        mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        mAdapter = new WorkoutsRecyclerViewAdapter(exercise);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override
