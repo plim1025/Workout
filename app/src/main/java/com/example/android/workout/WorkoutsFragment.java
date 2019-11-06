@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,24 +13,36 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.collection.ArrayMap;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class WorkoutsFragment extends Fragment {
 
     private View view;
+    private FragmentManager fragmentManager = getFragmentManager();
     private Calendar CALENDAR;
     private String DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
     private TextView DATEVIEW;
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
+    private ArrayList<DateFrag> fragArrayList = new ArrayList<>();
+    private boolean bundleReceived;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -37,12 +50,17 @@ public class WorkoutsFragment extends Fragment {
 
         // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
         Bundle bundle = this.getArguments();
+        if(bundle == null) {
+            bundleReceived = false;
+        } else {
+            bundleReceived = true;
+        }
         ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.workouts, container, false);
 
@@ -62,7 +80,7 @@ public class WorkoutsFragment extends Fragment {
             }
         });
 
-        // Make arrow buttons change date
+        // Make arrow buttons change date (also implement long clicks to change week)
         final ImageButton leftArrow = view.findViewById(R.id.left_arrow);
         final ImageButton rightArrow = view.findViewById(R.id.right_arrow);
         leftArrow.setOnClickListener(new View.OnClickListener() {
@@ -92,10 +110,23 @@ public class WorkoutsFragment extends Fragment {
             }
         });
 
-        // If exercises received from AddExerciseActivity OR Date has already been stored in DateArray, set viewpager
-        if()
+        // If fragment already inside fragArrayList, get frag, else make new one - also attach exercises to each fragment
+        if(containsDate()) {
+            Fragment fragment = getDateFrag().getFragment();
+            Bundle bundle = new Bundle();
+            ArrayList<Exercise> attached_exercises = getDateFrag().getExercise();
+            bundle.putParcelableArrayList("attached_exercises", attached_exercises);
+            fragment.setArguments(bundle);
+        } else if (bundleReceived){
+            Fragment fragment = new ViewPagerFragment();
+            fragArrayList.add(new DateFrag(DATE, fragment, exercise));
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("attached_exercises", exercise);
+            fragment.setArguments(bundle);
+        }
+
         // Set viewpager
-        ViewPagerAdapter adapter =  new ViewPagerAdapter(getContext(), DATE, exercise);
+        ViewPagerAdapter adapter =  new ViewPagerAdapter(fragmentManager, getContext(), fragArrayList);
         ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
         viewPager.setAdapter(adapter);
 
@@ -131,7 +162,6 @@ public class WorkoutsFragment extends Fragment {
         return view;
 }
 
-
     private void changeDate(int i) {
         CALENDAR.add(Integer.parseInt(DATE), i);
         DATEVIEW.setText(DATE);
@@ -140,5 +170,24 @@ public class WorkoutsFragment extends Fragment {
     @Override
     public String toString() {
         return WorkoutsFragment.class.getSimpleName();
+    }
+
+    private boolean containsDate() {
+        for (int i = 0; i < fragArrayList.size(); i++) {
+            if (fragArrayList.get(i).getDate() == DATE) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private DateFrag getDateFrag() {
+        for (int i = 0; i < fragArrayList.size(); i++) {
+            if (fragArrayList.get(i).getDate() == DATE) {
+                return fragArrayList.get(i);
+            }
+        }
+        Log.e(TAG, "DateFrag not found");
+        return null;
     }
 }
