@@ -1,6 +1,5 @@
 package com.example.android.workout;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -148,11 +147,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
                 exercise_items = 0;
             }
         });
-
-
     }
-
-
 
     public void insertItem(int position, Exercise added_exercise) {
         exercise.add(position, added_exercise);
