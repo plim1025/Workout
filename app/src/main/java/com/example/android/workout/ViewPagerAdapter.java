@@ -26,6 +26,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Fragment fragment = mDateFrags.get(0).getFragment();
+        if(fragment.isAdded())
+        {
+            return fragment;
+        }
         Bundle bundle = new Bundle();
         ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
         bundle.putParcelableArrayList("attached_exercises", exercises);
@@ -36,6 +40,11 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return mDateFrags.size();
+    }
+
+    private String getFragmentTag(int viewPagerId, int fragmentPosition)
+    {
+        return "android:switcher:" + viewPagerId + ":" + fragmentPosition;
     }
 }
 /*

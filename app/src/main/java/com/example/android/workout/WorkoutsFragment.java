@@ -32,6 +32,7 @@ public class WorkoutsFragment extends Fragment {
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
     private ArrayList<DateFrag> fragArrayList = new ArrayList<>();
     private boolean bundleReceived;
+    private boolean viewpagerSet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -109,9 +110,10 @@ public class WorkoutsFragment extends Fragment {
         }
 
         // Set viewpager
-        ViewPagerAdapter adapter =  new ViewPagerAdapter(getFragmentManager(), getContext(), fragArrayList);
         ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), getContext(), fragArrayList);
         viewPager.setAdapter(adapter);
+        viewpagerSet = true;
 
         // Go to AddExerciseActivity
         FloatingActionButton fab1 = view.findViewById(R.id.workout_fab_1);
