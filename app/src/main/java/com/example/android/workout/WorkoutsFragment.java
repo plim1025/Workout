@@ -1,62 +1,37 @@
 package com.example.android.workout;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.collection.ArrayMap;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class WorkoutsFragment extends Fragment {
 
     private View view;
-    private FragmentManager fragmentManager = getFragmentManager();
     private Calendar CALENDAR;
-    private String DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
+    private String DATE;
     private TextView DATEVIEW;
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
     private ArrayList<DateFrag> fragArrayList = new ArrayList<>();
     private boolean bundleReceived;
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
-        Bundle bundle = this.getArguments();
-        if(bundle == null) {
-            bundleReceived = false;
-        } else {
-            bundleReceived = true;
-        }
-        ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -64,9 +39,20 @@ public class WorkoutsFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.workouts, container, false);
 
+        // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
+        Bundle bundle = this.getArguments();
+        ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
+        if(added_exercises == null) {
+            bundleReceived = false;
+        } else {
+            bundleReceived = true;
+        }
+
+
         // Set Date
         DATEVIEW = view.findViewById(R.id.date);
         CALENDAR = Calendar.getInstance();
+        DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
 
         // When swipe right/left date changes accordingly
@@ -113,20 +99,17 @@ public class WorkoutsFragment extends Fragment {
         // If fragment already inside fragArrayList, get frag, else make new one - also attach exercises to each fragment
         if(containsDate()) {
             Fragment fragment = getDateFrag().getFragment();
-            Bundle bundle = new Bundle();
+            Bundle bundle2 = new Bundle();
             ArrayList<Exercise> attached_exercises = getDateFrag().getExercise();
-            bundle.putParcelableArrayList("attached_exercises", attached_exercises);
+            bundle2.putParcelableArrayList("attached_exercises", attached_exercises);
             fragment.setArguments(bundle);
-        } else if (bundleReceived){
+        } else if (bundleReceived) {
             Fragment fragment = new ViewPagerFragment();
-            fragArrayList.add(new DateFrag(DATE, fragment, exercise));
-            Bundle bundle = new Bundle();
-            bundle.putParcelableArrayList("attached_exercises", exercise);
-            fragment.setArguments(bundle);
+            fragArrayList.add(new DateFrag(CALENDAR, fragment, exercise));
         }
 
         // Set viewpager
-        ViewPagerAdapter adapter =  new ViewPagerAdapter(fragmentManager, getContext(), fragArrayList);
+        ViewPagerAdapter adapter =  new ViewPagerAdapter(getFragmentManager(), getContext(), fragArrayList);
         ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
         viewPager.setAdapter(adapter);
 
@@ -163,7 +146,8 @@ public class WorkoutsFragment extends Fragment {
 }
 
     private void changeDate(int i) {
-        CALENDAR.add(Integer.parseInt(DATE), i);
+        CALENDAR.add(Calendar.DATE, i);
+        DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
         DATEVIEW.setText(DATE);
     }
 
@@ -174,7 +158,7 @@ public class WorkoutsFragment extends Fragment {
 
     private boolean containsDate() {
         for (int i = 0; i < fragArrayList.size(); i++) {
-            if (fragArrayList.get(i).getDate() == DATE) {
+            if (fragArrayList.get(i).getDate() == CALENDAR) {
                 return true;
             }
         }
@@ -183,7 +167,7 @@ public class WorkoutsFragment extends Fragment {
 
     private DateFrag getDateFrag() {
         for (int i = 0; i < fragArrayList.size(); i++) {
-            if (fragArrayList.get(i).getDate() == DATE) {
+            if (fragArrayList.get(i).getDate() == CALENDAR) {
                 return fragArrayList.get(i);
             }
         }

@@ -8,6 +8,7 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Exercise> exercises_to_send = DataHolder.getInstance().exercises;
     private Fragment fragment;
     private Fragment initial_fragment;
-    Bundle bundle = new Bundle();
+    private Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
                 }
+
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, fragment, "0");
 

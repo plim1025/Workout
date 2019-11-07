@@ -42,7 +42,8 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/workouts_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workout_dates"/>
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/workout_fab"

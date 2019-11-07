@@ -1,45 +1,36 @@
 package com.example.android.workout;
 
 import android.content.Context;
-import android.view.View;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
-import java.lang.reflect.Array;
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
-    private ArrayList<DateFrag> mDateFrags = new ArrayList<>();
-    private Calendar CALENDAR;
-    private int DATE = Integer.parseInt(DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime()));
+    private ArrayList<DateFrag> mDateFrags;
 
-    // This holds all the currently displayable views, in order from left to right.
-    private ArrayList<View> views = new ArrayList<View>();
-
-    public ViewPagerAdapter(FragmentManager fm, Context context, ArrayList<DateFrag> dateFrags) {
-        super(fm);
+    public ViewPagerAdapter(@NonNull FragmentManager fm, Context context, ArrayList<DateFrag> dateFrags) {
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
         mDateFrags = dateFrags;
-
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        for(int i = 0; i < mDateFrags.size(); i++) {
-            if(position == Integer.parseInt(mDateFrags.get(i).getDate()) - DATE) {
-                Fragment fragment = mDateFrags.get(i).getFragment();
-                return fragment;
-            }
-        }
-        return null;
+        Fragment fragment = mDateFrags.get(0).getFragment();
+        Bundle bundle = new Bundle();
+        ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
+        bundle.putParcelableArrayList("attached_exercises", exercises);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override
@@ -47,4 +38,19 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return mDateFrags.size();
     }
 }
+/*
+for(int i = 0; i < mDateFrags.size(); i++) {
+        Calendar CALENDAR = Calendar.getInstance();
+        CALENDAR.add(Calendar.DATE, position);
+        Date fragDate = mDateFrags.get(i).getDate().getTime();
+        if(CALENDAR.getTime() == fragDate) {
+        Fragment fragment = mDateFrags.get(i).getFragment();
+        Bundle bundle = new Bundle();
+        ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
+        bundle.putParcelableArrayList("attached_exercises", exercises);
+        fragment.setArguments(bundle);
+        return fragment;
+        }
+        }
 
+ */
