@@ -2,14 +2,18 @@ package com.example.android.workout;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -25,27 +29,29 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = mDateFrags.get(0).getFragment();
-        if(fragment.isAdded())
-        {
-            return fragment;
+        for(int i = 0; i < mDateFrags.size(); i++) {
+            Calendar CALENDAR = Calendar.getInstance();
+            CALENDAR.add(Calendar.DATE, position);
+            int Today = CALENDAR.getTime().getDay();
+            int fragDate = mDateFrags.get(i).getDate();
+            if(Today == fragDate) {
+                Fragment fragment = mDateFrags.get(i).getFragment();
+                Bundle bundle = new Bundle();
+                ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
+                bundle.putParcelableArrayList("attached_exercises", exercises);
+                fragment.setArguments(bundle);
+                return fragment;
+            }
         }
-        Bundle bundle = new Bundle();
-        ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
-        bundle.putParcelableArrayList("attached_exercises", exercises);
-        fragment.setArguments(bundle);
-        return fragment;
+        return new ViewPagerFragment();
     }
 
     @Override
     public int getCount() {
-        return mDateFrags.size();
+        return 365;
     }
 
-    private String getFragmentTag(int viewPagerId, int fragmentPosition)
-    {
-        return "android:switcher:" + viewPagerId + ":" + fragmentPosition;
-    }
+
 }
 /*
 for(int i = 0; i < mDateFrags.size(); i++) {

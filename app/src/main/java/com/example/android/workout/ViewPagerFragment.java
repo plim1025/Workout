@@ -26,14 +26,15 @@ public class ViewPagerFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
 
-        // Get ArrayList argument sent in WorkoutsFragment
-        ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
-
-        RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
+        if(getArguments() != null) {
+            // Get ArrayList argument sent in WorkoutsFragment
+            ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
+            RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+            WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.setAdapter(mAdapter);
+        }
 
         return view;
     }

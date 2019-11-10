@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_workout:
-                        fragment = initial_fragment;
+                        fragment = new WorkoutsFragment();
                         break;
                     case R.id.nav_exercises:
                         fragment = new ExercisesFragment();

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 class DataHolder {
     final ArrayList<Exercise> exercises = new ArrayList<>();
+    final ArrayList<DateFrag> fragDates = new ArrayList<>();
 
     private DataHolder() {}
 
