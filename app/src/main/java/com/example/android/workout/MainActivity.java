@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
     private FragmentTransaction fragmentTransaction;
-    private ArrayList<Exercise> exercises_to_send = DataHolder.getInstance().exercises;
+    private ArrayList<Exercise> exercises = DataHolder.getInstance().exercises;
     private Fragment fragment;
     private Fragment initial_fragment;
     private Bundle bundle = new Bundle();
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
         ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercises");
         if(exercise!=null) {
-            exercises_to_send.addAll(exercise);
-            bundle.putParcelableArrayList("exercises", exercises_to_send);
+            exercises.addAll(exercise);
+            bundle.putParcelableArrayList("exercises", exercises);
         }
 
         // Set home fragment to workout tab

@@ -31,6 +31,7 @@ public class WorkoutsFragment extends Fragment {
     private int TODAY = CALENDAR.getTime().getDay();
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
     //private ArrayList<DateFrag> fragArrayList = DataHolder.getInstance().fragDates;
+    private boolean bundleReceived;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,16 +41,16 @@ public class WorkoutsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.workouts, container, false);
 
-        /*
+
         // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
         Bundle bundle = this.getArguments();
         //ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
         if(bundle == null) {
-            bundleReceived = true;
+            bundleReceived = false;
         } else {
             bundleReceived = true;
         }
-        */
+
 
 
         // Set Date
@@ -105,7 +106,7 @@ public class WorkoutsFragment extends Fragment {
             /*bundle2.putParcelableArrayList("attached_exercises", attached_exercises);
             fragment.setArguments(bundle);
             */
-        } else {
+        } else if (bundleReceived){
             Fragment fragment = new ViewPagerFragment();
             fragArrayList.add(new DateFrag(TODAY, fragment, exercise));
         }
@@ -114,7 +115,6 @@ public class WorkoutsFragment extends Fragment {
         ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), mContext, fragArrayList);
         viewPager.setAdapter(adapter);
-
 
         // Go to AddExerciseActivity
         FloatingActionButton fab1 = view.findViewById(R.id.workout_fab_1);
