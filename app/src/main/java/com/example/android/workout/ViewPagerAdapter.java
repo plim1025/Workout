@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import static java.util.Calendar.YEAR;
+
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
@@ -29,15 +31,15 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
+        Calendar CALENDAR = Calendar.getInstance();
+        CALENDAR.add(Calendar.DATE, position);
+        int[] date = {CALENDAR.get(Calendar.DAY_OF_MONTH), CALENDAR.get(Calendar.MONTH), CALENDAR.get(YEAR)};
+
         for(int i = 0; i < mDateFrags.size(); i++) {
-            Calendar CALENDAR = Calendar.getInstance();
-            CALENDAR.add(Calendar.DATE, position);
-            int Today = CALENDAR.getTime().getDay();
-            int fragDate = mDateFrags.get(i).getDate();
-            if(Today == fragDate) {
-                Fragment fragment = mDateFrags.get(i).getFragment();
+            if((mDateFrags.get(i).getDate()[0] == date[0]) && (mDateFrags.get(i).getDate()[1] == date[1]) && (mDateFrags.get(i).getDate()[2] == date[2])) {
                 Bundle bundle = new Bundle();
-                ArrayList<Exercise> exercises = mDateFrags.get(0).getExercise();
+                Fragment fragment = new ViewPagerFragment();
+                ArrayList<Exercise> exercises = mDateFrags.get(i).getExercise();
                 bundle.putParcelableArrayList("attached_exercises", exercises);
                 fragment.setArguments(bundle);
                 return fragment;
@@ -46,9 +48,15 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         return new ViewPagerFragment();
     }
 
+    @NonNull
+    @Override
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        return super.instantiateItem(container, position);
+    }
+
     @Override
     public int getCount() {
-        return 365;
+        return 3;
     }
 
 

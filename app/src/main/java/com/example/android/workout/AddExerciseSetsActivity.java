@@ -19,14 +19,15 @@ import java.util.ArrayList;
 
 public class AddExerciseSetsActivity extends AppCompatActivity {
 
-    private ArrayList<Exercise> exercise = new ArrayList<Exercise>();
+    private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
+    private ArrayList<Exercise> deletable_exercises = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private AddExerciseRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    float WEIGHTTEXT = 0;
-    int REPSTEXT = 0;
-    Exercise added_exercise;
-    int exercise_items = 0;
+    private float WEIGHTTEXT = 0;
+    private int REPSTEXT = 0;
+    private Exercise added_exercise;
+    private int exercise_items = 0;
 
     @Override
     public void onBackPressed() {
@@ -37,10 +38,9 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
     protected void onPause() {
         // send ArrayList of exercises to AddExerciseActivity
         Intent i = new Intent(this, AddExerciseActivity.class);
-        i.putParcelableArrayListExtra("exercises", exercise);
+        exercise.addAll((deletable_exercises));
+        deletable_exercises.clear();
         startActivity(i);
-        // clear exercise ArrayList
-
         super.onPause();
     }
 
@@ -142,7 +142,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         clear_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                exercise.clear();
+                deletable_exercises.clear();
                 mAdapter.notifyItemRangeRemoved(0, exercise_items);
                 exercise_items = 0;
             }
@@ -150,19 +150,19 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
     }
 
     public void insertItem(int position, Exercise added_exercise) {
-        exercise.add(position, added_exercise);
+        deletable_exercises.add(position, added_exercise);
         mAdapter.notifyItemInserted(position);
     }
 
     public void removeItem(int position) {
-        exercise.remove(position);
+        deletable_exercises.remove(position);
         mAdapter.notifyItemRemoved(position);
     }
 
     public void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.add_exercise_sets_recycler_view);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mAdapter = new AddExerciseRecyclerViewAdapter(exercise);
+        mAdapter = new AddExerciseRecyclerViewAdapter(deletable_exercises);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

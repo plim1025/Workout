@@ -7,18 +7,15 @@ import java.util.Calendar;
 
 public class DateFrag{
 
-    private int mDate;
-    private Fragment mFragment;
+    private int[] mDate;
     private ArrayList<Exercise> mExercise;
 
-    public DateFrag(int date, Fragment fragment, ArrayList<Exercise> exercise) {
+    public DateFrag(int[] date, ArrayList<Exercise> exercise) {
         mDate = date;
-        mFragment = fragment;
         mExercise = exercise;
     }
 
-    public int getDate() { return mDate; }
-    public Fragment getFragment() { return mFragment; }
+    public int[] getDate() { return mDate; }
     public ArrayList<Exercise> getExercise() { return mExercise; }
 }
 

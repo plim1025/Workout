@@ -29,12 +29,10 @@ public class AddExerciseActivity extends AppCompatActivity {
     private JSONObject json;
     private JSONArray exercise_names;
     private JSONObject exercises;
-    private ArrayList<Exercise> exercise = new ArrayList<>();
 
     @Override
     public void onBackPressed() {
         Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
-        i.putParcelableArrayListExtra("exercises", exercise);
         startActivity(i);
     }
 
@@ -44,8 +42,6 @@ public class AddExerciseActivity extends AppCompatActivity {
 
         setContentView(R.layout.add_exercise_activity);
 
-        exercise = getIntent().getParcelableArrayListExtra("exercises");
-
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
         setSupportActionBar(toolbar);
@@ -54,7 +50,6 @@ public class AddExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
-                i.putParcelableArrayListExtra("exercises", exercise);
                 startActivity(i);
             }
         });

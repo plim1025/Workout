@@ -3,6 +3,7 @@ package com.example.android.workout;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import static androidx.constraintlayout.widget.Constraints.TAG;
+import static java.util.Calendar.YEAR;
 
 public class WorkoutsFragment extends Fragment {
 
@@ -28,10 +31,8 @@ public class WorkoutsFragment extends Fragment {
     private Calendar CALENDAR = Calendar.getInstance();
     private String DATE;
     private TextView DATEVIEW;
-    private int TODAY = CALENDAR.getTime().getDay();
+    private int[] date = DataHolder.getInstance().date;
     private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
-    //private ArrayList<DateFrag> fragArrayList = DataHolder.getInstance().fragDates;
-    private boolean bundleReceived;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class WorkoutsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.workouts, container, false);
 
-
+        /*
         // Receive workout arraylist from addExerciseActivity (not sure if this works yet, try at home)
         Bundle bundle = this.getArguments();
         //ArrayList<Exercise> added_exercises = bundle.getParcelableArrayList("exercises");
@@ -50,6 +51,7 @@ public class WorkoutsFragment extends Fragment {
         } else {
             bundleReceived = true;
         }
+         */
 
 
 
@@ -106,9 +108,8 @@ public class WorkoutsFragment extends Fragment {
             /*bundle2.putParcelableArrayList("attached_exercises", attached_exercises);
             fragment.setArguments(bundle);
             */
-        } else if (bundleReceived){
-            Fragment fragment = new ViewPagerFragment();
-            fragArrayList.add(new DateFrag(TODAY, fragment, exercise));
+        } else {
+            fragArrayList.add(new DateFrag(date, exercise));
         }
 
         // Set viewpager
@@ -148,10 +149,10 @@ public class WorkoutsFragment extends Fragment {
         return view;
 }
 
-    private void changeDate(int i) {
+    public void changeDate(int i) {
         CALENDAR.add(Calendar.DATE, i);
         DATE = DateFormat.getDateInstance(DateFormat.LONG).format(CALENDAR.getTime());
-        TODAY += i;
+        date[0] += i;
         DATEVIEW.setText(DATE);
     }
 
@@ -162,7 +163,7 @@ public class WorkoutsFragment extends Fragment {
 
     private boolean containsDate(ArrayList<DateFrag> fragArrayList) {
         for (int i = 0; i < fragArrayList.size(); i++) {
-            if (fragArrayList.get(i).getDate() == TODAY) {
+            if (fragArrayList.get(i).getDate() == date) {
                 return true;
             }
         }
@@ -171,7 +172,7 @@ public class WorkoutsFragment extends Fragment {
 
     private DateFrag getDateFrag(ArrayList<DateFrag> fragArrayList) {
         for (int i = 0; i < fragArrayList.size(); i++) {
-            if (fragArrayList.get(i).getDate() == TODAY) {
+            if (fragArrayList.get(i).getDate() == date) {
                 return fragArrayList.get(i);
             }
         }

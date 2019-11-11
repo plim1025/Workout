@@ -25,13 +25,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    FragmentManager fragmentManager = getSupportFragmentManager();
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
     private FragmentTransaction fragmentTransaction;
-    private ArrayList<Exercise> exercises = DataHolder.getInstance().exercises;
+    private FragmentManager fragmentManager = getSupportFragmentManager();
     private Fragment fragment;
-    private Fragment initial_fragment;
     private Bundle bundle = new Bundle();
 
     @Override
@@ -48,17 +46,10 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         Menu menu = bottomNavigationView.getMenu();
 
-        // Receive parcelable ArrayList from AddExerciseActivity and send to WorkoutsFragment
-        ArrayList<Exercise> exercise = getIntent().getParcelableArrayListExtra("exercises");
-        if(exercise!=null) {
-            exercises.addAll(exercise);
-            bundle.putParcelableArrayList("exercises", exercises);
-        }
-
         // Set home fragment to workout tab
         MenuItem menuItem = menu.getItem(0);
         menuItem.setChecked(true);
-        initial_fragment = new WorkoutsFragment();
+        Fragment initial_fragment = new WorkoutsFragment();
         initial_fragment.setArguments(bundle);
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frame, initial_fragment, "0");

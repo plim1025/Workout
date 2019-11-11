@@ -1,10 +1,14 @@
 package com.example.android.workout;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+
+import static java.util.Calendar.YEAR;
 
 class DataHolder {
+    Calendar CALENDAR = Calendar.getInstance();
     final ArrayList<Exercise> exercises = new ArrayList<>();
-    final ArrayList<DateFrag> fragDates = new ArrayList<>();
+    final int[] date = {CALENDAR.get(Calendar.DAY_OF_MONTH), CALENDAR.get(Calendar.MONTH), CALENDAR.get(YEAR)};
 
     private DataHolder() {}
 

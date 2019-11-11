@@ -39,6 +39,10 @@
             android:background = "@drawable/workout_top_navigation_color" />
     </LinearLayout>
 
+    <androidx.viewpager.widget.PagerTitleStrip
+        android:id="@+id/workouts_viewpager_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/workouts_viewpager"
         android:layout_width="match_parent"
