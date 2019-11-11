@@ -3,8 +3,6 @@ package com.example.android.workout;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-
 public class Exercise implements Parcelable{
 
     private String mName;
