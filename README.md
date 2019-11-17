@@ -4,10 +4,12 @@ Android app for tracking workouts
 Workout tracker with minimalist UI.
 
 
-![Workout App 2](https://user-images.githubusercontent.com/53018369/69002918-83186580-08ad-11ea-85f0-e32f9c59cf73.png = 250x250)
-![Workout App 6](https://user-images.githubusercontent.com/53018369/69002943-6c264300-08ae-11ea-9653-36322c19d459.png)
-![Workout App 5](https://user-images.githubusercontent.com/53018369/69002944-6c264300-08ae-11ea-9644-f97e14147fd7.png)
-![Workout App 4](https://user-images.githubusercontent.com/53018369/69002945-6cbed980-08ae-11ea-87e1-2f35aa53e220.png)
-![Workout App 3](https://user-images.githubusercontent.com/53018369/69002946-6cbed980-08ae-11ea-8878-a37ba0a3be80.png)
+![output-onlinepngtools](https://user-images.githubusercontent.com/53018369/69003009-8f052700-08af-11ea-80e5-ae1eaec6692d.png)
+![output-onlinepngtools (1)](https://user-images.githubusercontent.com/53018369/69003030-c1af1f80-08af-11ea-97ec-5f16bd682ee5.png)
+![output-onlinepngtools (4)](https://user-images.githubusercontent.com/53018369/69003031-c1af1f80-08af-11ea-9d5e-64701b85863a.png)
+![output-onlinepngtools (3)](https://user-images.githubusercontent.com/53018369/69003032-c247b600-08af-11ea-85f7-f3029709fb97.png)
+![output-onlinepngtools (2)](https://user-images.githubusercontent.com/53018369/69003033-c247b600-08af-11ea-9843-e679f7cfab36.png)
+
+
 
 
