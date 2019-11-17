@@ -2,7 +2,8 @@
 <LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,11 +16,74 @@
             android:layout_marginRight="16dp"
             android:layout_marginLeft="8dp"
             android:padding="12dp"
-            android:background="@drawable/create_new_exercise_color"/>
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="80dp"
+            android:paddingTop="12dp"
+            android:text="Jack Lee"
+            android:layout_gravity="center"
+            android:textSize="24sp" />
+
     </LinearLayout>
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/pie_chart"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/progress_stats"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp" />
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="55"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="5 tons"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="50, 152"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progress_stats_titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Total Workouts"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Weight Lifted"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Calories Burned"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.anychart.AnyChartView
+        android:id="@+id/pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="12dp"/>
 </LinearLayout>

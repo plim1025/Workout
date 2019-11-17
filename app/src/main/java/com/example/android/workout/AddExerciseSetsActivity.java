@@ -29,11 +29,13 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
     private Exercise added_exercise;
     private int exercise_items = 0;
 
+    // Return to previous activity by killing current activity when back button (bottom of screen) is pressed
     @Override
     public void onBackPressed() {
         finish();
     }
 
+    // When activity paused, send added exercises to AddExerciseActivity
     @Override
     protected void onPause() {
         // send ArrayList of exercises to AddExerciseActivity
@@ -88,6 +90,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         weightEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
         repsEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
+        // Set up + and - buttons
         minusWeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

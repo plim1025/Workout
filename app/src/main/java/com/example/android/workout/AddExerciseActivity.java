@@ -29,6 +29,7 @@ public class AddExerciseActivity extends AppCompatActivity {
     private JSONArray exercise_names;
     private JSONObject exercises;
 
+    // Return to previous activity when back button (bottom of screen) is pressed
     @Override
     public void onBackPressed() {
         Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
@@ -57,7 +58,6 @@ public class AddExerciseActivity extends AppCompatActivity {
         final ImageButton imageButton = findViewById(R.id.exercise_sort_button);
         final PopupMenu dropDownMenu = new PopupMenu(this, imageButton);
         final Menu menu = dropDownMenu.getMenu();
-
         menu.add(Menu.NONE, 0, 0, "Basic List");
         menu.add(Menu.NONE, 1, 1,"Complex List");
         menu.add(Menu.NONE, 2, 2,"By Category");
@@ -74,6 +74,7 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
+        // Set up dropdown menu onClickListener
         dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -95,6 +96,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         });
     }
 
+    // Build activity recycler view
     private void buildRecyclerView() {
         try {
             switch (sortIndicator) {
@@ -143,6 +145,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         }
     }
 
+    // Read complex exercises JSON file
     private String readComplexJSONFromAsset() {
         String json = null;
         try {
@@ -159,6 +162,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         return json;
     }
 
+    // Read basic exercises JSON file
     private String readBasicJSONFromAsset() {
         String json = null;
         try {

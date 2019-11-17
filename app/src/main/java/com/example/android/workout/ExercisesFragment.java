@@ -39,6 +39,7 @@ public class ExercisesFragment extends Fragment {
 
         view = inflater.inflate(R.layout.exercises, container, false);
 
+        // Hide keyboard when enter activity
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         // Create FAB
@@ -54,7 +55,6 @@ public class ExercisesFragment extends Fragment {
         final ImageButton imageButton = view.findViewById(R.id.exercise_sort_button);
         final PopupMenu dropDownMenu = new PopupMenu(getContext(), imageButton);
         final Menu menu = dropDownMenu.getMenu();
-
         menu.add(Menu.NONE, 0, 0, "Basic List");
         menu.add(Menu.NONE, 1, 1,"Complex List");
         menu.add(Menu.NONE, 2, 2,"By Category");

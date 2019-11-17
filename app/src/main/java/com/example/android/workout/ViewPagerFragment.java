@@ -26,6 +26,8 @@ public class ViewPagerFragment extends Fragment {
         if(getArguments() != null) {
             // Get ArrayList argument sent in WorkoutsFragment
             ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
+
+            // Set recycler view in fragment
             RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
             WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);

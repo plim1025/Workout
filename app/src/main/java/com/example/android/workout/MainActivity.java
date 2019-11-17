@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.addToBackStack("Add " + initial_fragment.toString());
         fragmentTransaction.commit();
 
+        // Set up listeners for bottom nav
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Set up listeners for top right menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    // Set up fragment/activity hierarchy
     @Override
     public void onBackPressed() {
         Fragment fragment = fragmentManager.findFragmentById(R.id.frame);

@@ -11,12 +11,14 @@ import android.widget.PopupMenu;
 
 import androidx.fragment.app.Fragment;
 
+import com.anychart.AnyChart;
+import com.anychart.AnyChartView;
+import com.anychart.chart.common.dataentry.DataEntry;
+import com.anychart.chart.common.dataentry.ValueDataEntry;
+import com.anychart.charts.Pie;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import lecho.lib.hellocharts.model.PieChartData;
-import lecho.lib.hellocharts.model.SliceValue;
-import lecho.lib.hellocharts.view.PieChartView;
 
 public class ProgressFragment extends Fragment {
     @Override
@@ -25,26 +27,46 @@ public class ProgressFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.progress, container, false);
 
+        /*
         // Add pie chart slices
         PieChartView pieChartView = view.findViewById(R.id.pie_chart);
         List<SliceValue> pieData = new ArrayList<>();
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieRed)).setLabel("1"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieOrange)).setLabel("2"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieYellow)).setLabel("3"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieLime)).setLabel("4"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGreen)).setLabel("5"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieCyan)).setLabel("6"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieBlue)).setLabel("7"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.piePurple)).setLabel("8"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieMagenta)).setLabel("9"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGrey)).setLabel("10"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieRed)).setLabel("Abs"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieOrange)).setLabel("Back"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieYellow)).setLabel("Biceps"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieLime)).setLabel("Cardio"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGreen)).setLabel("Chest"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieCyan)).setLabel("Forearms"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieBlue)).setLabel("Glutes"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.piePurple)).setLabel("Lower Legs"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieMagenta)).setLabel("Triceps"));
+        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGrey)).setLabel("Upper Legs"));
 
         // Set pie chart
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Whatever is selected in sort here").setCenterText1FontSize(20);
+        pieChartData.setHasCenterCircle(true).setCenterText1("Muscle Groups").setCenterText1FontSize(20);
         pieChartView.setPieChartData(pieChartData);
         pieChartView.setChartRotationEnabled(false);
+        */
+
+        // Add pie chart
+        Pie pie = AnyChart.pie();
+        List<DataEntry> data = new ArrayList<>();
+        //data.add(new ValueDataEntry("Abs", 10000));
+        data.add(new ValueDataEntry("Back", 12000));
+        //data.add(new ValueDataEntry("Biceps", 18000));
+        data.add(new ValueDataEntry("Cardio", 1000));
+        data.add(new ValueDataEntry("Chest", 10000));
+        //data.add(new ValueDataEntry("Forearms", 0));
+        //data.add(new ValueDataEntry("Glutes", 0));
+        data.add(new ValueDataEntry("Legs", 30000));
+        //data.add(new ValueDataEntry("Triceps", 10000));
+        //data.add(new ValueDataEntry("Upper Legs", 10000));
+        pie.data(data);
+
+        AnyChartView anyChartView = view.findViewById(R.id.pie_chart);
+        anyChartView.setChart(pie);
 
         // Add Menu Button
         final ImageButton imageButton = view.findViewById(R.id.progress_sort_button);

@@ -25,6 +25,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     private ArrayList<Exercise> mExercises;
     private int[] mItemDate;
 
+    // Constructor
     public ViewPagerAdapter(@NonNull FragmentManager fm, Context context, int[] itemDate, ArrayList<Exercise> exercises) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
@@ -32,6 +33,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         mExercises = exercises;
     }
 
+    // This runs when new fragments need to be loaded into the adapter - loads 3 in at a time
     @NonNull
     @Override
     public Fragment getItem(int position) {
@@ -67,6 +69,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         return fragment;
     }
 
+    // Returns number of fragments in adapter
     @Override
     public int getCount() {
         int[] date = DataHolder.getInstance().date;
@@ -74,14 +77,14 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         return Integer.MAX_VALUE;
     }
 
+    // Returns page title for each fragment
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
         Calendar CALENDAR = Calendar.getInstance();
         CALENDAR.add(Calendar.DATE, position);
         String date = DateFormat.getDateInstance(DateFormat.FULL).format(CALENDAR.getTime());
-        String DATE = "           " + date.substring(0, date.length() - 6) + "           ";
-        return DATE;
+        return "          " + date.substring(0, date.length() - 6) + "          ";
     }
 }
 

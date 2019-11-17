@@ -14,10 +14,10 @@ public class AddExerciseRecyclerViewAdapter extends RecyclerView.Adapter<AddExer
     private ArrayList<Exercise> mExercises;
     private OnItemClickListener mListener;
 
+    // Create onClickListener for each workout item
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
-
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
