@@ -3,5 +3,12 @@ Android app for tracking workouts
 
 Workout tracker with minimalist UI.
 
-![Capture1](https://user-images.githubusercontent.com/53018369/66626890-b8df7580-ebae-11e9-8644-e5cdeb29f379.PNG)
-![Capture2](https://user-images.githubusercontent.com/53018369/66626892-ba10a280-ebae-11e9-8a93-fc41eccbb96f.PNG)
+
+![output-onlinepngtools](https://user-images.githubusercontent.com/53018369/69003009-8f052700-08af-11ea-80e5-ae1eaec6692d.png)
+![output-onlinepngtools (1)](https://user-images.githubusercontent.com/53018369/69003030-c1af1f80-08af-11ea-97ec-5f16bd682ee5.png)
+![output-onlinepngtools (4)](https://user-images.githubusercontent.com/53018369/69003031-c1af1f80-08af-11ea-9d5e-64701b85863a.png)
+![output-onlinepngtools (3)](https://user-images.githubusercontent.com/53018369/69003032-c247b600-08af-11ea-85f7-f3029709fb97.png)
+
+
+
+
