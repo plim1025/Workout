@@ -50,24 +50,6 @@ public class ProgressFragment extends Fragment {
         pieChartView.setChartRotationEnabled(false);
         */
 
-        // Add pie chart
-        Pie pie = AnyChart.pie();
-        List<DataEntry> data = new ArrayList<>();
-        //data.add(new ValueDataEntry("Abs", 10000));
-        data.add(new ValueDataEntry("Back", 12000));
-        //data.add(new ValueDataEntry("Biceps", 18000));
-        data.add(new ValueDataEntry("Cardio", 1000));
-        data.add(new ValueDataEntry("Chest", 10000));
-        //data.add(new ValueDataEntry("Forearms", 0));
-        //data.add(new ValueDataEntry("Glutes", 0));
-        data.add(new ValueDataEntry("Legs", 30000));
-        //data.add(new ValueDataEntry("Triceps", 10000));
-        //data.add(new ValueDataEntry("Upper Legs", 10000));
-        pie.data(data);
-
-        AnyChartView anyChartView = view.findViewById(R.id.pie_chart);
-        anyChartView.setChart(pie);
-
         // Add Menu Button
         final ImageButton imageButton = view.findViewById(R.id.progress_sort_button);
         final PopupMenu dropDownMenu = new PopupMenu(getContext(), imageButton);
