@@ -1,6 +1,8 @@
 package com.example.android.workout;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,33 +17,42 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.workout.WorkoutData.WorkoutContract;
+import com.example.android.workout.WorkoutData.WorkoutDBHelper;
+
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class AddExerciseSetsActivity extends AppCompatActivity {
 
-    private ArrayList<Exercise> exercise = DataHolder.getInstance().exercises;
+    // stores exercises in recyclerView
     private ArrayList<Exercise> deletable_exercises = new ArrayList<>();
+
+    // exercise clicked on in addExerciseActivity
+    private Exercise added_exercise;
+    private int exercise_items = 0;
+
+    private WorkoutDBHelper mDbHelper;
     private RecyclerView mRecyclerView;
     private AddExerciseRecyclerViewAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private float WEIGHTTEXT = 0;
     private int REPSTEXT = 0;
-    private Exercise added_exercise;
-    private int exercise_items = 0;
 
-    // Return to previous activity by killing current activity when back button (bottom of screen) is pressed
+
+    // Return to previous activity when back button (bottom) is pressed
     @Override
     public void onBackPressed() {
         finish();
     }
 
-    // When activity paused, send added exercises to AddExerciseActivity
+    // Return to previous activity when back button (top) is pressed
     @Override
     protected void onPause() {
-        // send ArrayList of exercises to AddExerciseActivity
         Intent i = new Intent(this, AddExerciseActivity.class);
-        exercise.addAll((deletable_exercises));
+        // Clear recyclerView
         deletable_exercises.clear();
+        insertExercisestoDb();
         startActivity(i);
         super.onPause();
     }
@@ -101,7 +112,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
                 }
             }
         });
-
         addWeight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,7 +120,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
                 weightEditText.setText(String.valueOf(WEIGHTTEXT));
             }
         });
-
         minusReps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,7 +130,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
                 }
             }
         });
-
         addReps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -131,17 +139,20 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
             }
         });
 
+        // When click add set, add to recyclerView
         addSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
                 REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
                 added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
-                insertItem(exercise_items, added_exercise);
+                deletable_exercises.add(exercise_items, added_exercise);
+                mAdapter.notifyItemInserted(exercise_items);
                 exercise_items++;
             }
         });
 
+        // When click clear all, clear all from recyclerView
         clear_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -152,16 +163,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         });
     }
 
-    public void insertItem(int position, Exercise added_exercise) {
-        deletable_exercises.add(position, added_exercise);
-        mAdapter.notifyItemInserted(position);
-    }
-
-    public void removeItem(int position) {
-        deletable_exercises.remove(position);
-        mAdapter.notifyItemRemoved(position);
-    }
-
     public void buildRecyclerView() {
         mRecyclerView = findViewById(R.id.add_exercise_sets_recycler_view);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -169,5 +170,27 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    public void insertExercisestoDb() {
+
+        // Gets the database in write mode
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+        // Create a ContentValues object where column names are the keys,
+        ContentValues values = new ContentValues();
+        values.put(WorkoutContract.WorkoutEntry.COL
+        values.put(WorkoutContract.WorkoutEntry.COLUMN_EXERCISE, added_exercise.getName());
+        values.put(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT, WEIGHTTEXT);
+        values.put(WorkoutContract.WorkoutEntry.COLUMN_REPS, REPSTEXT);
+
+        // Insert a new row for Toto in the database, returning the ID of that new row.
+        // The first argument for db.insert() is the pets table name.
+        // The second argument provides the name of a column in which the framework
+        // can insert NULL in the event that the ContentValues is empty (if
+        // this is set to "null", then the framework will not insert a row when
+        // there are no values).
+        // The third argument is the ContentValues object containing the info for Toto.
+        long newRowId = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME, null, values);
     }
 }

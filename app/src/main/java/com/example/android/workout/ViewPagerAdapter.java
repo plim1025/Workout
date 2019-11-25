@@ -21,31 +21,38 @@ import static java.util.Calendar.YEAR;
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
-    private ArrayList<DateFrag> mDateFrags = DataHolder.getInstance().dateFrags;
-    private ArrayList<Exercise> mExercises;
-    private int[] mItemDate;
 
     // Constructor
-    public ViewPagerAdapter(@NonNull FragmentManager fm, Context context, int[] itemDate, ArrayList<Exercise> exercises) {
+    public ViewPagerAdapter(@NonNull FragmentManager fm, Context context) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
-        mItemDate = itemDate;
-        mExercises = exercises;
     }
 
     // This runs when new fragments need to be loaded into the adapter - loads 3 in at a time
     @NonNull
     @Override
     public Fragment getItem(int position) {
+
+        // Add current position to calendar date
         Calendar CALENDAR = Calendar.getInstance();
         CALENDAR.add(Calendar.DATE, position);
+
         Bundle bundle = new Bundle();
+
+        // Get adjusted date according to position
         int date[] = {CALENDAR.get(Calendar.DAY_OF_MONTH), CALENDAR.get(Calendar.MONTH), CALENDAR.get(YEAR)};
+
+        // Loop through old mDateFrags to see if DateFrag date matches adjusted date
         for(int i = 0; i < mDateFrags.size(); i++) {
+
+            // If it does
             if((mDateFrags.get(i).getDate()[0] == date[0]) && (mDateFrags.get(i).getDate()[1] == date[1]) && (mDateFrags.get(i).getDate()[2] == date[2])) {
                 Fragment fragment = new ViewPagerFragment();
+
+                // Fetch new exercises
                 ArrayList<Exercise> exercises = mDateFrags.get(i).getExercise();
-                // get new exercises if date matches date when entered addExercisesActivity
+
+                // get old exercises if date matches date when entered addExercisesActivity and contains at least one exercise
                 if(((mItemDate[0] == date[0]) && (mItemDate[1] == date[1]) && (mItemDate[2] == date[2])) && exercises.size() > 0) {
                     exercises.addAll((mExercises));
                     mDateFrags.add(i, new DateFrag(date, mExercises));
@@ -55,8 +62,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 return fragment;
             }
         }
+
         // If fragment not in previous records, create new
         Fragment fragment = new ViewPagerFragment();
+
         // If date matches date when entered addExerciseActivity, attach exercises
         if((mItemDate[0] == date[0]) && (mItemDate[1] == date[1]) && (mItemDate[2] == date[2]) && (mExercises.size() != 0)) {
             Bundle bundle2 = new Bundle();
@@ -72,8 +81,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     // Returns number of fragments in adapter
     @Override
     public int getCount() {
-        int[] date = DataHolder.getInstance().date;
-
         return Integer.MAX_VALUE;
     }
 

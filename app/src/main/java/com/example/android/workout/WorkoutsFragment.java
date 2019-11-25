@@ -3,7 +3,6 @@ package com.example.android.workout;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +12,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-
-import static androidx.constraintlayout.widget.Constraints.TAG;
-import static java.util.Calendar.YEAR;
 
 public class WorkoutsFragment extends Fragment {
 
     private Context mContext = getContext();
-    private int[] date = DataHolder.getInstance().date;
-    private ArrayList<Exercise> exercises = DataHolder.getInstance().exercises;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,27 +25,9 @@ public class WorkoutsFragment extends Fragment {
 
         // Set viewpager
         final ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
-        ArrayList<Exercise> exercises_copy = (ArrayList<Exercise>) exercises.clone();
-        final ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), mContext, date, exercises_copy);
+        final ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), mContext);
         viewPager.setAdapter(adapter);
-        exercises.clear();
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-
-            @Override
-            public void onPageScrollStateChanged(int state) {}
-
-            @Override
-            public void onPageSelected(int position) {
-                Calendar CALENDAR = Calendar.getInstance();
-                CALENDAR.add(Calendar.DATE, position);
-                date[0] = CALENDAR.get(Calendar.DAY_OF_MONTH);
-                date[1] = CALENDAR.get(Calendar.MONTH);
-                date[2] = CALENDAR.get(YEAR);
-            }
-        });
 
         // Go to AddExerciseActivity
         FloatingActionButton fab1 = view.findViewById(R.id.workout_fab_1);
@@ -61,6 +35,8 @@ public class WorkoutsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
+                // Put position of viewpager as argument
+                intent.putExtra("date", viewPager.getCurrentItem());
                 startActivity(intent);
             }
         });

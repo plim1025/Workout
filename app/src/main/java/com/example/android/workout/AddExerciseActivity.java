@@ -96,7 +96,6 @@ public class AddExerciseActivity extends AppCompatActivity {
         });
     }
 
-    // Build activity recycler view
     private void buildRecyclerView() {
         try {
             switch (sortIndicator) {
