@@ -28,6 +28,7 @@ public class AddExerciseActivity extends AppCompatActivity {
     private JSONObject json;
     private JSONArray exercise_names;
     private JSONObject exercises;
+    private int date;
 
     // Return to previous activity when back button (bottom of screen) is pressed
     @Override
@@ -41,6 +42,10 @@ public class AddExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.add_exercise_activity);
+
+        // Receive date from workoutsFragment
+        Intent intent = getIntent();
+        date = intent.getParcelableExtra("date");
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
@@ -135,6 +140,7 @@ public class AddExerciseActivity extends AppCompatActivity {
                 public void onItemClick(int position) {
                     Intent intent = new Intent(AddExerciseActivity.this, AddExerciseSetsActivity.class);
                     intent.putExtra("current_exercise", exercise.get(position));
+                    intent.putExtra("date", date);
                     startActivity(intent);
                 }
             });

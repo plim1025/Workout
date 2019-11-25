@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
@@ -31,6 +32,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
     // exercise clicked on in addExerciseActivity
     private Exercise added_exercise;
     private int exercise_items = 0;
+    private int date;
 
     private WorkoutDBHelper mDbHelper;
     private RecyclerView mRecyclerView;
@@ -52,7 +54,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         Intent i = new Intent(this, AddExerciseActivity.class);
         // Clear recyclerView
         deletable_exercises.clear();
-        insertExercisestoDb();
+        insertExercises();
         startActivity(i);
         super.onPause();
     }
@@ -65,9 +67,10 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // Hide keyboard when open activity
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        // Receive exercise object when clicked on
+        // Receive exercise object and date from AddExerciseActivity
         Intent intent = getIntent();
         final Exercise current_exercise = intent.getParcelableExtra("current_exercise");
+        date = intent.getParcelableExtra("date");
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_sets_toolbar);
@@ -172,14 +175,14 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    public void insertExercisestoDb() {
+    public void insertExercises() {
 
         // Gets the database in write mode
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         // Create a ContentValues object where column names are the keys,
         ContentValues values = new ContentValues();
-        values.put(WorkoutContract.WorkoutEntry.COL
+        values.put(WorkoutContract.WorkoutEntry.COLUMN_DATE, date);
         values.put(WorkoutContract.WorkoutEntry.COLUMN_EXERCISE, added_exercise.getName());
         values.put(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT, WEIGHTTEXT);
         values.put(WorkoutContract.WorkoutEntry.COLUMN_REPS, REPSTEXT);
@@ -192,5 +195,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // there are no values).
         // The third argument is the ContentValues object containing the info for Toto.
         long newRowId = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME, null, values);
+        Log.v("AddExerciseActivity", "New Row ID " + newRowId);
     }
 }
