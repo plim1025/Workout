@@ -32,50 +32,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-
-        // Add current position to calendar date
-        Calendar CALENDAR = Calendar.getInstance();
-        CALENDAR.add(Calendar.DATE, position);
-
-        Bundle bundle = new Bundle();
-
-        // Get adjusted date according to position
-        int date[] = {CALENDAR.get(Calendar.DAY_OF_MONTH), CALENDAR.get(Calendar.MONTH), CALENDAR.get(YEAR)};
-
-        // Loop through old mDateFrags to see if DateFrag date matches adjusted date
-        for(int i = 0; i < mDateFrags.size(); i++) {
-
-            // If it does
-            if((mDateFrags.get(i).getDate()[0] == date[0]) && (mDateFrags.get(i).getDate()[1] == date[1]) && (mDateFrags.get(i).getDate()[2] == date[2])) {
-                Fragment fragment = new ViewPagerFragment();
-
-                // Fetch new exercises
-                ArrayList<Exercise> exercises = mDateFrags.get(i).getExercise();
-
-                // get old exercises if date matches date when entered addExercisesActivity and contains at least one exercise
-                if(((mItemDate[0] == date[0]) && (mItemDate[1] == date[1]) && (mItemDate[2] == date[2])) && exercises.size() > 0) {
-                    exercises.addAll((mExercises));
-                    mDateFrags.add(i, new DateFrag(date, mExercises));
-                }
-                bundle.putParcelableArrayList("attached_exercises", exercises);
-                fragment.setArguments(bundle);
-                return fragment;
-            }
-        }
-
-        // If fragment not in previous records, create new
-        Fragment fragment = new ViewPagerFragment();
-
-        // If date matches date when entered addExerciseActivity, attach exercises
-        if((mItemDate[0] == date[0]) && (mItemDate[1] == date[1]) && (mItemDate[2] == date[2]) && (mExercises.size() != 0)) {
-            Bundle bundle2 = new Bundle();
-            ArrayList<Exercise> stored_exercises = mExercises;
-            DateFrag newFrag = new DateFrag(date, stored_exercises);
-            bundle2.putParcelableArrayList("attached_exercises", stored_exercises);
-            fragment.setArguments(bundle2);
-            mDateFrags.add(newFrag);
-        }
-        return fragment;
+        return null;
     }
 
     // Returns number of fragments in adapter

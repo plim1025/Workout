@@ -45,7 +45,7 @@ public class AddExerciseActivity extends AppCompatActivity {
 
         // Receive date from workoutsFragment
         Intent intent = getIntent();
-        date = intent.getParcelableExtra("date");
+        date = intent.getIntExtra("date", 0);
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);

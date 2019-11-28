@@ -26,7 +26,7 @@ public class WorkoutsFragment extends Fragment {
         // Set viewpager
         final ViewPager viewPager = view.findViewById(R.id.workouts_viewpager);
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), mContext);
-        viewPager.setAdapter(adapter);
+        //viewPager.setAdapter(adapter);
 
 
         // Go to AddExerciseActivity
@@ -36,7 +36,8 @@ public class WorkoutsFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
                 // Put position of viewpager as argument
-                intent.putExtra("date", viewPager.getCurrentItem());
+                int date = viewPager.getCurrentItem();
+                intent.putExtra("date", date);
                 startActivity(intent);
             }
         });

@@ -11,6 +11,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ import com.example.android.workout.WorkoutData.WorkoutContract;
 import com.example.android.workout.WorkoutData.WorkoutDBHelper;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 
 public class AddExerciseSetsActivity extends AppCompatActivity {
@@ -32,7 +34,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
     // exercise clicked on in addExerciseActivity
     private Exercise added_exercise;
     private int exercise_items = 0;
-    private int date;
+    private int dateInt;
 
     private WorkoutDBHelper mDbHelper;
     private RecyclerView mRecyclerView;
@@ -54,7 +56,6 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         Intent i = new Intent(this, AddExerciseActivity.class);
         // Clear recyclerView
         deletable_exercises.clear();
-        insertExercises();
         startActivity(i);
         super.onPause();
     }
@@ -70,7 +71,15 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // Receive exercise object and date from AddExerciseActivity
         Intent intent = getIntent();
         final Exercise current_exercise = intent.getParcelableExtra("current_exercise");
-        date = intent.getParcelableExtra("date");
+        int date = intent.getIntExtra("date", 0);
+
+        // Add position of viewpager to date and convert to int in form "DDMMYYYY"
+        Calendar CALENDAR = Calendar.getInstance();
+        CALENDAR.add(Calendar.DATE, date);
+        int years = CALENDAR.get(Calendar.YEAR);
+        int months =  CALENDAR.get(Calendar.MONTH);
+        int days = CALENDAR.get(Calendar.DAY_OF_MONTH);
+        dateInt = Integer.parseInt(Integer.toString(years) + Integer.toString(months) + Integer.toString(days));
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.add_exercise_sets_toolbar);
@@ -152,6 +161,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
                 deletable_exercises.add(exercise_items, added_exercise);
                 mAdapter.notifyItemInserted(exercise_items);
                 exercise_items++;
+                insertExercises();
             }
         });
 
@@ -177,12 +187,14 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
 
     public void insertExercises() {
 
+        mDbHelper = new WorkoutDBHelper(this);
+
         // Gets the database in write mode
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         // Create a ContentValues object where column names are the keys,
         ContentValues values = new ContentValues();
-        values.put(WorkoutContract.WorkoutEntry.COLUMN_DATE, date);
+        values.put(WorkoutContract.WorkoutEntry.COLUMN_DATE, dateInt);
         values.put(WorkoutContract.WorkoutEntry.COLUMN_EXERCISE, added_exercise.getName());
         values.put(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT, WEIGHTTEXT);
         values.put(WorkoutContract.WorkoutEntry.COLUMN_REPS, REPSTEXT);
@@ -195,6 +207,14 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // there are no values).
         // The third argument is the ContentValues object containing the info for Toto.
         long newRowId = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME, null, values);
-        Log.v("AddExerciseActivity", "New Row ID " + newRowId);
+
+        // Show a toast message depending on whether or not the insertion was successful
+        if (newRowId == -1) {
+            // If the row ID is -1, then there was an error with insertion.
+            Toast.makeText(this, "Error with saving exercise", Toast.LENGTH_SHORT).show();
+        } else {
+            // Otherwise, the insertion was successful and we can display a toast with the row ID.
+            Toast.makeText(this, "Exercise saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
+        }
     }
 }
