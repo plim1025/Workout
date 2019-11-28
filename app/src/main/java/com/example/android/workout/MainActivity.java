@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.main_activity);
 
+        // Set up database of exercises
+
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

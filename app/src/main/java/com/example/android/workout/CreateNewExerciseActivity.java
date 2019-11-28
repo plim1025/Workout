@@ -31,7 +31,7 @@ public class CreateNewExerciseActivity extends AppCompatActivity{
         });
 
         // Set up dropdown menu
-        String[] spinnerArray = new String[] {"", "Abs", "Back", "Biceps", "Cardio", "Chest", "Forearms", "Glutes", "Lower Legs", "Triceps", "Upper Legs"};
+        String[] spinnerArray = new String[] {"", "Abs", "Back", "Biceps", "Cardio", "Chest", "Glutes", "Lower Legs", "Triceps", "Upper Legs"};
         Spinner spinner = findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, spinnerArray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

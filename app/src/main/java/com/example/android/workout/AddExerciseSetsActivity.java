@@ -157,7 +157,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
                 REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
-                added_exercise = new Exercise(current_exercise.getName(), current_exercise.getMuscleGroup(), current_exercise.getType(), current_exercise.getEquipment(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
+                added_exercise = new Exercise(current_exercise.getName(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
                 deletable_exercises.add(exercise_items, added_exercise);
                 mAdapter.notifyItemInserted(exercise_items);
                 exercise_items++;
@@ -207,14 +207,5 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         // there are no values).
         // The third argument is the ContentValues object containing the info for Toto.
         long newRowId = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME, null, values);
-
-        // Show a toast message depending on whether or not the insertion was successful
-        if (newRowId == -1) {
-            // If the row ID is -1, then there was an error with insertion.
-            Toast.makeText(this, "Error with saving exercise", Toast.LENGTH_SHORT).show();
-        } else {
-            // Otherwise, the insertion was successful and we can display a toast with the row ID.
-            Toast.makeText(this, "Exercise saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
-        }
     }
 }

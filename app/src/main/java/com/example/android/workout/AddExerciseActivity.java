@@ -125,7 +125,7 @@ public class AddExerciseActivity extends AppCompatActivity {
 
             for(int i = 0; i < exercise_names.length(); i++){
                 JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
-                exercise.add(new Exercise(exercise_names.getString(i), exercise_info.getString("Main Muscle Group"), exercise_info.getString("Type"), exercise_info.getString("Equipment"), 0, 0, 0));
+                // read exercises from database
             }
 
             RecyclerView recyclerView = findViewById(R.id.exercise_recycler_view);

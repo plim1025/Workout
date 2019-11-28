@@ -24,7 +24,7 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
                 + WorkoutEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + WorkoutEntry.COLUMN_DATE + " INTEGER NOT NULL, "
                 + WorkoutEntry.COLUMN_EXERCISE + " INTEGER NOT NULL, "
-                + WorkoutEntry.COLUMN_WEIGHT + " INTEGER NOT NULL, "
+                + WorkoutEntry.COLUMN_WEIGHT + " REAL, "
                 + WorkoutEntry.COLUMN_REPS + " INTEGER NOT NULL);";
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_PETS_TABLE);
@@ -32,6 +32,6 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        // Only 1 version for now, leave empty
     }
 }
