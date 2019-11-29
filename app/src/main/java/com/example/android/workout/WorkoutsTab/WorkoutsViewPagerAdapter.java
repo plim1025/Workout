@@ -1,11 +1,10 @@
-package com.example.android.workout;
+package com.example.android.workout.WorkoutsTab;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.example.android.workout.Exercise;
 import com.example.android.workout.WorkoutData.WorkoutContract;
 import com.example.android.workout.WorkoutData.WorkoutDBHelper;
 
@@ -20,14 +20,14 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class WorkoutsViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context mContext;
     private ArrayList<Exercise> mExercises = new ArrayList<>();
     private int mLastPosition;
 
     // Constructor
-    public ViewPagerAdapter(@NonNull FragmentManager fm, Context context) {
+    public WorkoutsViewPagerAdapter(@NonNull FragmentManager fm, Context context) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
     }
@@ -79,7 +79,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         bundle.putParcelableArrayList("attached_exercises", (ArrayList<? extends Parcelable>) mExercises.clone());
         // Clear exercisesFragment for further usage
         mExercises.clear();
-        Fragment viewPagerFragment = new ViewPagerFragment();
+        Fragment viewPagerFragment = new WorkoutsViewPagerFragment();
         viewPagerFragment.setArguments(bundle);
         return viewPagerFragment;
     }

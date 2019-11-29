@@ -1,24 +1,29 @@
-package com.example.android.workout;
+package com.example.android.workout.WorkoutsTab;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.workout.Exercise;
+import com.example.android.workout.R;
 
 import java.util.ArrayList;
 
 public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRecyclerViewAdapter.RecyclerViewHolder> {
     private ArrayList<Exercise> mExercises;
-    private OnItemClickListener mListener;
+    private OnLongItemClickListener mListener;
 
-    public interface OnItemClickListener {
+    public interface OnLongItemClickListener {
         void onItemClick(int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener) {
+    public void setOnLongItemClickListener(OnLongItemClickListener listener) {
         mListener = listener;
     }
 
@@ -27,21 +32,23 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
         private TextView exercise_weight;
         private TextView exercise_reps;
 
-        private RecyclerViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
+        private RecyclerViewHolder(@NonNull final View itemView, final OnLongItemClickListener listener) {
             super(itemView);
             exercise_name = itemView.findViewById(R.id.workout_exercise_name);
             exercise_weight = itemView.findViewById(R.id.workout_exercise_weight);
             exercise_reps = itemView.findViewById(R.id.workout_exercise_reps);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
-                public void onClick(View view) {
+                public boolean onLongClick(View view) {
                     if (listener != null) {
                         int position = getAdapterPosition();
                         if(position != RecyclerView.NO_POSITION) {
                             listener.onItemClick(position);
+                            return true;
                         }
                     }
+                    return false;
                 }
             });
         }

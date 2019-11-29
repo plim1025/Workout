@@ -1,4 +1,4 @@
-package com.example.android.workout;
+package com.example.android.workout.ExerciseTab;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,6 +19,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.android.workout.ExerciseData.ExerciseContract;
+import com.example.android.workout.R;
 import com.example.android.workout.WorkoutData.ExerciseDBHelper;
 import com.example.android.workout.WorkoutData.WorkoutContract;
 import com.example.android.workout.WorkoutData.WorkoutDBHelper;

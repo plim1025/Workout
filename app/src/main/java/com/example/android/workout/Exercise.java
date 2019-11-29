@@ -70,7 +70,7 @@ public class Exercise implements Parcelable{
 
     public int getSet() { return mSet; }
 
-    public String getmNotes() { return mNotes; }
+    public String getNotes() { return mNotes; }
 
     @Override
     public int describeContents() {

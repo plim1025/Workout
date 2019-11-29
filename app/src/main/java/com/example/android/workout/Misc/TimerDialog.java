@@ -1,4 +1,4 @@
-package com.example.android.workout;
+package com.example.android.workout.Misc;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
+
+import com.example.android.workout.R;
 
 public class TimerDialog extends AppCompatDialogFragment {
 

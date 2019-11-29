@@ -21,11 +21,13 @@
         </activity>
         <activity android:name=".SettingsActivity">
         </activity>
-        <activity android:name=".CreateNewExerciseActivity">
+        <activity android:name=".ExerciseTab.CreateNewExerciseActivity">
         </activity>
-        <activity android:name=".AddExerciseActivity">
+        <activity android:name=".ExerciseTab.ExerciseInfoActivity">
         </activity>
-        <activity android:name=".AddExerciseSetsActivity">
+        <activity android:name=".WorkoutsTab.AddExerciseActivity">
+        </activity>
+        <activity android:name=".WorkoutsTab.AddExerciseSetsActivity">
         </activity>
     </application>
 

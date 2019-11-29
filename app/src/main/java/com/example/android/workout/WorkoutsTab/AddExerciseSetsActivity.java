@@ -1,17 +1,15 @@
-package com.example.android.workout;
+package com.example.android.workout.WorkoutsTab;
 
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,12 +17,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.workout.Exercise;
+import com.example.android.workout.R;
 import com.example.android.workout.WorkoutData.WorkoutContract;
 import com.example.android.workout.WorkoutData.WorkoutDBHelper;
+import com.example.android.workout.WorkoutsTab.AddExerciseActivity;
+import com.example.android.workout.WorkoutsTab.AddExerciseRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 
 public class AddExerciseSetsActivity extends AppCompatActivity {
 

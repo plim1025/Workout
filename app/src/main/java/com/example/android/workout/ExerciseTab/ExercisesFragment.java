@@ -1,78 +1,82 @@
-package com.example.android.workout;
+package com.example.android.workout.ExerciseTab;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.workout.Exercise;
 import com.example.android.workout.ExerciseData.ExerciseContract;
+import com.example.android.workout.R;
 import com.example.android.workout.WorkoutData.ExerciseDBHelper;
-import com.example.android.workout.WorkoutData.WorkoutContract;
+import com.example.android.workout.WorkoutsTab.AddExerciseSetsActivity;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-public class AddExerciseActivity extends AppCompatActivity {
+public class ExercisesFragment extends Fragment {
 
+    private View view;
     private ArrayList<Exercise> exercises = new ArrayList<>();
     private ExerciseDBHelper mDbHelper;
-    private int date;
 
-    // Return to previous activity when back button (bottom of screen) is pressed
     @Override
-    public void onBackPressed() {
-        Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
-        startActivity(i);
+    public void onResume() {
+        exercises.clear();
+        exercises = getAllExercises();
+        buildRecyclerView();
+        super.onResume();
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        setContentView(R.layout.add_exercise_activity);
+        view = inflater.inflate(R.layout.exercises_fragment, container, false);
 
         // Instantiate ExerciseDBHelper
-        mDbHelper = new ExerciseDBHelper(this);
+        mDbHelper = new ExerciseDBHelper(this.getActivity());
 
-        // Receive date from workoutsFragment
-        Intent intent = getIntent();
-        date = intent.getIntExtra("date", 0);
+        // Hide keyboard when enter activity
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        // Set up toolbar
-        Toolbar toolbar = findViewById(R.id.add_exercise_toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        // Create FAB
+        FloatingActionButton fab1 = view.findViewById(R.id.exercises_fab_1);
+        fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(AddExerciseActivity.this, MainActivity.class);
-                startActivity(i);
+                startActivity(new Intent(getActivity(), CreateNewExerciseActivity.class));
             }
         });
 
         // Create menu
-        final ImageButton imageButton = findViewById(R.id.exercise_sort_button);
-        final PopupMenu dropDownMenu = new PopupMenu(this, imageButton);
+        final ImageButton imageButton = view.findViewById(R.id.exercise_sort_button);
+        final PopupMenu dropDownMenu = new PopupMenu(getContext(), imageButton);
         final Menu menu = dropDownMenu.getMenu();
-        menu.add(Menu.NONE, 0, 0, "All Exercises");
-        menu.add(Menu.NONE, 2, 2,"By Category");
-        menu.add(Menu.NONE, 3, 3,"By Most Recent");
-        menu.add(Menu.NONE, 4, 4,"Favorites");
+        menu.add(Menu.NONE, 0, 0, "Basic List");
+        menu.add(Menu.NONE, 1, 1, "Complex List");
+        menu.add(Menu.NONE, 2, 2, "By Category");
+        menu.add(Menu.NONE, 3, 3, "By Most Recent");
+        menu.add(Menu.NONE, 4, 4, "Favorites");
 
         // Set default to all exercisesFragment
         exercises.clear();
         exercises = getAllExercises();
         buildRecyclerView();
+
+
 
         // Show menu items if click on imageButton
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +86,6 @@ public class AddExerciseActivity extends AppCompatActivity {
             }
         });
 
-        // Set up dropdown menu onClickListener
         dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -104,6 +107,14 @@ public class AddExerciseActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        // Inflate the layout for this fragment
+        return view;
+    }
+
+    @Override
+    public String toString() {
+        return ExercisesFragment.class.getSimpleName();
     }
 
     // returns arrayList of all exercisesFragment
@@ -135,19 +146,18 @@ public class AddExerciseActivity extends AppCompatActivity {
     }
 
     private void buildRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.exercise_recycler_view);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        RecyclerView recyclerView = view.findViewById(R.id.exercise_recycler_view);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         ExerciseRecyclerViewAdapter adapter = new ExerciseRecyclerViewAdapter(exercises);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
-        // When click on item, go to AddExerciseSetsActivity and send which exercise was clicked on
         adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent(AddExerciseActivity.this, AddExerciseSetsActivity.class);
-                intent.putExtra("current_exercise", exercises.get(position));
-                intent.putExtra("date", date);
+                Intent intent = new Intent(getActivity(), ExerciseInfoActivity.class);
+                intent.putExtra("exercise", exercises.get(position));
                 startActivity(intent);
             }
         });

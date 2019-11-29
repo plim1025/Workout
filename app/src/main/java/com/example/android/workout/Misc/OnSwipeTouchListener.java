@@ -1,4 +1,4 @@
-package com.example.android.workout;
+package com.example.android.workout.Misc;
 
 import android.content.Context;
 import android.view.GestureDetector;

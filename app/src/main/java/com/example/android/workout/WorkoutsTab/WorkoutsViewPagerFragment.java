@@ -1,9 +1,11 @@
-package com.example.android.workout;
+package com.example.android.workout.WorkoutsTab;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,10 +13,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.android.workout.Exercise;
+import com.example.android.workout.R;
+import com.example.android.workout.WorkoutsTab.WorkoutsRecyclerViewAdapter;
+
 import java.util.ArrayList;
 
 
-public class ViewPagerFragment extends Fragment {
+public class WorkoutsViewPagerFragment extends Fragment {
 
     @Nullable
     @Override
@@ -28,11 +34,18 @@ public class ViewPagerFragment extends Fragment {
             ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
 
             // Set recycler view in fragment
-            RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-            WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
+            final RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
+            final RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+            final WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
             mRecyclerView.setLayoutManager(mLayoutManager);
             mRecyclerView.setAdapter(mAdapter);
+
+            mAdapter.setOnLongItemClickListener(new WorkoutsRecyclerViewAdapter.OnLongItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    mRecyclerView.getChildAt(position).setBackgroundColor(Color.BLACK);
+                }
+            });
         }
 
         return view;

@@ -16,7 +16,7 @@ public class ProgressFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.progressFragment, container, false);
+        View view = inflater.inflate(R.layout.progress_fragment, container, false);
 
         /*
         // Add pie chart slices

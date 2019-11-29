@@ -1,4 +1,4 @@
-package com.example.android.workout;
+package com.example.android.workout.ExerciseTab;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.workout.Exercise;
+import com.example.android.workout.R;
 
 import java.util.ArrayList;
 

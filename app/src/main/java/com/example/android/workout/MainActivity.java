@@ -3,9 +3,7 @@ package com.example.android.workout;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,8 +19,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.android.workout.ExerciseData.ExerciseContract;
+import com.example.android.workout.ExerciseTab.ExercisesFragment;
 import com.example.android.workout.WorkoutData.ExerciseDBHelper;
-import com.example.android.workout.WorkoutData.WorkoutDBHelper;
+import com.example.android.workout.WorkoutsTab.WorkoutsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;

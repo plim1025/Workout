@@ -1,4 +1,4 @@
-package com.example.android.workout;
+package com.example.android.workout.WorkoutsTab;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.android.workout.Misc.TimerDialog;
+import com.example.android.workout.R;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class WorkoutsFragment extends Fragment {
@@ -30,11 +32,11 @@ public class WorkoutsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.workoutsFragment, container, false);
+        View view = inflater.inflate(R.layout.workouts_fragment, container, false);
 
         // Set viewpager
         viewPager = view.findViewById(R.id.workouts_viewpager);
-        final ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager(), this.getActivity());
+        final WorkoutsViewPagerAdapter adapter = new WorkoutsViewPagerAdapter(getFragmentManager(), this.getActivity());
         int lastPos = getActivity().getSharedPreferences("viewPager position", 0).getInt("viewPager position", 0);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(lastPos);
