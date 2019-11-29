@@ -1,6 +1,11 @@
 package com.example.android.workout;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,15 +20,27 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.android.workout.ExerciseData.ExerciseContract;
+import com.example.android.workout.WorkoutData.ExerciseDBHelper;
+import com.example.android.workout.WorkoutData.WorkoutDBHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
+
     private static final String ACTIVITY_NAME = MainActivity.class.getSimpleName();
     private static final String TAG = ACTIVITY_NAME;
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private Fragment fragment;
     private Bundle bundle = new Bundle();
+    private ExerciseDBHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +48,30 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.main_activity);
 
-        // Set up database of exercises
+        // Check if exercise database is empty
+        mDbHelper = new ExerciseDBHelper(this);
+        boolean dbExists;
+        SQLiteDatabase dbRead = mDbHelper.getReadableDatabase();
+        Cursor cursor = dbRead.rawQuery("SELECT * FROM exercises", null);
+        dbExists = cursor.moveToNext();
+        cursor.close();
+
+
+        // If exercise database empty, add list from JSON file
+        if(!dbExists) {
+            try {
+                JSONObject JSON = new JSONObject(readJSONFromAsset());
+                JSONObject json = JSON.getJSONObject("exercise_info");
+                JSONArray exercise_names = json.names();
+                for(int i = 0; i < exercise_names.length(); i++){
+                    JSONObject current_exercise_info = json.getJSONObject(exercise_names.getString(i));
+                    insertExercise(exercise_names.getString(i), current_exercise_info.getString("Main Muscle Group"), current_exercise_info.getString("Equipment"), current_exercise_info.getString("Category"));
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
 
         // Set up toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -146,5 +186,41 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.commit();
             fragmentManager.popBackStack("Add main", 0);
         }
+    }
+
+    // Read basic exercises JSON file
+    private String readJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("exercise_info_basic");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    // Insert exercise to exercise database
+    public void insertExercise(String name, String muscle, String equipment, String category) {
+
+        mDbHelper = new ExerciseDBHelper(this);
+
+        // Gets the database in write mode
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+        // Create a ContentValues object where column names are the keys,
+        ContentValues values = new ContentValues();
+        values.put(ExerciseContract.ExerciseEntry.COLUMN_NAME, name);
+        values.put(ExerciseContract.ExerciseEntry.COLUMN_MUSCLE, muscle);
+        values.put(ExerciseContract.ExerciseEntry.COLUMN_EQUIPMENT, equipment);
+        values.put(ExerciseContract.ExerciseEntry.COLUMN_CATEGORY, category);
+
+        // function returns _id, and if error occurs _id is set to -1
+        long newRowId = db.insert(ExerciseContract.ExerciseEntry.TABLE_NAME, null, values);
     }
 }

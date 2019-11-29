@@ -157,11 +157,11 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 WEIGHTTEXT = Float.valueOf(weightEditText.getText().toString());
                 REPSTEXT = Integer.parseInt(repsEditText.getText().toString());
-                added_exercise = new Exercise(current_exercise.getName(), WEIGHTTEXT, REPSTEXT, exercise_items+1);
+                added_exercise = new Exercise(current_exercise.getName(), null, null, null, WEIGHTTEXT, REPSTEXT,exercise_items+1, null);
                 deletable_exercises.add(exercise_items, added_exercise);
                 mAdapter.notifyItemInserted(exercise_items);
                 exercise_items++;
-                insertExercises();
+                insertWorkouts();
             }
         });
 
@@ -185,7 +185,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    public void insertExercises() {
+    public void insertWorkouts() {
 
         mDbHelper = new WorkoutDBHelper(this);
 
@@ -199,13 +199,7 @@ public class AddExerciseSetsActivity extends AppCompatActivity {
         values.put(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT, WEIGHTTEXT);
         values.put(WorkoutContract.WorkoutEntry.COLUMN_REPS, REPSTEXT);
 
-        // Insert a new row for Toto in the database, returning the ID of that new row.
-        // The first argument for db.insert() is the pets table name.
-        // The second argument provides the name of a column in which the framework
-        // can insert NULL in the event that the ContentValues is empty (if
-        // this is set to "null", then the framework will not insert a row when
-        // there are no values).
-        // The third argument is the ContentValues object containing the info for Toto.
+        // function returns _id, and if error occurs _id is set to -1
         long newRowId = db.insert(WorkoutContract.WorkoutEntry.TABLE_NAME, null, values);
     }
 }

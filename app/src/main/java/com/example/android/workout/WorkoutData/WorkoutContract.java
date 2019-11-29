@@ -2,13 +2,11 @@ package com.example.android.workout.WorkoutData;
 
 import android.provider.BaseColumns;
 
-
 public class WorkoutContract {
 
     // To prevent someone from accidentally instantiating the contract class,
     // give it an empty constructor.
     private WorkoutContract() {}
-
 
     public static abstract class WorkoutEntry implements BaseColumns {
 

@@ -1,6 +1,8 @@
 package com.example.android.workout;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,20 +16,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.android.workout.ExerciseData.ExerciseContract;
+import com.example.android.workout.WorkoutData.ExerciseDBHelper;
+import com.example.android.workout.WorkoutData.WorkoutContract;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class AddExerciseActivity extends AppCompatActivity {
 
-    private int sortIndicator = 0;
-    private JSONObject json;
-    private JSONArray exercise_names;
-    private JSONObject exercises;
+    private ArrayList<Exercise> exercises = new ArrayList<>();
+    private ExerciseDBHelper mDbHelper;
     private int date;
 
     // Return to previous activity when back button (bottom of screen) is pressed
@@ -42,6 +40,9 @@ public class AddExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.add_exercise_activity);
+
+        // Instantiate ExerciseDBHelper
+        mDbHelper = new ExerciseDBHelper(this);
 
         // Receive date from workoutsFragment
         Intent intent = getIntent();
@@ -63,12 +64,14 @@ public class AddExerciseActivity extends AppCompatActivity {
         final ImageButton imageButton = findViewById(R.id.exercise_sort_button);
         final PopupMenu dropDownMenu = new PopupMenu(this, imageButton);
         final Menu menu = dropDownMenu.getMenu();
-        menu.add(Menu.NONE, 0, 0, "Basic List");
-        menu.add(Menu.NONE, 1, 1,"Complex List");
+        menu.add(Menu.NONE, 0, 0, "All Exercises");
         menu.add(Menu.NONE, 2, 2,"By Category");
         menu.add(Menu.NONE, 3, 3,"By Most Recent");
         menu.add(Menu.NONE, 4, 4,"Favorites");
 
+        // Set default to all exercises
+        exercises.clear();
+        exercises = getAllExercises();
         buildRecyclerView();
 
         // Show menu items if click on imageButton
@@ -85,15 +88,17 @@ public class AddExerciseActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case 0:
-                        sortIndicator = 0; break;
+                        exercises.clear();
+                        exercises = getAllExercises(); break;
                     case 1:
-                        sortIndicator = 1; break;
+                        exercises.clear();
+                        break;
                     case 2:
-                        sortIndicator = 2; break;
+                        exercises.clear();
+                        break;
                     case 3:
-                        sortIndicator = 3; break;
-                    case 4:
-                        sortIndicator = 4; break;
+                        exercises.clear();
+                        break;
                 }
                 buildRecyclerView();
                 return false;
@@ -101,86 +106,50 @@ public class AddExerciseActivity extends AppCompatActivity {
         });
     }
 
+    // returns arrayList of all exercises
+    private ArrayList<Exercise> getAllExercises() {
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+        ArrayList<Exercise> exercises = new ArrayList<>();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM exercises", null);
+
+        // Figure out the index of each column
+        int exerciseColumnIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_NAME);
+        int muscleColumnIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_MUSCLE);
+        int equipmentColumnIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_EQUIPMENT);
+        int categoryColumnIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_CATEGORY);
+        int categoryNotesIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_NOTES);
+
+        cursor.moveToFirst();
+        while(cursor.moveToNext()) {
+            String exercise = cursor.getString(exerciseColumnIndex);
+            String muscle = cursor.getString(muscleColumnIndex);
+            String equipment = cursor.getString(equipmentColumnIndex);
+            String category = cursor.getString(categoryColumnIndex);
+            String notes = cursor.getString(categoryNotesIndex);
+            exercises.add(new Exercise(exercise, muscle, equipment, category, 0, 0, 0, notes));
+        }
+        cursor.close();
+
+        return exercises;
+    }
+
     private void buildRecyclerView() {
-        try {
-            switch (sortIndicator) {
-                case 0:
-                    json = new JSONObject(readBasicJSONFromAsset());
-                    exercises = json.getJSONObject("exercise_info");
-                    break;
-                case 1:
-                    json = new JSONObject(readComplexJSONFromAsset());
-                    exercises = json.getJSONObject("exercise_info");
-                    break;
-                case 2:
-                    json = new JSONObject(readComplexJSONFromAsset());
-                    break;
-                case 3:
-                    json = new JSONObject(readComplexJSONFromAsset());
-                    break;
+        RecyclerView recyclerView = findViewById(R.id.exercise_recycler_view);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        ExerciseRecyclerViewAdapter adapter = new ExerciseRecyclerViewAdapter(exercises);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+        // When click on item, go to AddExerciseSetsActivity and send which exercise was clicked on
+        adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(AddExerciseActivity.this, AddExerciseSetsActivity.class);
+                intent.putExtra("current_exercise", exercises.get(position));
+                intent.putExtra("date", date);
+                startActivity(intent);
             }
-
-            final ArrayList<Exercise> exercise = new ArrayList<Exercise>();
-            exercise_names = exercises.names();
-
-            for(int i = 0; i < exercise_names.length(); i++){
-                JSONObject exercise_info = exercises.getJSONObject(exercise_names.getString(i));
-                // read exercises from database
-            }
-
-            RecyclerView recyclerView = findViewById(R.id.exercise_recycler_view);
-            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-            ExerciseRecyclerViewAdapter adapter = new ExerciseRecyclerViewAdapter(exercise);
-            recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setAdapter(adapter);
-
-            // When click on item, go to AddExerciseSetsActivity and send which exercise was clicked on
-            adapter.setOnItemClickListener(new ExerciseRecyclerViewAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(int position) {
-                    Intent intent = new Intent(AddExerciseActivity.this, AddExerciseSetsActivity.class);
-                    intent.putExtra("current_exercise", exercise.get(position));
-                    intent.putExtra("date", date);
-                    startActivity(intent);
-                }
-            });
-
-        } catch (JSONException e){
-            e.printStackTrace();
-        }
-    }
-
-    // Read complex exercises JSON file
-    private String readComplexJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("exercise_info_complex");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
-
-    // Read basic exercises JSON file
-    private String readBasicJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = getAssets().open("exercise_info_basic");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
+        });
     }
 }

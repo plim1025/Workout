@@ -9,7 +9,6 @@
     <string name="workout_fab_1">Add Exercise</string>
     <string name="workout_fab_2">Copy Workout</string>
     <string name="workout_fab_3">Add Rest</string>
-    <string name="exercises_fab_1">Create New</string>
-    <string name="exercises_fab_2">Select Favorites</string>
+    <string name="exercises_fab">Create New</string>
     <string name="query_hint">Search Exercises</string>
 </resources>

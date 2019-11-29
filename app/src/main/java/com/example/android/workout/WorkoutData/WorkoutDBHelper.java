@@ -20,14 +20,14 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the workout table
-        String SQL_CREATE_PETS_TABLE = "CREATE TABLE " + WorkoutEntry.TABLE_NAME + " ("
+        String SQL_CREATE_WORKOUT_TABLE = "CREATE TABLE " + WorkoutEntry.TABLE_NAME + " ("
                 + WorkoutEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + WorkoutEntry.COLUMN_DATE + " INTEGER NOT NULL, "
                 + WorkoutEntry.COLUMN_EXERCISE + " INTEGER NOT NULL, "
                 + WorkoutEntry.COLUMN_WEIGHT + " REAL, "
                 + WorkoutEntry.COLUMN_REPS + " INTEGER NOT NULL);";
         // Execute the SQL statement
-        db.execSQL(SQL_CREATE_PETS_TABLE);
+        db.execSQL(SQL_CREATE_WORKOUT_TABLE);
     }
 
     @Override

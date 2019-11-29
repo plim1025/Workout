@@ -47,8 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="22dp"
             android:layout_marginBottom="16dp"
             app:fab_addButtonColorNormal="@color/mediumGray"
             app:fab_addButtonColorPressed="@color/mediumGray2"
@@ -70,23 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/exercises_fab_1"
-                android:text="@string/exercises_fab_1" />
-
-            <com.getbase.floatingactionbutton.AddFloatingActionButton
-                android:id="@+id/exercises_fab_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fab_colorNormal="@color/mediumGray"
-                app:fab_colorPressed="@color/mediumGray2"
-                app:fab_plusIconColor="@color/black"
-                app:fab_size="mini"
-                app:fab_stroke_visible="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/exercises_fab_2"
-                android:text="@string/exercises_fab_2" />
+                android:text="@string/exercises_fab" />
 
         </com.getbase.floatingactionbutton.FloatingActionsMenu>
     </RelativeLayout>

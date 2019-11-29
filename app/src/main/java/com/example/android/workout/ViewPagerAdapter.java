@@ -60,11 +60,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             int weightColumnIndex = cursor.getColumnIndex(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT);
             int repsColumnIndex = cursor.getColumnIndex(WorkoutContract.WorkoutEntry.COLUMN_REPS);
 
+            // Read all exercises with same date as position and add to mExercises
             while(cursor.moveToNext()) {
                 String currentExercise = cursor.getString(exerciseColumnIndex);
                 float currentWeight = cursor.getFloat(weightColumnIndex);
                 int currentReps = cursor.getInt(repsColumnIndex);
-                Exercise newExercise = new Exercise(currentExercise, null, null, null, currentWeight, currentReps, 0);
+                Exercise newExercise = new Exercise(currentExercise, null, null, null, currentWeight, currentReps, 0, null);
                 mExercises.add(newExercise);
             }
 
