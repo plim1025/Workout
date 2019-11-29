@@ -69,7 +69,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         menu.add(Menu.NONE, 3, 3,"By Most Recent");
         menu.add(Menu.NONE, 4, 4,"Favorites");
 
-        // Set default to all exercises
+        // Set default to all exercisesFragment
         exercises.clear();
         exercises = getAllExercises();
         buildRecyclerView();
@@ -106,7 +106,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         });
     }
 
-    // returns arrayList of all exercises
+    // returns arrayList of all exercisesFragment
     private ArrayList<Exercise> getAllExercises() {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         ArrayList<Exercise> exercises = new ArrayList<>();

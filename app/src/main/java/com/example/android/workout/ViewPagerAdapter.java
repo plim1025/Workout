@@ -60,7 +60,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             int weightColumnIndex = cursor.getColumnIndex(WorkoutContract.WorkoutEntry.COLUMN_WEIGHT);
             int repsColumnIndex = cursor.getColumnIndex(WorkoutContract.WorkoutEntry.COLUMN_REPS);
 
-            // Read all exercises with same date as position and add to mExercises
+            // Read all exercisesFragment with same date as position and add to mExercises
             while(cursor.moveToNext()) {
                 String currentExercise = cursor.getString(exerciseColumnIndex);
                 float currentWeight = cursor.getFloat(weightColumnIndex);
@@ -77,7 +77,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         Bundle bundle = new Bundle();
         // Attach clone of mExercises to fragment
         bundle.putParcelableArrayList("attached_exercises", (ArrayList<? extends Parcelable>) mExercises.clone());
-        // Clear exercises for further usage
+        // Clear exercisesFragment for further usage
         mExercises.clear();
         Fragment viewPagerFragment = new ViewPagerFragment();
         viewPagerFragment.setArguments(bundle);

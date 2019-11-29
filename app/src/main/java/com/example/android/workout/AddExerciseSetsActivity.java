@@ -28,7 +28,7 @@ import java.util.Collection;
 
 public class AddExerciseSetsActivity extends AppCompatActivity {
 
-    // stores exercises in recyclerView
+    // stores exercisesFragment in recyclerView
     private ArrayList<Exercise> deletable_exercises = new ArrayList<>();
 
     // exercise clicked on in addExerciseActivity

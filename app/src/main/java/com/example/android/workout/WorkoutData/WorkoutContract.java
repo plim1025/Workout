@@ -11,7 +11,7 @@ public class WorkoutContract {
     public static abstract class WorkoutEntry implements BaseColumns {
 
         // Name of database table
-        public static final String TABLE_NAME = "workouts";
+        public static final String TABLE_NAME = "workoutsFragment";
 
         // Type: INTEGER
         public static final String COLUMN_DATE = "date";

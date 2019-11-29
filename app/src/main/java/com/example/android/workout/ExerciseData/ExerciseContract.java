@@ -11,7 +11,7 @@ public class ExerciseContract {
     public static abstract class ExerciseEntry implements BaseColumns {
 
         // Name of database table
-        public static final String TABLE_NAME = "exercises";
+        public static final String TABLE_NAME = "exercisesFragment";
 
         // Type: TEXT
         public static final String COLUMN_NAME = "name";

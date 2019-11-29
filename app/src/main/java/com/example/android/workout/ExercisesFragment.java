@@ -30,10 +30,18 @@ public class ExercisesFragment extends Fragment {
     private ExerciseDBHelper mDbHelper;
 
     @Override
+    public void onResume() {
+        exercises.clear();
+        exercises = getAllExercises();
+        buildRecyclerView();
+        super.onResume();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.exercises, container, false);
+        view = inflater.inflate(R.layout.exercisesFragment, container, false);
 
         // Instantiate ExerciseDBHelper
         mDbHelper = new ExerciseDBHelper(this.getActivity());
@@ -60,10 +68,12 @@ public class ExercisesFragment extends Fragment {
         menu.add(Menu.NONE, 3, 3, "By Most Recent");
         menu.add(Menu.NONE, 4, 4, "Favorites");
 
-        // Set default to all exercises
+        // Set default to all exercisesFragment
         exercises.clear();
         exercises = getAllExercises();
         buildRecyclerView();
+
+
 
         // Show menu items if click on imageButton
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +114,7 @@ public class ExercisesFragment extends Fragment {
         return ExercisesFragment.class.getSimpleName();
     }
 
-    // returns arrayList of all exercises
+    // returns arrayList of all exercisesFragment
     private ArrayList<Exercise> getAllExercises() {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         ArrayList<Exercise> exercises = new ArrayList<>();

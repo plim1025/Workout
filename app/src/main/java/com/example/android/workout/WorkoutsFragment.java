@@ -1,6 +1,5 @@
 package com.example.android.workout;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -31,7 +30,7 @@ public class WorkoutsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.workouts, container, false);
+        View view = inflater.inflate(R.layout.workoutsFragment, container, false);
 
         // Set viewpager
         viewPager = view.findViewById(R.id.workouts_viewpager);

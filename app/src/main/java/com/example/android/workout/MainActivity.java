@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Read basic exercises JSON file
+    // Read basic exercisesFragment JSON file
     private String readJSONFromAsset() {
         String json = null;
         try {
