@@ -3,6 +3,7 @@ package com.example.android.workout.WorkoutsTab;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -15,8 +16,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.workout.Exercise;
+import com.example.android.workout.MainActivity;
 import com.example.android.workout.R;
 import com.example.android.workout.WorkoutsTab.WorkoutsRecyclerViewAdapter;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import java.util.ArrayList;
 
@@ -29,6 +33,9 @@ public class WorkoutsViewPagerFragment extends Fragment {
 
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
+
+        final FloatingActionButton fab = view.findViewById(R.id.workouts_pager_fab);
+        fab.setVisibility(View.INVISIBLE);
 
         if(getArguments() != null) {
             // Get ArrayList argument sent in WorkoutsFragment
@@ -46,14 +53,22 @@ public class WorkoutsViewPagerFragment extends Fragment {
                 public void onItemClick(int position) {
                     View cardView = mLayoutManager.findViewByPosition(position);
                     cardView.findViewById(R.id.workout_set).setBackgroundColor(getResources().getColor(R.color.lightBlue));
+                    enterEditMode(fab);
             }
             });
         }
         return view;
     }
 
-    public void enterEditMode() {
-        // Add trashcan icon to toolbar, set onclicklistener for it removing selected item from recyclerview and database
+    public void enterEditMode(FloatingActionButton trashIcon) {
+        trashIcon.setVisibility(View.VISIBLE);
+        trashIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // delete selected recyclerview items and remove from database
+            }
+        });
+
         // Add onClickListener to mAdapter overriding onLongItemClickListener
         // make all items draggable
     }

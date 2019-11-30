@@ -11,4 +11,5 @@
     <string name="workout_fab_3">Add Rest</string>
     <string name="exercises_fab">Create New</string>
     <string name="query_hint">Search Exercises</string>
+    <string name="action_bar_2">Trash</string>
 </resources>

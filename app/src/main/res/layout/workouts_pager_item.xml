@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/workouts_pager_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:fab_colorNormal="@color/mediumGray"
+        app:fab_colorPressed="@color/mediumGray2"
+        app:fab_icon="@drawable/ic_delete_grey_24dp"
+        app:fab_addButtonStrokeVisible="false"
+        android:elevation="24dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/workout_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"/>
-</LinearLayout>
+</RelativeLayout>

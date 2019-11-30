@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -54,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = dbRead.rawQuery("SELECT * FROM exercises", null);
         dbExists = cursor.moveToNext();
         cursor.close();
-
 
         // If exercise database empty, add list from JSON file
         if(!dbExists) {
@@ -117,19 +117,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-        fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
-            @Override
-            public void onBackStackChanged() {
-                StringBuilder backstackEntryMessage = new StringBuilder("Current status of fragment transaction back stack: " + fragmentManager.getBackStackEntryCount() + "\n");
-
-                for (int index = (fragmentManager.getBackStackEntryCount() - 1); index >= 0; index--) {
-                    FragmentManager.BackStackEntry entry = fragmentManager.getBackStackEntryAt(index);
-                    backstackEntryMessage.append(entry.getName() + "\n");
-                }
-                Log.i(TAG, backstackEntryMessage.toString());
-            }
-        });
     }
 
     // Set up listeners for top right menu
@@ -155,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.top_nav_menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.top_nav_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

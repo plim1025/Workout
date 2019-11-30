@@ -97,7 +97,7 @@ public class WorkoutsViewPagerAdapter extends FragmentStatePagerAdapter {
         Calendar CALENDAR = Calendar.getInstance();
         CALENDAR.add(Calendar.DATE, position);
         String date = DateFormat.getDateInstance(DateFormat.FULL).format(CALENDAR.getTime());
-        return "          " + date.substring(0, date.length() - 6) + "          ";
+        return "             " + date.substring(0, date.length() - 6) + "             ";
     }
 }
 
