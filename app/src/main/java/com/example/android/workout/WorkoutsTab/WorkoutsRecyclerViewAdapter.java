@@ -19,6 +19,10 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
     private ArrayList<Exercise> mExercises;
     private OnLongItemClickListener mListener;
 
+    public WorkoutsRecyclerViewAdapter(ArrayList<Exercise> exercises) {
+        mExercises = exercises;
+    }
+
     public interface OnLongItemClickListener {
         void onItemClick(int position);
     }
@@ -52,10 +56,6 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
                 }
             });
         }
-    }
-
-    public WorkoutsRecyclerViewAdapter(ArrayList<Exercise> exercises) {
-        mExercises = exercises;
     }
 
     @NonNull

@@ -47,7 +47,6 @@ public class WorkoutsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), AddExerciseActivity.class);
-                // Put position of viewpager as argument
                 int date = viewPager.getCurrentItem();
                 intent.putExtra("date", date);
                 startActivity(intent);

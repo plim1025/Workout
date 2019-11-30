@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,7 @@ public class WorkoutsViewPagerFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
+        final View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
 
         if(getArguments() != null) {
             // Get ArrayList argument sent in WorkoutsFragment
@@ -43,12 +44,18 @@ public class WorkoutsViewPagerFragment extends Fragment {
             mAdapter.setOnLongItemClickListener(new WorkoutsRecyclerViewAdapter.OnLongItemClickListener() {
                 @Override
                 public void onItemClick(int position) {
-                    mRecyclerView.getChildAt(position).setBackgroundColor(Color.BLACK);
-                }
+                    View cardView = mLayoutManager.findViewByPosition(position);
+                    cardView.findViewById(R.id.workout_set).setBackgroundColor(getResources().getColor(R.color.lightBlue));
+            }
             });
         }
-
         return view;
+    }
+
+    public void enterEditMode() {
+        // Add trashcan icon to toolbar, set onclicklistener for it removing selected item from recyclerview and database
+        // Add onClickListener to mAdapter overriding onLongItemClickListener
+        // make all items draggable
     }
 }
 
