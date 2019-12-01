@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.PagerTitleStrip;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.android.workout.Misc.TimerDialog;
@@ -37,6 +38,10 @@ public class WorkoutsFragment extends Fragment {
         // Set viewpager
         viewPager = view.findViewById(R.id.workouts_viewpager);
         final WorkoutsViewPagerAdapter adapter = new WorkoutsViewPagerAdapter(getFragmentManager(), this.getActivity());
+        // Set title strip to only show one at once
+        PagerTitleStrip titleStrip = view.findViewById(R.id.workouts_viewpager_title);
+        titleStrip.setNonPrimaryAlpha(0F);
+        // Set to last position
         int lastPos = getActivity().getSharedPreferences("viewPager position", 0).getInt("viewPager position", 0);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(lastPos);

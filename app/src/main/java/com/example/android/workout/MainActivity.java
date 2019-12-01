@@ -2,6 +2,7 @@ package com.example.android.workout;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
@@ -79,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
         // Creates bottom navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         Menu menu = bottomNavigationView.getMenu();
+
+        // Put today's date as viewPager Position
+        SharedPreferences.Editor editor = getSharedPreferences("viewPager position", 0).edit();
+        editor.putInt("viewPager position", 0);
+        editor.apply();
 
         // Set home fragment to workout tab
         MenuItem menuItem = menu.getItem(0);

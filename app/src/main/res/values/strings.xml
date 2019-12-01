@@ -6,9 +6,6 @@
     <string name="action_bar_1">Calendar</string>
     <string name="dropdown_1">Themes</string>
     <string name="dropdown_2">Settings</string>
-    <string name="workout_fab_1">Add Exercise</string>
-    <string name="workout_fab_2">Copy Workout</string>
-    <string name="workout_fab_3">Add Rest</string>
     <string name="exercises_fab">Create New</string>
     <string name="query_hint">Search Exercises</string>
     <string name="action_bar_2">Trash</string>
