@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 // Need to title it so that fragment tier 2 can return to tier 1 after pressing android back button
                 fragmentTransaction.addToBackStack("Add main");
                 fragmentTransaction.commit();
+
                 return true;
             }
         });

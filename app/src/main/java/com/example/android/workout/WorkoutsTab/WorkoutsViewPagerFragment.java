@@ -1,12 +1,15 @@
 package com.example.android.workout.WorkoutsTab;
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.PaintDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,61 +19,126 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.workout.Exercise;
-import com.example.android.workout.MainActivity;
+import com.example.android.workout.Misc.OnSwipeTouchListener;
 import com.example.android.workout.R;
-import com.example.android.workout.WorkoutsTab.WorkoutsRecyclerViewAdapter;
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import java.util.ArrayList;
 
 
 public class WorkoutsViewPagerFragment extends Fragment {
 
+    private FloatingActionButton trashFAB;
+    private FloatingActionButton checkFAB;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private WorkoutsRecyclerViewAdapter mAdapter;
+    private boolean inEditMode = false;
+    // Keeps track of highlighted exercise_items
+    private ArrayList<Integer> selected_items = new ArrayList<Integer>();
+
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
 
-        final FloatingActionButton fab = view.findViewById(R.id.workouts_pager_fab);
-        fab.setVisibility(View.INVISIBLE);
+        trashFAB = view.findViewById(R.id.workouts_pager_fab_trash);
+        checkFAB = view.findViewById(R.id.workouts_pager_fab_check);
+        trashFAB.setVisibility(View.INVISIBLE);
+        checkFAB.setVisibility(View.INVISIBLE);
 
         if(getArguments() != null) {
             // Get ArrayList argument sent in WorkoutsFragment
             ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
 
             // Set recycler view in fragment
-            final RecyclerView mRecyclerView = view.findViewById(R.id.workout_recycler_view);
-            final RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-            final WorkoutsRecyclerViewAdapter mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
+            mRecyclerView = view.findViewById(R.id.workout_recycler_view);
+            mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+            mAdapter = new WorkoutsRecyclerViewAdapter(exercises);
             mRecyclerView.setLayoutManager(mLayoutManager);
             mRecyclerView.setAdapter(mAdapter);
 
-            mAdapter.setOnLongItemClickListener(new WorkoutsRecyclerViewAdapter.OnLongItemClickListener() {
+            mAdapter.setOnLongClickListener(new WorkoutsRecyclerViewAdapter.OnLongItemClickListener() {
+                @Override
+                public void onItemLongClick(int position) {
+                    // If not in edit mode, highlight exercise onLongClick and enter edit mode, else do nothing
+                    if(!inEditMode) {
+                        View cardView = mLayoutManager.findViewByPosition(position);
+                        cardView.findViewById(R.id.workout_set).setBackground(getResources().getDrawable(R.color.lightBlue));
+                        selected_items.add(position);
+                        enterEditMode();
+                    }
+                }
+            });
+            mAdapter.setOnClickListener(new WorkoutsRecyclerViewAdapter.OnClickListener() {
                 @Override
                 public void onItemClick(int position) {
-                    View cardView = mLayoutManager.findViewByPosition(position);
-                    cardView.findViewById(R.id.workout_set).setBackgroundColor(getResources().getColor(R.color.lightBlue));
-                    enterEditMode(fab);
-            }
+                    // If in edit mode, highlight exercise onClick
+                    if(inEditMode) {
+                        LinearLayout exercise_item = mLayoutManager.findViewByPosition(position).findViewById(R.id.workout_set);
+                        int exercise_item_background_color = ((ColorDrawable) exercise_item.getBackground()).getColor();
+
+                        // Check if background color already blue, and if yes, then change back to white, else change color to blue
+                        if(exercise_item_background_color == Color.parseColor("#ADD8E6")) {
+                            exercise_item.setBackground(getResources().getDrawable(R.color.lightGray));
+                            for(int i = 0; i < selected_items.size(); i++) {
+                                if(selected_items.get(i) == position) {
+                                    selected_items.remove(i);
+                                }
+                            }
+                        } else {
+                            exercise_item.setBackground(getResources().getDrawable(R.color.lightBlue));
+                            selected_items.add(position);
+                        }
+                    }
+                }
             });
         }
         return view;
     }
 
-    public void enterEditMode(FloatingActionButton trashIcon) {
-        trashIcon.setVisibility(View.VISIBLE);
-        trashIcon.setOnClickListener(new View.OnClickListener() {
+    public void enterEditMode() {
+        inEditMode = !inEditMode;
+
+        // Show trash and check FABs
+        trashFAB.setVisibility(View.VISIBLE);
+        checkFAB.setVisibility(View.VISIBLE);
+        trashFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // delete selected recyclerview items and remove from database
             }
         });
+        checkFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                exitEditMode();
+            }
+        });
 
-        // Add onClickListener to mAdapter overriding onLongItemClickListener
         // make all items draggable
+    }
+
+    public void exitEditMode() {
+        inEditMode = !inEditMode;
+
+        // Hide trash and check FABs
+        trashFAB.setVisibility(View.INVISIBLE);
+        checkFAB.setVisibility(View.INVISIBLE);
+
+        // Turns highlighted exercise items back to gray
+        for(int i = 0; i < selected_items.size(); i++) {
+            mLayoutManager.findViewByPosition(selected_items.get(i)).findViewById(R.id.workout_set).setBackground(getResources().getDrawable(R.color.lightGray));
+        }
+        selected_items.clear();
+    }
+
+    @Override
+    public void onPause() {
+        exitEditMode();
+        super.onPause();
     }
 }
 

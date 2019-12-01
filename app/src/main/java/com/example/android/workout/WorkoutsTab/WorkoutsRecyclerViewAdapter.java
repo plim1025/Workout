@@ -1,7 +1,10 @@
 package com.example.android.workout.WorkoutsTab;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -17,18 +20,27 @@ import java.util.ArrayList;
 
 public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRecyclerViewAdapter.RecyclerViewHolder> {
     private ArrayList<Exercise> mExercises;
-    private OnLongItemClickListener mListener;
+    private OnLongItemClickListener mOnLongClickListener;
+    private OnClickListener mOnClickListener;
 
     public WorkoutsRecyclerViewAdapter(ArrayList<Exercise> exercises) {
         mExercises = exercises;
     }
 
     public interface OnLongItemClickListener {
+        void onItemLongClick(int position);
+    }
+
+    public void setOnLongClickListener(OnLongItemClickListener onLongClickListener) {
+        mOnLongClickListener = onLongClickListener;
+    }
+
+    public interface OnClickListener {
         void onItemClick(int position);
     }
 
-    public void setOnLongItemClickListener(OnLongItemClickListener listener) {
-        mListener = listener;
+    public void setOnClickListener(OnClickListener onClickListener) {
+        mOnClickListener = onClickListener;
     }
 
     public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
@@ -36,7 +48,7 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
         private TextView exercise_weight;
         private TextView exercise_reps;
 
-        private RecyclerViewHolder(@NonNull final View itemView, final OnLongItemClickListener listener) {
+        private RecyclerViewHolder(@NonNull final View itemView, final OnLongItemClickListener onLongClickListener, final OnClickListener onClickListener) {
             super(itemView);
             exercise_name = itemView.findViewById(R.id.workout_exercise_name);
             exercise_weight = itemView.findViewById(R.id.workout_exercise_weight);
@@ -45,14 +57,26 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
-                    if (listener != null) {
+                    if (onLongClickListener != null) {
                         int position = getAdapterPosition();
                         if(position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
+                            onLongClickListener.onItemLongClick(position);
                             return true;
                         }
                     }
                     return false;
+                }
+            });
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onClickListener != null) {
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION) {
+                            onClickListener.onItemClick(position);
+                        }
+                    }
                 }
             });
         }
@@ -62,7 +86,7 @@ public class WorkoutsRecyclerViewAdapter extends RecyclerView.Adapter<WorkoutsRe
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.workout_exercise_item, parent, false);
-        RecyclerViewHolder holder = new RecyclerViewHolder(v, mListener);
+        RecyclerViewHolder holder = new RecyclerViewHolder(v, mOnLongClickListener, mOnClickListener);
         return holder;
     }
 

@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.android.workout.Misc.OnSwipeTouchListener;
 
 public class ProgressFragment extends Fragment {
     @Override

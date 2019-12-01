@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.getbase.floatingactionbutton.FloatingActionButton
-        android:id="@+id/workouts_pager_fab"
+        android:id="@+id/workouts_pager_fab_trash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -15,7 +15,22 @@
         app:fab_colorNormal="@color/mediumGray"
         app:fab_colorPressed="@color/mediumGray2"
         app:fab_icon="@drawable/ic_delete_grey_24dp"
-        app:fab_addButtonStrokeVisible="false"
+        app:fab_stroke_visible="false"
+        android:elevation="24dp"
+        />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/workouts_pager_fab_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="96dp"
+        android:layout_marginRight="22dp"
+        app:fab_colorNormal="@color/mediumGray"
+        app:fab_colorPressed="@color/mediumGray2"
+        app:fab_icon="@drawable/ic_check_gray_24dp"
+        app:fab_stroke_visible="false"
         android:elevation="24dp"
         />
 
