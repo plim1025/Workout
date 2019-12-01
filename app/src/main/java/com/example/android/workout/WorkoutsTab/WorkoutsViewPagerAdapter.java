@@ -77,6 +77,8 @@ public class WorkoutsViewPagerAdapter extends FragmentStatePagerAdapter {
         Bundle bundle = new Bundle();
         // Attach clone of mExercises to fragment
         bundle.putParcelableArrayList("attached_exercises", (ArrayList<? extends Parcelable>) mExercises.clone());
+        // Attach dateInt to fragment
+        bundle.putInt("date", dateInt);
         // Clear exercisesFragment for further usage
         mExercises.clear();
         Fragment viewPagerFragment = new WorkoutsViewPagerFragment();

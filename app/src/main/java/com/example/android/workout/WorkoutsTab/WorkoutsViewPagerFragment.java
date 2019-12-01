@@ -1,16 +1,14 @@
 package com.example.android.workout.WorkoutsTab;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.PaintDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,8 +17,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.workout.Exercise;
-import com.example.android.workout.Misc.OnSwipeTouchListener;
 import com.example.android.workout.R;
+import com.example.android.workout.WorkoutData.WorkoutContract;
+import com.example.android.workout.WorkoutData.WorkoutDBHelper;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -28,11 +27,14 @@ import java.util.ArrayList;
 
 public class WorkoutsViewPagerFragment extends Fragment {
 
+    private ArrayList<Exercise> exercises = new ArrayList<>();
+    private int date;
     private FloatingActionButton trashFAB;
     private FloatingActionButton checkFAB;
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private WorkoutsRecyclerViewAdapter mAdapter;
+    private WorkoutDBHelper mDbHelper;
     private boolean inEditMode = false;
     // Keeps track of highlighted exercise_items
     private ArrayList<Integer> selected_items = new ArrayList<Integer>();
@@ -44,14 +46,18 @@ public class WorkoutsViewPagerFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.workouts_pager_item, container, false);
 
-        trashFAB = view.findViewById(R.id.workouts_pager_fab_trash);
-        checkFAB = view.findViewById(R.id.workouts_pager_fab_check);
-        trashFAB.setVisibility(View.INVISIBLE);
-        checkFAB.setVisibility(View.INVISIBLE);
-
         if(getArguments() != null) {
-            // Get ArrayList argument sent in WorkoutsFragment
-            ArrayList<Exercise> exercises = getArguments().getParcelableArrayList("attached_exercises");
+            // Instantiate FABs and set invisible
+            trashFAB = view.findViewById(R.id.workouts_pager_fab_trash);
+            checkFAB = view.findViewById(R.id.workouts_pager_fab_check);
+            trashFAB.setVisibility(View.INVISIBLE);
+            checkFAB.setVisibility(View.INVISIBLE);
+
+            // Get list of exercises sent from AddExercisesActivity
+            exercises = getArguments().getParcelableArrayList("attached_exercises");
+
+            // Get date sent from WorkoutsViewPagerAdapter
+            date = getArguments().getInt("date");
 
             // Set recycler view in fragment
             mRecyclerView = view.findViewById(R.id.workout_recycler_view);
@@ -108,7 +114,7 @@ public class WorkoutsViewPagerFragment extends Fragment {
         trashFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // delete selected recyclerview items and remove from database
+                deleteWorkouts();
             }
         });
         checkFAB.setOnClickListener(new View.OnClickListener() {
@@ -132,7 +138,33 @@ public class WorkoutsViewPagerFragment extends Fragment {
         for(int i = 0; i < selected_items.size(); i++) {
             mLayoutManager.findViewByPosition(selected_items.get(i)).findViewById(R.id.workout_set).setBackground(getResources().getDrawable(R.color.lightGray));
         }
+
         selected_items.clear();
+    }
+
+    public void deleteWorkouts() {
+
+        // Remove items from recyclerView
+        for(int i = 0; i < selected_items.size(); i++) {
+            mLayoutManager.removeViewAt(i);
+            mAdapter.notifyItemRemoved(i);
+        }
+
+        // Instantiate DbHelper
+        mDbHelper = new WorkoutDBHelper(this.getActivity());
+
+        // Gets the database in write mode
+        SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT _id FROM workouts WHERE date = ?", new String[] {Integer.toString(date)});
+
+        // Delete all marked exercise items
+        for(int i = 0; i < selected_items.size(); i++) {
+            cursor.moveToNext();
+            String[] id = {Long.toString(cursor.getLong(cursor.getColumnIndex("_id")))};
+            db.delete("workouts", "_id = ?", id);
+        }
+        cursor.close();
     }
 
     @Override
