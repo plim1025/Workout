@@ -115,6 +115,7 @@ public class WorkoutsViewPagerFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 deleteWorkouts();
+                exitEditMode();
             }
         });
         checkFAB.setOnClickListener(new View.OnClickListener() {
@@ -138,17 +139,9 @@ public class WorkoutsViewPagerFragment extends Fragment {
         for(int i = 0; i < selected_items.size(); i++) {
             mLayoutManager.findViewByPosition(selected_items.get(i)).findViewById(R.id.workout_set).setBackground(getResources().getDrawable(R.color.lightGray));
         }
-
-        selected_items.clear();
     }
 
     public void deleteWorkouts() {
-
-        // Remove items from recyclerView
-        for(int i = 0; i < selected_items.size(); i++) {
-            mLayoutManager.removeViewAt(i);
-            mAdapter.notifyItemRemoved(i);
-        }
 
         // Instantiate DbHelper
         mDbHelper = new WorkoutDBHelper(this.getActivity());
@@ -165,6 +158,15 @@ public class WorkoutsViewPagerFragment extends Fragment {
             db.delete("workouts", "_id = ?", id);
         }
         cursor.close();
+
+        // Remove items from recyclerView
+        for(int i = 0; i < selected_items.size(); i++) {
+            int remove = selected_items.get(i);
+            exercises.remove(remove);
+            mAdapter.notifyItemRemoved(selected_items.get(i));
+            mAdapter.notifyItemRangeChanged(selected_items.get(i), mAdapter.getItemCount());
+            selected_items.remove(i);
+        }
     }
 
     @Override
