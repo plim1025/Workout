@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
@@ -51,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if exercise database is empty
         mDbHelper = new ExerciseDBHelper(this);
-        boolean dbExists;
+        boolean dbExists = true;
         SQLiteDatabase dbRead = mDbHelper.getReadableDatabase();
-        Cursor cursor = dbRead.rawQuery("SELECT * FROM exercises", null);
+        Cursor cursor = dbRead.rawQuery("SELECT * FROM exercise", null);
         dbExists = cursor.moveToNext();
         cursor.close();
 
@@ -70,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
 
         // Set up toolbar

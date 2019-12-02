@@ -114,7 +114,7 @@ public class AddExerciseActivity extends AppCompatActivity {
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         ArrayList<Exercise> exercises = new ArrayList<>();
 
-        Cursor cursor = db.rawQuery("SELECT * FROM exercises", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM exercise", null);
 
         // Figure out the index of each column
         int exerciseColumnIndex = cursor.getColumnIndex(ExerciseContract.ExerciseEntry.COLUMN_NAME);
