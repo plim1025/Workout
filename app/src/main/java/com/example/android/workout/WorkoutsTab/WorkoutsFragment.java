@@ -1,5 +1,6 @@
 package com.example.android.workout.WorkoutsTab;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class WorkoutsFragment extends Fragment {
     @Override
     public void onPause() {
         // Get last position of viewpager and save in shared preferences
-        SharedPreferences.Editor editor = getActivity().getSharedPreferences("viewPager position", 0).edit();
+        SharedPreferences.Editor editor = getActivity().getSharedPreferences("workouts", Context.MODE_PRIVATE).edit();
         editor.putInt("viewPager position", viewPager.getCurrentItem());
         editor.apply();
 
@@ -38,11 +39,13 @@ public class WorkoutsFragment extends Fragment {
         // Set viewpager
         viewPager = view.findViewById(R.id.workouts_viewpager);
         final WorkoutsViewPagerAdapter adapter = new WorkoutsViewPagerAdapter(getFragmentManager(), this.getActivity());
+
         // Set title strip to only show one at once
         PagerTitleStrip titleStrip = view.findViewById(R.id.workouts_viewpager_title);
         titleStrip.setNonPrimaryAlpha(0F);
+
         // Set to last position
-        int lastPos = getActivity().getSharedPreferences("viewPager position", 0).getInt("viewPager position", 0);
+        int lastPos = getActivity().getSharedPreferences("workouts", Context.MODE_PRIVATE).getInt("viewPager position", 0);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(lastPos);
 

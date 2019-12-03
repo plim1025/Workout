@@ -1,5 +1,6 @@
 package com.example.android.workout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +12,15 @@ import android.widget.PopupMenu;
 
 import androidx.fragment.app.Fragment;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+
 public class ProgressFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -18,28 +28,40 @@ public class ProgressFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.progress_fragment, container, false);
 
-        /*
-        // Add pie chart slices
-        PieChartView pieChartView = view.findViewById(R.id.pie_chart);
-        List<SliceValue> pieData = new ArrayList<>();
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieRed)).setLabel("Abs"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieOrange)).setLabel("Back"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieYellow)).setLabel("Biceps"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieLime)).setLabel("Cardio"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGreen)).setLabel("Chest"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieCyan)).setLabel("Forearms"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieBlue)).setLabel("Glutes"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.piePurple)).setLabel("Lower Legs"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieMagenta)).setLabel("Triceps"));
-        pieData.add(new SliceValue(10, getResources().getColor(R.color.pieGrey)).setLabel("Upper Legs"));
+        // Create dataSet of muscle groups
+        ArrayList<PieEntry> muscleGroups = new ArrayList<>();
+        muscleGroups.add(new PieEntry(10, "Abs"));
+        muscleGroups.add(new PieEntry(15, "Back"));
+        muscleGroups.add(new PieEntry(10, "Biceps"));
+        muscleGroups.add(new PieEntry(5, "Cardio"));
+        muscleGroups.add(new PieEntry(20, "Chest"));
+        muscleGroups.add(new PieEntry(5, "Lower Legs"));
+        muscleGroups.add(new PieEntry(5, "Triceps"));
+        muscleGroups.add(new PieEntry(25, "Upper Legs"));
+        PieDataSet pieDataSet = new PieDataSet(muscleGroups, "Muscle Groups");
 
-        // Set pie chart
-        PieChartData pieChartData = new PieChartData(pieData);
-        pieChartData.setHasLabels(true);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Muscle Groups").setCenterText1FontSize(20);
-        pieChartView.setPieChartData(pieChartData);
-        pieChartView.setChartRotationEnabled(false);
-        */
+        // Add colors to dataset
+        ArrayList<Integer> colors = new ArrayList<>();
+        for (int c : ColorTemplate.COLORFUL_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.LIBERTY_COLORS)
+            colors.add(c);
+
+        for (int c : ColorTemplate.PASTEL_COLORS)
+            colors.add(c);
+        colors.add(ColorTemplate.getHoloBlue());
+        pieDataSet.setColors(colors);
+
+        // Set dataset to piechart
+        PieData data = new PieData(pieDataSet);
+        PieChart chart = view.findViewById(R.id.progress_piechart);
+        data.setValueFormatter(new PercentFormatter(chart));
+        data.setValueTextSize(11f);
+        data.setValueTextColor(Color.WHITE);
+        chart.setData(data);
+        chart.getDescription().setEnabled(false);
+        chart.getLegend().setEnabled(false);
 
         // Add Menu Button
         final ImageButton imageButton = view.findViewById(R.id.progress_sort_button);
